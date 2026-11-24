@@ -113,7 +113,7 @@ function sig(){const c=$('pad'),w=450,h=170,o=document.createElement('canvas');o
 async function send(){const m=$('msg'),v=id=>$(id).value.trim();m.className='msg';
   const err=t=>{m.className='msg err';m.textContent=t};
   if(!v('f_name'))return err('نام و نام خانوادگی را بنویسید.');
-  if(!/^0?9\d{9}$/.test(toEn(v('f_phone')).replace(/[^\d]/g,'').replace(/^98/,'0')))return err('شماره‌ی موبایل را درست بنویسید (مثل ۰۹۱۲۰۰۰۰۰۰۰).');
+  if(!/^0?9\d{9}$/.test(toEn(v('f_phone')).replace(/[^\d]/g,'').replace(/^98/,'0')))return err('شماره‌ی موبایل را درست بنویسید (مثل ۰۹۱۲۰۰۰۰۰۰۲).');
   const miss=MED_Q.concat(MED_D).find(([k])=>M.y[k]&&MED_Q.some(q=>q[0]===k)&&!(M.t[k]||'').trim());if(miss)return err('برای «'+miss[1]+'» توضیح کوتاهی بنویسید.');
   if(!$('f_ok').checked)return err('برای ارسال، تیک پذیرش رضایت‌نامه را بزنید.');
   if(!signed)return err('لطفاً در کادر، امضا کنید.');

@@ -2996,7 +2996,7 @@ body[data-role="doctor"] #viewForm .m55p{display:none!important}
     <div class="kv">
       <span>نام فایل</span><span id="cFile"></span>
       <span>ارسال به</span><span id="cTo" class="ltr"></span>
-      <span>فرستنده</span><span class="ltr" id="cFrom">user@example.com</span>
+      <span>فرستنده</span><span class="ltr" id="cFrom">sender@example.com</span>
     </div>
     <div class="msg" id="cMsg"></div>
     <div class="steps" id="cSteps" hidden>
@@ -3064,7 +3064,7 @@ body[data-role="doctor"] #viewForm .m55p{display:none!important}
 <div class="sheet" id="sSheet" hidden>
   <div class="in">
     <h3>تنظیمات</h3>
-    <label class="f">ایمیل گیرنده PDFها<input id="set_to" class="ltr" type="email" placeholder="user@example.com"></label>
+    <label class="f">ایمیل گیرنده PDFها<input id="set_to" class="ltr" type="email" placeholder="recipient@example.com"></label>
     <label class="f">نام کلینیک (سربرگ)<input id="set_clinic"></label>
     <label class="f">نام پزشک و تخصص (سربرگ)<input id="set_doctor"></label>
     <label class="f">تماس جهت هماهنگی<input id="set_phone"></label>
@@ -3132,7 +3132,7 @@ const SECTIONS=[
  {id:'anes',t:'زمان بیهوشی',kind:'none',text:'مدت',price:'flat'}
 ];
 const SEC=Object.fromEntries(SECTIONS.map(x=>[x.id,x]));
-const DEFAULT_SET={recipient:'',clinic:'کلینیک دندانپزشکی شهید رهنمون',doctor:'دکتر سید مجتبی علویکیا · جراح فک و صورت',phone:'۰۹۱۲۰۰۰۰۰۰۰ (منتظری)',prices:{}};
+const DEFAULT_SET={recipient:'',clinic:'کلینیک دندانپزشکی شهید رهنمون',doctor:'دکتر سید مجتبی علویکیا · جراح فک و صورت',phone:'۰۹۱۲۰۰۰۰۰۰۱ (منتظری)',prices:{}};
 let SET={...DEFAULT_SET};
 const FA_NF=new Intl.NumberFormat('fa-IR');const fa=n=>FA_NF.format(Math.round(n));
 const toEn=s=>String(s||'').replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));

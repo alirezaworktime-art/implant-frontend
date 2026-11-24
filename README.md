@@ -14,6 +14,10 @@ Plain HTML/CSS/JavaScript, no framework and no build step. Persian, right-to-lef
 
 PDF files of the treatment plan are drawn on a canvas and assembled by the app itself (no PDF library).
 
+## Run locally
+With **implant-backend** next to this folder: `cd ../implant-backend && npm install && npm run dev`, then open http://127.0.0.1:8787/.
+Edit a file here, restart `npm run dev`, reload. See implant-backend `docs/DEVELOPMENT.md` and `docs/ARCHITECTURE.md`.
+
 ## How it is served
 The pages are not served from this repo. They are embedded in the back-end bundle (`ASSETS` map) and served by the same
 server that answers the API, so the page talks to its own origin. See **implant-backend** → `scripts/build-bundle.mjs`.
