@@ -1,0 +1,25 @@
+/* ---- login ---- */
+.login{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--sh);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);margin-top:12px}
+.login-hero{background:var(--accent-2) var(--tile) center/56px;color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:100%}
+.login-hero .mark{width:54px;height:54px;border-radius:16px;background:rgba(255,255,255,.14)}
+.login-hero .mark svg{width:28px;height:28px}
+.login-hero h2{font-size:1.6rem;font-weight:800;margin:0;line-height:1.35}
+.login-hero p{margin:6px 0 0;font-size:.88rem;opacity:.85}
+.login-body{padding:24px;display:flex;flex-direction:column;gap:14px}
+.login-body h3{margin:0;font-size:1rem;font-weight:800}
+@media (max-width:680px){.login{grid-template-columns:minmax(0,1fr);margin-top:4px}.login-hero{padding:20px;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px}.login-hero h2{font-size:1.2rem}.login-body{padding:18px}}
+.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media (max-width:420px){.roles{grid-template-columns:minmax(0,1fr)}}
+.role{font:inherit;text-align:right;border:1px solid var(--line);background:var(--sunk);color:var(--ink);border-radius:var(--r);padding:10px 12px;cursor:pointer;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center}
+.role .ri{grid-row:1/3;width:34px;height:34px;border-radius:10px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted)}
+.role .ri svg{width:18px;height:18px}
+.role b{font-size:.92rem}.role small{color:var(--muted);font-size:.72rem;line-height:1.4}
+.role:hover{border-color:var(--line2)}
+.role[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.role[aria-pressed="true"] .ri{background:var(--accent);border-color:var(--accent);color:#fff}
+.pwshow{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;white-space:nowrap;width:max-content;font-size:.86rem;color:var(--muted);cursor:pointer}
+.pwshow input{width:18px!important;height:18px;min-height:0;flex:none;margin:0;padding:0;accent-color:var(--accent)}
+.appget{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;gap:6px;border-top:1px dashed var(--line);padding-top:12px}
+.appget:empty{display:none}
+.appget a,.appget button{color:var(--accent);font:inherit;font-weight:700;background:none;border:0;padding:0;cursor:pointer;text-align:right}
+

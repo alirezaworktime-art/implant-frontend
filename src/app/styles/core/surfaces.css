@@ -1,0 +1,30 @@
+/* ---- surfaces ---- */
+.banner{border:1px solid color-mix(in srgb,var(--warn) 45%,var(--line));background:var(--warn-soft);color:var(--ink);border-radius:var(--r);padding:10px 14px;font-size:.86rem}
+.banner.info{border-color:color-mix(in srgb,var(--accent) 40%,var(--line));background:var(--accent-soft);white-space:pre-wrap}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--sh)}
+.card h2{font-size:1.02rem;font-weight:800;margin:0;display:flex;justify-content:space-between;align-items:center;gap:8px;line-height:1.4}
+.card[data-sec]{border-inline-start:4px solid var(--accent)}
+.card[data-sec][data-kind="pros"]{border-inline-start-color:var(--lapis)}
+.card[data-sec][data-kind="info"]{border-inline-start-color:var(--line2)}
+.card[data-sec].used{background:linear-gradient(var(--surface),var(--surface)) padding-box}
+.card[data-sec].used h2::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);order:-1;flex:none;margin-inline-end:-2px}
+.tag{font-size:.7rem;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:99px;padding:1px 10px;white-space:nowrap;margin-inline-start:auto}
+.tag.p{color:var(--lapis);background:var(--lapis-soft)}
+
+/* ---- forms ---- */
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.fields .full{grid-column:1/-1}
+@media (max-width:340px){.fields{grid-template-columns:minmax(0,1fr)}}
+label.f,div.f{display:flex;flex-direction:column;gap:4px;font-size:.8rem;font-weight:500;color:var(--muted);min-width:0}
+input,textarea,select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-width:0;min-height:44px;transition:border-color .12s,background .12s}
+input:hover,textarea:hover,select:hover{border-color:var(--line2)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+textarea{resize:vertical;min-height:84px}
+.price,.ltr{direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+.note{font-size:.8rem;color:var(--muted);margin:0;line-height:1.7}
+.msg{font-size:.86rem;min-height:1.2em}
+.msg.err{color:var(--bad);font-weight:600}.msg.ok{color:var(--ok);font-weight:600}
+.grp{display:flex;flex-direction:column;gap:6px}
+.grp>span{font-size:.8rem;color:var(--muted);font-weight:500}
+

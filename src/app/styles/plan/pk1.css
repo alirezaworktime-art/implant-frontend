@@ -1,0 +1,5 @@
+/* ---------- pk1 ---------- */
+.pk1{border:1px dashed var(--line,#cfd6e4);border-radius:12px;padding:10px 12px;margin:10px 0}
+.pk1 .grp{margin-top:6px}.pk1 .pk1f{margin-top:4px}.pk1 .calc{align-self:center;font-size:.9em}
+.pk1row span:last-child{font-weight:700}
+

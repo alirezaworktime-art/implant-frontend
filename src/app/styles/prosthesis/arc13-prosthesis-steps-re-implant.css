@@ -1,0 +1,10 @@
+/* ---------- arc13: prosthesis steps + re-implant choice ---------- */
+.a11re{display:none!important}
+.a13ri,.a13top{margin:4px 0 10px}.a13ri>span,.a13g>span{display:block;font-size:.86rem;color:var(--muted);font-weight:600;margin-bottom:6px}.a13ri .chips,.a13g .chips{display:flex;flex-wrap:wrap;gap:6px}.a13ri small{display:block;margin-top:6px;color:var(--warn)}
+.a13top{display:grid;gap:10px}.a13top .f select{width:100%}
+.a13p .a6n,.a13p .a6sut{display:none!important}
+.a13ch{margin:8px 0}.a13ch .note{margin:0 0 6px}.a13ka{color:var(--accent)}.a13kp{color:var(--warn)}
+.a13ch .a6t.a13pa{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.a13ch .a6t.a13pp{background:var(--warn);color:#fff;border-color:var(--warn)}
+.a6l.a13free .arbp label,.a6l.a13free .arbp .lnk{display:none}
+

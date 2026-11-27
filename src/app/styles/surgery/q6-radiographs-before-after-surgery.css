@@ -1,0 +1,17 @@
+/* ---------- q6: radiographs before / after surgery — grouped tab, per-file delete, thumbnail strips on the doctor / surgery / prosthesis pages ---------- */
+.q6grp{margin:10px 0 4px;padding:8px 10px;border-radius:12px;background:var(--sunk);border:1px solid var(--line)}
+.q6grp>h3.pf-h{margin:0 0 4px}
+.q6it{position:relative;min-width:0}
+.q6it .imth{width:100%}
+.q6del{position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font:inherit;font-weight:800;line-height:1;cursor:pointer}
+.q6del[data-armed="1"]{background:#b3261e;width:auto;padding:0 8px;border-radius:13px;font-size:.72rem}
+.q6kind{display:block;font-size:.66rem;color:var(--muted)}
+.q6strip{margin:8px 0;border:1px dashed var(--line2);border-radius:12px;padding:8px 10px}
+.q6strip h4{margin:0 0 6px;font-size:.86rem}
+.q6strip .q6row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.q6strip .q6row:empty::after{content:"—";color:var(--muted)}
+.q6strip .imth{flex:0 0 auto;width:92px;padding:3px}
+.q6strip .imth img{width:84px;height:64px;object-fit:cover;border-radius:6px}
+.q6strip .imth .pdf{display:block;width:84px;height:64px;line-height:64px;border-radius:6px;background:var(--line);font-weight:800}
+.q6strip .imth small{font-size:.62rem}
+.q6strip .q6lbl{font-size:.74rem;color:var(--muted);margin:4px 0 2px}

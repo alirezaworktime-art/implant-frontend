@@ -1,0 +1,10 @@
+/* ---------- pk3 ---------- */
+.pk3n{border:1px solid var(--line,#dfe5ef);border-radius:12px;padding:8px 10px;margin:8px 0;background:var(--card,#fff)}
+.pk3n .pk3h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pk3n .pk3h b{flex:1}
+.pk3n .pk3l{margin-top:6px}.pk3n .fxn{margin:6px 0}.pk3n .fxn.pk3mine{border-right:4px solid var(--accent,#1d7c73);background:#fffbe6}
+.pk3mh{font-size:.85em;color:#666;margin:6px 0 2px}
+.pk3lab{margin:8px 0 0}
+.pk3tag{margin:8px 0}.pk3teeth{display:flex;flex-direction:column;gap:4px}.pk3q{display:flex;gap:3px;align-items:center;flex-wrap:wrap}.pk3q small{min-width:64px;color:#666}
+.pk3q .t{min-width:30px;padding:2px 4px;border:1px solid var(--line,#cfd6e4);border-radius:6px;background:#fff;touch-action:manipulation}.pk3q .t[aria-pressed="true"]{background:var(--accent,#1d7c73);color:#fff;border-color:var(--accent,#1d7c73)}
+.pk3filt{margin:6px 0}.imth .pk3lbl{display:block;font-size:.72em;color:var(--accent,#1d7c73);white-space:normal}
+

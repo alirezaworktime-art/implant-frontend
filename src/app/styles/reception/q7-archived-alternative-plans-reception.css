@@ -1,0 +1,6 @@
+/* ---------- q7: archived alternative plans + reception plan sheet ---------- */
+#q7Alts .q7p{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--sunk);margin-top:6px}
+#q7Alts .q7p b{font-size:.95rem}#q7Alts .q7p small{color:var(--muted)}
+.q7pl .tot{align-items:flex-start;text-align:right}.q7pl .tot b{font-size:1.02rem}
+
+.pk3tag{display:none!important}

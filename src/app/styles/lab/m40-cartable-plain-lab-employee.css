@@ -1,0 +1,7 @@
+/* ---------- m40 (2026-11-17): cartable of a plain lab employee — only his own work, three tiles, no side menu ---------- */
+body.m40plain #l5Nav,body.m40plain #l4Fab,body.m40plain #lbSeg,body.m40plain #m39tabs,body.m40plain #m39bar,body.m40plain #viewLab > .qhead{display:none!important}
+.m40d{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:var(--sh);margin-bottom:10px}
+.m40d .m40m{flex:1 1 220px;min-width:0}
+.m40d .m40m b{font-size:1rem}
+.m40d .meta{display:block}
+.m40more{display:flex;justify-content:center;margin:14px 0 40px}

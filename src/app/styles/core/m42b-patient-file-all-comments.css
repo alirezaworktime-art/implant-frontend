@@ -1,0 +1,7 @@
+/* ---------- m42b (2026-11-17): patient file — all comments in one list ---------- */
+.m42bl{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.m42bc{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface)}
+.m42bc.fin{border-inline-start:4px solid var(--warn,#c98a00)}
+.m42bh{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.m42bh small{color:var(--muted)}
+.m42bc p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.9}

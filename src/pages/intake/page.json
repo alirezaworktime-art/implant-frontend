@@ -1,0 +1,20 @@
+{
+ "out": "f.html",
+ "parts": [
+  {
+   "raw": "<!doctype html>\n<html lang=\"fa\" dir=\"rtl\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<meta name=\"robots\" content=\"noindex, nofollow\">\n<meta name=\"referrer\" content=\"no-referrer\">\n<title>فرم پذیرش بیمار</title>\n<link rel=\"icon\" href=\"icon-192.png\">\n<style>"
+  },
+  {
+   "file": "pages/intake/style.css"
+  },
+  {
+   "raw": "</style>\n</head>\n<body>\n<div class=\"wrap\" id=\"app\"><div class=\"empty\">در حال بارگذاری…</div></div>\n<script>"
+  },
+  {
+   "file": "pages/intake/script.js"
+  },
+  {
+   "raw": "</script>\n</body>\n</html>\n"
+  }
+ ]
+}

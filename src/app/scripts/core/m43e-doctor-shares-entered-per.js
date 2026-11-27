@@ -1,0 +1,1 @@
+/* ---------- m43e (owner, 2026-11-17): doctor shares are entered per doctor first ---------- */

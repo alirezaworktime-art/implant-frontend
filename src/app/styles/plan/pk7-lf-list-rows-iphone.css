@@ -1,0 +1,10 @@
+/* ---------- pk7: lf list rows on iPhone Safari stayed wider than the card (flex button + long text) ---------- */
+.lflist{min-width:0;width:100%}
+.lfrow{box-sizing:border-box;max-width:100%;min-width:0;overflow:hidden;-webkit-appearance:none;appearance:none;margin:0}
+.lfrow>*{min-width:0}
+.lfrow .lfno{flex:0 0 auto}
+.lfrow .lfmain{flex:1 1 0%;min-width:0;overflow-wrap:anywhere}
+.lfrow .lfmain b,.lfrow .lfmain small{overflow-wrap:anywhere}
+.lfrow .lftags{flex:0 0 100%;max-width:100%;min-width:0}
+.lf .lfcard{min-width:0;overflow:hidden}
+.lfe,.lfinfo div{min-width:0;overflow-wrap:anywhere}

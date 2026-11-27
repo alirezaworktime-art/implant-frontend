@@ -1,0 +1,8 @@
+/* ---------- m9: ---------- */
+.m9pen{position:sticky;top:calc(var(--abh,64px) + 4px);z-index:5;background:var(--surface,#fff);border:1px solid var(--line);border-radius:14px;padding:8px 10px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.m9pen small{display:block;color:var(--muted);margin-bottom:6px}
+.m9pen .chip{border-width:2px}.m9pen .chip i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-inline-end:5px;vertical-align:middle}
+.m9pen .chip[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--surface,#fff));color:var(--c);font-weight:700}
+button .m9d{position:absolute;top:-6px;inset-inline-start:-5px;min-width:15px;height:15px;padding:0 2px;border-radius:8px;background:var(--c);color:#fff;font-size:10px;line-height:15px;font-style:normal;font-weight:700;text-align:center;pointer-events:none}
+.t.m9w,.qd.m9w,.chip.m9w{position:relative;outline:2px solid var(--c);outline-offset:1px}
+.m9who{font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.8}

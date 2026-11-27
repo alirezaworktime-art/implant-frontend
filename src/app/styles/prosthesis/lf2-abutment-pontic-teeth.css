@@ -1,0 +1,5 @@
+/* ---------- lf2: abutment / pontic teeth ---------- */
+.lfteeth button.lfpa{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+.lfteeth button.lfpp{background:var(--warn);color:#fff;border-color:var(--warn);font-weight:700}
+.lf2a{color:var(--accent)}.lf2p{color:var(--warn)}.lf2s{margin:6px 0 0;font-size:.86rem}
+

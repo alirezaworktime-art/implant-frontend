@@ -1,0 +1,24 @@
+/* fe1: path bar steps are timeline points, not pills */
+.pbar .ps{border:0;background:none;box-shadow:none;border-radius:8px;padding:0 2px 2px;min-height:0;white-space:normal;line-height:1.35}
+.pbar .ps[data-ntst]:hover{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+.pbar .ps:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* fe1: doctor choice on the plan form */
+.fields .hdoc{grid-column:span 2}.hdoc .seg button{white-space:nowrap}
+/* fe1: patient-file tabs never break into two lines */
+.pftabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.pftabs::-webkit-scrollbar{display:none}.pftabs button{white-space:nowrap;flex:1 0 auto}
+@media (max-width:560px){.pftabs button{font-size:.8rem;padding-inline:10px}}
+/* fe1: tile subtitles are never cut */
+@media (min-width:900.02px){.htile.x .hs{white-space:normal;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:clip}}
+/* fe1: lab tables wrap on computers instead of scrolling sideways */
+@media (min-width:1000px){body[data-role="lab"] .l6t td{white-space:normal}body[data-role="lab"] .l6t td.tnum,body[data-role="lab"] .l6t td:first-child{white-space:nowrap}body[data-role="lab"] .l6t th{white-space:normal}body[data-role="lab"] .l6t td,body[data-role="lab"] .l6t th{padding-inline:6px}body[data-role="lab"] .l6t td.l6c-name,body[data-role="lab"] .l6t td.l6c-note,body[data-role="lab"] .l6t td.l6c-wt,body[data-role="lab"] .l6t td.l6c-dept{min-width:72px}}
+/* fix6b: kept copy of a refused (stale) save; storekeeper catalog matching */
+.fx6stale{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid color-mix(in srgb,#b7791f 45%,transparent);background:color-mix(in srgb,#b7791f 9%,transparent);display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between}
+.fx6stale>div:first-child{flex:1 1 260px;min-width:0}.fx6stale .btns{margin:0;flex-wrap:wrap}
+.fx6cat .fx6it{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end;padding:10px 0;border-top:1px solid var(--line)}
+.fx6cat .fx6it:first-of-type{border-top:0}
+.fx6cat .fx6nm{flex:1 1 200px;min-width:0;overflow-wrap:anywhere}.fx6cat .fx6nm small{display:block;color:var(--muted)}
+.fx6cat .fx6sel{display:flex;flex-wrap:wrap;gap:6px;flex:2 1 300px;min-width:0}
+.fx6cat .fx6sel label{display:flex;flex-direction:column;gap:2px;font-size:.78rem;color:var(--muted);flex:1 1 90px;min-width:0;margin:0}
+.fx6cat .fx6sel select{width:100%;min-width:0;max-width:100%}
+.fx6cat .fx6btn{display:flex;flex-wrap:wrap;gap:6px}
+.fx6cat details summary{cursor:pointer;font-weight:700}.fx6cat .fx6miss{overflow-wrap:anywhere;line-height:1.9}

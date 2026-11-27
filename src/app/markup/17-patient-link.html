@@ -1,0 +1,33 @@
+<!-- patient link -->
+<div class="sheet" id="plSheet" hidden>
+  <div class="in">
+    <h3>لینک اختصاصی بیمار</h3>
+    <p class="note">بیمار با این لینک خلاصه‌ی طرح درمان، نوبت‌های بعدی، پرداخت‌ها و چک‌هایش را می‌بیند. فقط کسی که لینک را دارد آن را می‌بیند؛ اگر لینک دست کس دیگری افتاد «لینک تازه» بسازید تا لینک قبلی باطل شود.</p>
+    <div class="linkbox"><input id="pl_url" readonly><button class="btn sm" id="plCopy" type="button">کپی</button></div>
+    <div class="msg" id="plMsg"></div>
+    <div class="btns" style="flex-wrap:wrap"><a class="btn sm" id="plWa" target="_blank" rel="noopener">ارسال در واتس‌اپ</a><a class="btn sm ghost" id="plSms">ارسال پیامک</a><button class="btn sm ghost" id="plRenew" type="button">لینک تازه</button><button class="btn sm ghost danger" id="plOff" type="button">غیرفعال کردن لینک</button><button class="btn sm ghost" id="plClose" type="button">بستن</button></div>
+  </div>
+</div>
+<div class="obbar" id="obBar" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="sheet" id="aSheet" hidden>
+  <div class="in">
+    <h3>طرح درمان پیشنهادی دوم</h3>
+    <p class="note">طرح دوم در همان PDF، بعد از طرح اول می‌آید. طرح کامل از روی طرح ۱ کپی می‌شود و فقط بخش‌های ایمپلنت آن خالی می‌ماند؛ بعد از آن می‌توانید طرح‌های دیگر هم اضافه کنید.</p>
+    <div class="btns" style="flex-direction:column;align-items:stretch">
+      <button class="btn" type="button" data-alt="full">طرح درمان کامل دوم (با جدول و قیمت)</button>
+      <button class="btn ghost" type="button" data-alt="text">فقط توضیحات</button>
+      <button class="btn ghost" type="button" id="aClose">انصراف</button>
+    </div>
+  </div>
+</div>
+<div class="bar" id="formBar" hidden>
+  <div class="sum"><small id="barLbl">جمع کل</small><b id="barTotal">۰</b></div>
+  <div class="btns">
+    <button class="btn ghost" id="saveBtn" type="button">ذخیره پیش‌نویس</button>
+    <button class="btn ghost" id="undBtn" type="button" hidden>تصمیم نگرفت</button>
+    <button class="btn ghost" id="fx7Back" type="button" hidden>برگشت به پزشک طرح درمان</button>
+    <button class="btn" id="confirmBtn" type="button">ثبت نهایی</button>
+  </div>
+</div>
+

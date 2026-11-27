@@ -1,0 +1,10 @@
+<!-- consent + signature -->
+<div class="sheet" id="sgnSheet" hidden>
+  <div class="in">
+    <h3>رضایت‌نامه و امضای بیمار</h3>
+    <div class="consent" id="sgnTxt"></div><div class="seg ex1sg" role="group" aria-label="امضاکننده"><button type="button" data-ex1g="0" aria-pressed="true">خود بیمار امضا می‌کند</button><button type="button" data-ex1g="1" aria-pressed="false">ولی / قیم امضا می‌کند</button></div><div class="fields" id="ex1GW" hidden><label class="f">نام ولی / قیم<input id="ex1_gname" maxlength="80"></label><label class="f">نسبت با بیمار<input id="ex1_grel" maxlength="40" placeholder="پدر، مادر، همسر…"></label></div>
+    <div class="sigpad"><canvas id="sgnPad" width="900" height="300" aria-label="محل امضای بیمار"></canvas><span>بیمار اینجا امضا کند</span></div>
+    <div class="msg" id="sgnMsg"></div>
+    <div class="btns" style="flex-wrap:wrap"><button class="btn" id="sgnOk" type="button">ثبت امضا و ثبت نهایی</button><button class="btn ghost" id="sgnClear" type="button">پاک کردن امضا</button><button class="btn ghost" id="sgnSkip" type="button">ثبت نهایی بدون امضا</button><button class="btn ghost" id="sgnClose" type="button">انصراف</button></div>
+  </div>
+</div>

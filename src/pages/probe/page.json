@@ -1,0 +1,20 @@
+{
+ "out": "probe.html",
+ "parts": [
+  {
+   "raw": "<!doctype html>\n<html lang=\"fa\" dir=\"rtl\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>تست بسترها</title>\n<style>"
+  },
+  {
+   "file": "pages/probe/style.css"
+  },
+  {
+   "raw": "</style></head><body>\n<h1>تست بسترها بدون فیلترشکن</h1>\n<p>فیلترشکن را خاموش کنید و دکمه را بزنید. هر بستر ۳ بار تست می‌شود (حدود ۱ دقیقه). نتیجه روی همین دستگاه ذخیره می‌شود.</p>\n<button id=\"go\">شروع تست</button> <span id=\"st\"></span>\n<table><thead><tr><th>بستر</th><th>نتیجه</th><th>زمان (میلی‌ثانیه)</th><th class=\"u\">آدرس</th></tr></thead><tbody id=\"tb\"></tbody></table>\n<script>"
+  },
+  {
+   "file": "pages/probe/script.js"
+  },
+  {
+   "raw": "</script></body></html>\n"
+  }
+ ]
+}

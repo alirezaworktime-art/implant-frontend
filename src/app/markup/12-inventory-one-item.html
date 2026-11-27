@@ -1,0 +1,19 @@
+<!-- inventory: one item -->
+<div class="sheet" id="invSheet" hidden>
+  <div class="in">
+    <h3 id="ivTitle"></h3>
+    <div class="ihead"><div><div class="big-num" id="ivQty">۰</div><small class="note" id="ivUnit">عدد</small></div><span class="note" id="ivState"></span></div>
+    <div id="ivEdit">
+      <div class="seg" style="margin-bottom:10px"><button type="button" data-ivt="in" aria-pressed="true">ورود</button><button type="button" data-ivt="out" aria-pressed="false">خروج</button><button type="button" data-ivt="adj" aria-pressed="false">شمارش</button><button type="button" data-ivt="ret" aria-pressed="false">برگشت</button><button type="button" data-ivt="waste" aria-pressed="false">ضایعات</button></div>
+      <div class="grp"><span id="ivNLbl">تعداد ورودی</span><div class="stepper"><button type="button" data-ivs="-1" aria-label="یکی کمتر">−</button><input id="ivN" inputmode="numeric" value="1" aria-label="تعداد"><button type="button" data-ivs="1" aria-label="یکی بیشتر">+</button></div></div>
+      <div class="fields" id="ivX" hidden></div>
+      <div class="fields" style="margin-top:10px"><label class="f">توضیح (اختیاری)<input id="ivNote" placeholder="مثلاً: فاکتور شماره ۱۲۳، تاریخ انقضا…"></label><label class="f">ثبت‌کننده<input id="ivBy"></label></div>
+      <div class="msg" id="ivMsg"></div>
+      <div class="btns"><button class="btn" id="ivSave" type="button" style="flex:1">ثبت</button></div>
+      <div class="fields" id="ivMinW" style="margin-top:6px;align-items:end"><label class="f">حداقل موجودی (برای هشدار رو به اتمام)<input id="ivMin" inputmode="numeric" placeholder="مثلاً ۳"></label><button class="btn ghost" id="ivMinSave" type="button">ذخیره‌ی حداقل</button></div>
+    </div>
+    <h3 style="font-size:.95rem">سابقه‌ی این قلم</h3>
+    <div id="ivHist" class="sys" style="box-shadow:none"></div>
+    <div class="btns"><button class="btn ghost" id="ivClose" type="button">بستن</button></div>
+  </div>
+</div>

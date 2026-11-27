@@ -1,0 +1,26 @@
+<!-- consultant: patient did not decide -->
+<div class="sheet" id="outSheet" hidden>
+  <div class="in">
+    <h3>نتیجه‌ی مشاوره</h3>
+    <p class="note">بیمار طرح درمان را گرفت؛ کدام حالت پیش آمد؟</p>
+    <div class="outs">
+      <button type="button" class="outb" data-out="book"><b>پذیرفت؛ نوبت روزهای بعد</b><small>ثبت نهایی طرح و رفتن به صف نوبت‌دهی پذیرش</small></button>
+      <button type="button" class="outb" data-out="today"><b>پذیرفت؛ جراحی همین امروز</b><small>ثبت نهایی و نوبت امروز با عنوان «جراحی خارج نوبت»</small></button>
+      <button type="button" class="outb" data-out="think"><b>می‌خواهد فکر کند</b><small>به «پیگیری‌ها»ی پذیرش می‌رود تا روزهای بعد تماس بگیرند</small></button>
+      <button type="button" class="outb bad" data-out="lost"><b>پشیمان شد و رفت</b><small>انصراف بیمار ثبت می‌شود</small></button>
+    </div>
+    <div class="btns"><button class="btn ghost" id="outClose" type="button">بستن</button></div>
+  </div>
+</div>
+<div class="sheet" id="unSheet" hidden>
+  <div class="in">
+    <h3 id="unTitle">بیمار هنوز تصمیم نگرفته</h3>
+    <p class="note" id="unNote">طرح ذخیره می‌شود و از کارتابل بیرون می‌رود. یک هفته و چهار هفته‌ی بعد در «پیگیری طرح‌های تأییدنشده» یادآوری می‌شود تا با بیمار تماس بگیرید.</p>
+    <div class="grp"><span>دلیل اصلی</span><div class="chips" id="unWhy"></div></div>
+    <label class="f">توضیح (اختیاری)<input id="un_note" placeholder="مثلاً: بعد از عید تماس بگیریم"></label>
+    <label class="f" id="fx3QW" hidden>اعتبار قیمت‌ها تا<input id="fx3_until" inputmode="numeric" placeholder="۱۴۰۵/۰۹/۱۲"></label>
+    <div class="btns" id="fx3QB" hidden><button class="btn sm ghost" type="button" id="fx3QPdf">📄 PDF استعلام قیمت (همه‌ی برندها)</button></div>
+    <div class="msg" id="unMsg"></div>
+    <div class="btns"><button class="btn" id="unGo" type="button" style="flex:1">ثبت و پیگیری بعداً</button><button class="btn ghost" id="unClose" type="button">انصراف</button></div>
+  </div>
+</div>

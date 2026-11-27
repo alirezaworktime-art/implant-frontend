@@ -1,0 +1,17 @@
+<!-- inventory: new stock -->
+<div class="sheet" id="invMvSheet" hidden>
+  <div class="in">
+    <h3>ورود کالا به انبار</h3>
+    <div class="chips"><button type="button" class="chip" data-ikind="fix">فیکسچر</button><button type="button" class="chip" data-ikind="heal">هیلینگ</button><button type="button" class="chip" data-ikind="cover">کاور</button><button type="button" class="chip" data-ikind="other">مواد مصرفی</button></div>
+    <label class="f" id="in_catW">برند و سیستم<select id="in_cat"></select></label>
+    <div class="fields" id="in_manW"><label class="f">برند<input id="in_b"></label><label class="f">سیستم<input id="in_sys"></label></div>
+    <div class="fields" id="in_fixW"><label class="f">قطر فیکسچر (mm)<select id="in_dS"></select><input id="in_d" class="ltr" inputmode="decimal"></label><label class="f">طول فیکسچر (mm)<select id="in_lS"></select><input id="in_l" class="ltr" inputmode="decimal"></label></div>
+    <label class="f" id="in_hsW">سایز<select id="in_hS"></select><input id="in_hs" class="ltr" placeholder="مثلاً 4.5×4"></label>
+    <div id="in_othW" class="grp"><div class="fields"><label class="f">نام قلم<input id="in_name"></label><label class="f">واحد<input id="in_unit" value="عدد" placeholder="عدد، بسته، ویال…"></label></div><div class="chips" id="in_sug"></div></div>
+    <div class="grp"><span>تعداد</span><div class="stepper"><button type="button" data-ins="-1" aria-label="یکی کمتر">−</button><input id="in_n" inputmode="numeric" value="1" aria-label="تعداد"><button type="button" data-ins="1" aria-label="یکی بیشتر">+</button></div></div>
+    <div class="fields"><label class="f">توضیح (اختیاری)<input id="in_note" placeholder="مثلاً: فاکتور شماره ۱۲۳"></label><label class="f">ثبت‌کننده<input id="in_by"></label></div>
+    <div class="msg" id="inMsg"></div>
+    <div class="btns"><button class="btn" id="inSave" type="button" style="flex:1">ثبت ورود</button><button class="btn ghost" id="inClose" type="button">بستن</button></div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+/* patient file, overview strip, filters */
+.kpi.mini{padding:8px 12px;gap:0}.kpi.mini b{font-size:1.25rem}.kpi.mini span{font-size:.72rem}.kpi.mini.warn b{color:var(--warn)}.kpi.mini.bad b{color:var(--bad)}
+#lFilt .chip .cnt{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:99px;background:var(--surface);color:var(--muted);font-size:.7rem;margin-inline-start:4px;padding:0 5px}
+#lFilt .chip[aria-pressed="true"] .cnt{background:rgba(255,255,255,.25);color:#fff}
+.sheet .in.pf{max-width:760px}
+.pf-head{display:flex;gap:14px;align-items:flex-start}.pf-noimg{display:grid;place-items:center;font-size:.72rem;color:var(--muted)}
+.pf-h{margin:8px 0 0;font-size:.95rem;font-weight:800}
+.tl{display:flex;flex-direction:column;gap:0;border-inline-start:2px solid var(--line2);margin-inline-start:8px;padding-inline-start:16px}
+.tl-i{position:relative;padding:4px 0 12px}.tl-i i{position:absolute;inset-inline-start:-23px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--surface)}
+.tl-i.fut i{background:var(--surface);border:2px solid var(--line2)}.tl-i.warn i{background:var(--bad)}
+.tl-i b{font-size:.92rem}.tl-i small{color:var(--muted);font-size:.74rem;margin-inline-start:8px}.tl-i p{margin:2px 0 0;font-size:.84rem;color:var(--muted);line-height:1.7}
+.warnline{display:block;color:var(--warn);font-size:.74rem;margin-top:2px}
+#themeBtn[data-t="dark"] svg{transform:rotate(180deg)}#themeBtn[data-t="light"] svg{opacity:.6}
+#sumTxt{font-size:.84rem;direction:rtl}
+/* exception: the doctor prices impacted canine / wisdom surgery and All on X long himself */
+body[data-role="doctor"] #viewForm .dr label.f:has(> input.price){display:flex!important}body[data-role="doctor"] #viewForm .calc.dr{display:block!important}
+.dr-only{display:none}body[data-role="doctor"] .dr-only{display:inline}
+.h2t{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.h2chips{display:inline-flex;gap:4px}.h2chips .chip{font-size:.8rem;min-height:30px;padding:3px 12px}
+.qcnt{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.qtn{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:6px 10px;direction:ltr}.qtn small{grid-column:1/-1;direction:rtl;font-size:.72rem;color:var(--muted)}
+.qtr{display:flex;align-items:center;gap:3px;justify-content:center}.qtr b{width:26px;font-size:.72rem;color:var(--muted);text-align:center}
+.tq{width:23px;height:30px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:.82rem;padding:0;cursor:pointer}
+.tq[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}.qcnt .f{width:84px;align-items:center}.qcnt .pick{min-height:36px}
+.ctx{margin:0;font-size:.86rem;font-weight:700;color:var(--accent)}
+.chart .t{touch-action:pan-y;user-select:none;-webkit-user-select:none}
+body[data-role="doctor"] #viewForm [data-sec="surg"] label.f.pz,body[data-role="doctor"] #viewForm [data-sec="surg"] label.f:has(> input.price){display:flex!important}
+body[data-role="doctor"] #viewForm [data-sec="surg"] .calc{display:block!important}
+

@@ -1,0 +1,6 @@
+/* ---------- q1: quadrant buttons and left/right chips with the patient's right on the right side of the screen; small Persian label under each quadrant code ---------- */
+.qd{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;gap:1px}
+.qd::after{font-size:.58rem;font-weight:500;color:var(--muted);direction:rtl}
+.qd[data-k="q1"]::after,.qd[data-ik$=":UR"]::after{content:"بالا راست"} .qd[data-k="q2"]::after,.qd[data-ik$=":UL"]::after{content:"بالا چپ"}
+.qd[data-k="q4"]::after,.qd[data-ik$=":LR"]::after{content:"پایین راست"} .qd[data-k="q3"]::after,.qd[data-ik$=":LL"]::after{content:"پایین چپ"}
+.qd[aria-pressed="true"]::after{color:inherit}

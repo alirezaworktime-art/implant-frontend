@@ -1,0 +1,27 @@
+  <!-- surgery day (surgery assistant) -->
+  <section id="viewSurg" class="wrap" style="padding:0" hidden>
+    <section class="card sgpat"><img id="sgPhoto" class="sgphoto" alt="عکس بیمار" hidden><div style="flex:1"><h2 id="sgName">روز جراحی</h2><div class="meta" id="sgMeta"></div><div class="qwarn" id="sgMed" hidden></div><div id="sgArcPat" hidden></div><div class="note" id="sgStaff" hidden></div><div class="sgteam"><label class="f">جراح *<input id="sg_by" list="dlSgDoc" autocomplete="off"><datalist id="dlSgDoc"></datalist></label><div class="grp"><span>پزشک دستیار امروز *</span><div class="chips" id="sgAsst"></div></div></div></div></section>
+    <section class="card" id="sgArcSes" hidden><h2>جلسه‌های جراحی<small id="arcSesT"></small></h2>
+      <p class="note">هر روزی که بیمار جراحی شده یک جلسه است. برای هر جلسه تاریخ، جراح و دستیار را بزنید و از فهرست‌های کنار صفحه درمان را باز کنید و علامت بزنید. برای روز دیگر «+ جلسه‌ی جراحی دیگر» را بزنید.</p>
+      <div class="chips" id="arcSesBar"></div>
+      <div class="arcrow"><label class="f">تاریخ این جلسه *<input id="arc_day" placeholder="۱۴۰۲/۰۳/۱۵" autocomplete="off"></label><label class="f" id="arcUncW">انکاوری (تعداد)<input id="arc_unc" inputmode="numeric" autocomplete="off" placeholder="۰"></label><button type="button" class="chip" data-arcby>جراح معلوم نیست: «پزشک کلینیک»</button><button type="button" class="btn sm ghost" id="arcSesDel" hidden>حذف جلسه</button></div>
+      <div id="arcTeam"></div><div class="msg" id="sgArcMsg"></div><p class="note" id="sgArcMore" hidden></p></section>
+    <section class="card"><h2>طرح درمان تأییدشده</h2><div class="pview" id="sgPlan"></div><div id="sgPrev"></div></section>
+    <div class="sgpick" id="sgPick"></div>
+    <div id="surgSecs" class="wrap" style="padding:0"></div>
+    <div class="sgpick sgpick2" id="sgPick2"></div>
+    <section class="card"><h2>ثبت جلسه</h2>
+      <div id="sgImpW" hidden><h3 style="margin:0 0 6px;font-size:.95rem">ایمپلنت‌های این جلسه</h3><div class="implist" id="sgImps"></div></div>
+      <div class="grp"><span>پیگیری‌ها (نوبت خودکار در کارتابل پذیرش)</span><div class="fu">
+        <label class="pwshow"><input type="checkbox" data-fu="numb" checked> فردا: چک بی‌حسی</label>
+        <label class="pwshow"><input type="checkbox" data-fu="week" checked> یک هفته بعد: چکاپ</label>
+        <label class="pwshow"><input type="checkbox" data-fu="suture" checked> دو هفته بعد: کشیدن بخیه</label>
+        <label class="pwshow"><input type="checkbox" id="sg_unc"> آنکاوری</label></div></div>
+      <div class="chips" id="sgUncM" hidden><button type="button" class="chip" data-unc="2" aria-pressed="false">دو ماه بعد</button><button type="button" class="chip" data-unc="3" aria-pressed="true">سه ماه بعد</button><button type="button" class="chip" data-unc="4" aria-pressed="false">چهار ماه بعد</button><button type="button" class="chip" data-unc="5" aria-pressed="false">پنج ماه بعد</button><button type="button" class="chip" data-unc="6" aria-pressed="false">شش ماه بعد</button><button type="button" class="chip" data-unc="7" aria-pressed="false">هفت ماه بعد</button></div>
+      <label class="pwshow"><input type="checkbox" id="sg_tmp"> روکش موقت فوری در همین جلسه تحویل شد (تک‌واحد)</label>
+      <label class="pwshow"><input type="checkbox" id="sg_fin"> این آخرین جلسه است (پایان درمان جراحی)</label>
+      <div class="msg" id="sgMsg"></div>
+      <div class="btns"><button class="btn" id="sgSave" type="button">ثبت جلسه</button><button class="btn" id="sgGo" type="button">ثبت جلسه ↓</button><button class="btn ghost" id="sgBack" type="button">بازگشت به کارتابل</button></div></section>
+  <section class="card" id="arcBot" hidden><div id="fxArcSheet" hidden></div></section>
+  </section>
+

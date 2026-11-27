@@ -1,0 +1,34 @@
+<!-- surgery session review before saving -->
+<div class="sheet" id="pkSheet" hidden>
+  <div class="in">
+    <h3>بیمار کدام طرح را پذیرفت؟</h3>
+    <p class="note" id="pkNote">طرح پذیرفته‌شده مبنای روز جراحی، هزینه و پرداخت‌ها می‌شود و طرح دیگر از پرونده حذف می‌شود.</p>
+    <div class="msg" id="pkMsg"></div>
+    <div class="btns"><button class="btn" data-pick="1" type="button">طرح ۱</button><button class="btn" data-pick="2" type="button">طرح ۲</button><button class="btn ghost" id="pkClose" type="button">انصراف</button></div>
+  </div>
+</div>
+<div class="sheet" id="sgRev" hidden>
+  <div class="in">
+    <h3>مرور جلسه قبل از ثبت</h3>
+    <div id="srBody"></div>
+    <div class="msg" id="srMsg"></div>
+    <div class="btns"><button class="btn" id="srOk" type="button" style="flex:1">تأیید و ثبت جلسه</button><button class="btn ghost" id="srBack" type="button">برگشت و اصلاح</button></div>
+  </div>
+</div>
+<div class="sheet" id="impSheet" hidden>
+  <div class="in">
+    <h3 id="impTitle">ایمپلنت</h3>
+    <label class="f" id="impCatW">برند<select id="imp_cat"></select></label>
+    <div class="fields" id="impManW"><label class="f">برند<input id="imp_b"></label><input id="imp_sys" type="hidden"></div>
+    <div><label class="f">قطر فیکسچر (mm)<select id="imp_dS"></select><div class="rcs" id="imp_dSC"></div><input id="imp_d" inputmode="decimal" class="ltr"></label>
+      <label class="f">طول فیکسچر (mm)<select id="imp_lS"></select><div class="rcs" id="imp_lSC"></div><input id="imp_l" inputmode="decimal" class="ltr"></label></div>
+    <div class="grp"><span>کاور / هیلینگ</span><div class="chips"><button type="button" class="chip" data-ht="cover" aria-pressed="false">کاور اسکرو</button><button type="button" class="chip" data-ht="heal" aria-pressed="false">اباتمنت</button><button type="button" class="chip" data-ht="chl" aria-pressed="false">کاستومایز هیلینگ</button></div></div>
+    <label class="f" hidden>سایز کاور / هیلینگ<select id="imp_hS"></select><input id="imp_hs" class="ltr"></label>
+    <div class="grp"><span>دلیل جراحی</span><div class="chips"><button type="button" class="chip" data-rs="new" aria-pressed="true">جديد</button><button type="button" class="chip" data-rs="redo" aria-pressed="false">کاشت مجدد</button><button type="button" class="chip" data-rs="fail" aria-pressed="false">فيل اوليه</button></div></div>
+    <div id="pk2W" hidden><div class="grp"><span>کاشت مجدد</span><div class="seg" role="group" aria-label="کاشت مجدد اول یا دوم"><button type="button" data-pk2ri="1" aria-pressed="true">اول</button><button type="button" data-pk2ri="2" aria-pressed="false">دوم</button></div></div><label class="f">تعرفه‌ی کاشت مجدد این فیکسچر (تومان) — پیش‌فرض صفر<input id="pk2_rp" class="price" inputmode="numeric" placeholder="۰"></label><p class="note">فیکسچر با همین تعرفه حساب می‌شود؛ مصرفی‌های همان دندان (GBR، ممبران، CGF، هیلینگ، روکش) نصف قیمت.</p></div>
+    <p class="note" id="impStock" hidden></p>
+    <div class="msg" id="impMsg"></div>
+    <div class="btns"><button class="btn" id="impOk" type="button">ثبت</button><button class="btn ghost" id="impDel" type="button">ایمپلنت گذاشته نشد</button><button class="btn ghost" id="impClose" type="button">بستن</button></div>
+  </div>
+</div>
+

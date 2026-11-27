@@ -1,0 +1,9 @@
+/* ---------- m43c (2026-11-17): manager — tariffs and doctor shares ---------- */
+#m43Sh .in{max-width:980px}
+.m43tw{overflow-x:auto;margin-top:6px}
+.m43tw table{width:100%;border-collapse:collapse;font-size:.88rem}
+.m43tw th,.m43tw td{border-bottom:1px solid var(--line);padding:6px 6px;text-align:right;vertical-align:middle}
+.m43tw td.num{white-space:nowrap}
+.m43tw input,.m43tw select{min-height:40px;width:100%;min-width:6.5em}
+.m43tw tr.m43cat td{background:var(--sunk);font-weight:700}
+@media (max-width:640px){.m43tw table{font-size:.78rem}.m43tw th,.m43tw td{padding:5px 3px}.m43tw input,.m43tw select{min-width:4.6em;padding-inline:6px}.m43tw [data-m43h]{display:none}.m43tw th:nth-child(2),.m43tw td.num:nth-child(2){display:none}}

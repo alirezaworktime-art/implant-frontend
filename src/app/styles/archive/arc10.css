@@ -1,0 +1,27 @@
+/* arc10 */
+.a10m .a10i{display:grid;gap:6px;border:1px dashed var(--line2);border-radius:var(--r-sm);padding:8px;margin:6px 0;background:var(--sunk)}
+.a10m .a10i textarea{width:100%;min-height:52px}
+.a10m .a10x{color:var(--bad)}
+.a10box{border:1px solid color-mix(in srgb,var(--warn) 45%,var(--line));background:var(--warn-soft);border-radius:var(--r);padding:8px 12px;margin:8px 0;display:grid;gap:6px}
+.a10box>b{color:var(--warn)}
+.a10box small{color:var(--muted);display:block}
+.a10box p{margin:2px 0 0;white-space:pre-wrap;color:var(--ink)}
+.a9ct td:nth-child(4),.a9ct td:nth-child(5){white-space:nowrap}
+#set_prices .a10ph{margin:10px 0 2px}
+#a6Root select[data-a6f="doc"]:disabled{opacity:1;background:var(--sunk);color:var(--ink)}
+
+/* up2 */
+.up2{margin-top:10px}
+.up2 .up2f .pinfo b{word-break:break-all}
+.up2 .up2f .acts{flex-wrap:wrap}
+.up2pick .chips .chip{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+
+/* gd2 */
+#a6Money .a9gd{margin:10px 0 4px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--sunk)}
+
+/* nt2 */
+.nt2r{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px}
+.nt2r .f{margin:0}
+.a10m .nt2l{align-self:center;color:var(--muted);margin-inline-end:4px}
+@media (max-width:520px){.nt2r{grid-template-columns:1fr}}
+

@@ -1,0 +1,11 @@
+/* ---------- q5: surgical guide card at the end of the treatment-plan form ---------- */
+#q5Card .q5chart{direction:ltr;display:flex;flex-direction:column;gap:6px;width:max-content;max-width:100%;margin:8px auto 0;overflow-x:auto}
+#q5Card .q5row{display:flex;align-items:center;gap:3px}
+#q5Card .q5row .q5mid{width:2px;align-self:stretch;background:var(--ink);opacity:.45;margin:0 4px}
+#q5Card .q5row+.q5row{padding-top:5px;border-top:2px solid color-mix(in srgb,var(--ink) 45%,transparent)}
+#q5Card .q5t{font:inherit;font-weight:700;font-size:.9rem;width:36px;height:36px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
+#q5Card .q5t[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+#q5Card .q5t:disabled{opacity:.28;cursor:not-allowed}
+#q5Card .q5sides{display:flex;flex-direction:row;justify-content:space-between;font-size:.7rem;color:var(--muted);direction:ltr;unicode-bidi:isolate}#q5Card .q5sides span{direction:rtl}
+#q5Card .q5sum{margin-top:8px}
+.q5kv{color:var(--accent);font-weight:700}

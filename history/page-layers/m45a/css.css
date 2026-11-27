@@ -1,0 +1,6 @@
+/* ---------- m45a (2026-11-17): surgery sheet — suture kind, surgical guide, checks before saving ---------- */
+.m45sut{margin:8px 0}
+.m45sut>span{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+#m45Gd .chips{margin:6px 0}
+#m45Gd input{min-height:44px;width:100%}
+.tl .m45s{margin-top:4px;font-size:.84rem;color:var(--muted)}

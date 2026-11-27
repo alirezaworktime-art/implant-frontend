@@ -1,0 +1,28 @@
+/* ---------- m39 (2026-11-17): lab side sections in the look of the workbench — group tiles on top, every list as cards (table view kept as a choice on wide screens) ---------- */
+.m39tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.m39tab{flex:0 0 auto;font:inherit;font-size:.86rem;font-weight:600;min-height:48px;padding:6px 16px;border-radius:12px;border:1px solid var(--line2,var(--line));background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.m39tab[aria-current="true"]{border:2px solid var(--accent);color:var(--accent);font-weight:800}
+.m39bar{display:flex;justify-content:flex-end;gap:8px;margin:0 0 8px}
+.m39bar[hidden]{display:none}
+.m39bar button{font:inherit;font-size:.8rem;min-height:40px;padding:0 12px;border-radius:10px;border:1px solid var(--line2,var(--line));background:var(--surface);color:var(--ink);cursor:pointer}
+.m39bar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:700}
+#viewLab #lbList{padding-bottom:96px}
+/* a table drawn as cards */
+#viewLab .l5tw.m39w{overflow:visible}
+#viewLab table.m39c{display:block;border:0;background:none;width:100%;min-width:0}
+#viewLab table.m39c thead{display:none}
+#viewLab table.m39c tbody{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,430px),1fr));gap:12px}
+#viewLab table.m39c tr{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px 14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--sh);min-width:0}
+#viewLab table.m39c td{display:block;border:0;padding:0;min-width:0;text-align:start;font-size:.9rem;overflow-wrap:anywhere;background:none;position:static;width:auto}
+#viewLab table.m39c td[data-l]::before{content:attr(data-l);display:block;font-size:.72rem;font-weight:500;color:var(--mute,var(--ink2,#5d6a77));margin-bottom:2px}
+#viewLab table.m39c td.m39e{display:none}
+#viewLab table.m39c td.m39h{grid-column:1/-1;font-size:1rem;font-weight:700}
+#viewLab table.m39c td.m39h[data-l]::before{display:none}
+#viewLab table.m39c td.m39a{grid-column:1/-1;border-top:1px solid var(--line);padding-top:10px}
+#viewLab table.m39c td.m39a[data-l]::before{display:none}
+#viewLab table.m39c td.m39a .acts,#viewLab table.m39c td.m39a{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#viewLab table.m39c td .btn.sm{min-height:40px}
+#viewLab table.m39c tr.m39one{grid-template-columns:1fr}
+#viewLab table.m39c tr.m39one td{grid-column:1/-1}
+/* report tables stay tables, inside a card that scrolls sideways on a narrow screen */
+#viewLab .l5tw.m39s{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 12px;box-shadow:var(--sh);margin-bottom:12px}

@@ -1,0 +1,38 @@
+/* ---- compact plan layout ---- */
+#sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;grid-auto-flow:row dense;align-items:stretch}
+#sections>.card>.calc:last-child:empty{display:none}
+#sections>.card{margin:0}
+#sections>.card{padding:14px;gap:10px}
+#sections>.card[data-wide],#sections>.card.plan2{grid-column:1/-1}
+@media (max-width:820px){#sections{grid-template-columns:minmax(0,1fr)}}
+.fields{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+.items.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:620px){.items.three{grid-template-columns:minmax(0,1fr)}}
+.items.three .quad .qd{width:64px;height:40px}.items.three .quad-sides{width:128px}
+.sp{border:1px dashed var(--line2);border-radius:var(--r);padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.sp-h{display:flex;justify-content:space-between;align-items:center;gap:8px}.sp-h b{font-size:.9rem}
+.sp-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.4fr) minmax(0,.7fr) minmax(0,.7fr) auto;gap:6px;align-items:center}
+.sp-row select,.sp-row input{min-height:40px;padding:6px 8px;font-size:.88rem}
+@media (max-width:560px){.sp-row{grid-template-columns:1fr 1fr}.sp-row select{grid-column:1/-1}}
+.med>h3+.mrow,.med .mrow{padding:6px 0}
+#fMed,#rcMed{display:block}
+.medq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+@media (max-width:620px){.medq{grid-template-columns:minmax(0,1fr)}}
+/* doctor works without prices; the consultant sees them */
+body[data-role="doctor"] #viewForm .pz,body[data-role="doctor"] #viewForm label.f:has(> input.price),body[data-role="doctor"] #viewForm .grp:has(.brands),
+body[data-role="doctor"] #viewForm .calc,body[data-role="doctor"] #totalsCard,body[data-role="doctor"] #formBar .sum,body[data-role="doctor"] #viewForm p.note:has(+ .calc){display:none!important}
+
+/* surgery day: patient photo, plan view, treatment picker, follow-ups */
+.sgpat{flex-direction:row;align-items:center;gap:16px}
+.sgphoto{width:96px;height:96px;object-fit:cover;border-radius:14px;border:1px solid var(--line);flex:none;background:var(--sunk)}
+.photo-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.pview{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.pv-card{border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:12px;padding:10px 12px;background:var(--sunk);display:flex;flex-direction:column;gap:6px}
+.pv-card[data-kind="pros"]{border-inline-start-color:var(--lapis)}
+.pv-card h3{margin:0;font-size:.92rem;font-weight:800}.pv-card p{margin:0;font-size:.84rem;line-height:1.7}
+.mc{direction:ltr;display:flex;flex-direction:column;gap:3px;align-self:center;max-width:100%;min-width:0}.mc .mr{min-width:0}.mc i{flex:0 1 18px;min-width:9px}
+.mc .mr{display:flex;gap:2px;align-items:center}.mc .mr+.mr{border-top:1.5px solid color-mix(in srgb,var(--ink) 45%,transparent);padding-top:3px}
+.mc i{font-style:normal;width:18px;height:20px;border-radius:5px;display:grid;place-items:center;font-size:.68rem;color:var(--muted);background:var(--surface);border:1px solid var(--line)}
+.mc i.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:800}.pv-card[data-kind="pros"] .mc i.on{background:var(--lapis);border-color:var(--lapis)}
+.mc b{width:2px;align-self:stretch;background:var(--ink);opacity:.45;margin:0 3px}
+.sgpick{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.sgpick .note{width:100%}

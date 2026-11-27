@@ -1,0 +1,25 @@
+/* doctor picker */
+.dpk .chips{margin:8px 0}.dpk input{width:100%}
+
+/* queue: «صف من» + نوار شناور مربع‌ها */
+.hts[data-n="9"],.hts[data-n="10"]{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){.hts[data-n="9"],.hts[data-n="10"]{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.htile.hq{--tc:#1E1E1C}
+/* my queue */
+#myq{display:flex;flex-direction:column;gap:10px}
+.mqh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:2px 0 4px}.mqh h2{margin:0;font-size:1.25rem}.mqh small{color:var(--muted);font-size:.85rem}
+.mqi{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.mqi.first{box-shadow:0 2px 10px color-mix(in srgb,var(--tc,#888) 25%,transparent);border-color:color-mix(in srgb,var(--tc,#888) 45%,var(--line))}
+.mqi .no{width:46px;height:46px;border-radius:50%;background:var(--tc,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.15rem;font-weight:800;flex:0 0 auto}
+.mqi .bd{flex:1;min-width:0}.mqi .nm{font-size:1.1rem;font-weight:800}.mqi .why{color:var(--muted);font-size:.86rem;margin-top:2px;overflow-wrap:anywhere}
+.mqi .why b.late{color:var(--bad)}
+.mqi .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;margin:0}
+.mqi .acts .btn.main{background:color-mix(in srgb,var(--tc,var(--accent)) 65%,#000);border-color:transparent;color:#fff;font-weight:800;min-height:44px;padding:0 18px}
+.mqi .acts .btn.main.dark{background:#1E1E1C}
+.mq-plan{--tc:#378ADD}.mq-cons{--tc:#639922}.mq-surg{--tc:#E24B4A}.mq-chk{--tc:#EF9F27}.mq-pros{--tc:#7F77DD}.mq-fin{--tc:#1D9E75}.mq-arch{--tc:#888780}
+.mqsep{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.82rem;margin:8px 0 2px}.mqsep::before,.mqsep::after{content:'';flex:1;height:1px;background:var(--line)}
+.mql{display:flex;align-items:center;gap:12px;padding:9px 14px;background:var(--sunk);border:1px solid var(--line);border-radius:12px;color:var(--muted);font-size:.9rem;cursor:pointer}
+.mql .tm{font-weight:800;color:var(--ink);min-width:48px;font-variant-numeric:tabular-nums}.mql .nm{color:var(--ink);font-weight:600}.mql .k{font-weight:700}.mql .st{margin-inline-start:auto;font-size:.8rem}
+.mqe{padding:40px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px;font-size:1rem}
+.mqe b{display:block;font-size:1.3rem;color:var(--ink);margin-bottom:4px}
+@media (max-width:600px){.mqi{flex-wrap:wrap}.mqi .acts{width:100%;justify-content:stretch}.mqi .acts .btn.main{flex:1}.mqi.first .nm{font-size:1.3rem}}

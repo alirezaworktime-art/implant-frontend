@@ -1,0 +1,4 @@
+/* ---------- m51a ---------- */
+.m51dup{margin:8px 0 10px;padding:10px 12px;border:2px solid var(--bad,#b91c1c);border-radius:12px;background:#fef2f2;color:#7f1d1d;font-size:.92rem}
+.m51dup>b{display:block;margin-bottom:4px}
+.m51dup .m51r{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px}

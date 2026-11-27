@@ -1,0 +1,12 @@
+/* ---------- m54a ---------- */
+.m54card{margin:0 0 10px;padding:10px 12px;border:1px solid var(--line,#d6d3d1);border-radius:12px;background:var(--card,#fff);font-size:.92rem}
+.m54card .m54al{display:inline-block;margin:0 0 6px 6px;padding:2px 9px;border-radius:999px;background:#fee2e2;color:#991b1b;font-weight:800}
+.m54card .m54cl{margin:0 0 8px;padding:8px 10px;border-radius:10px;background:#1f2937;color:#fff;font-weight:700}
+.m54card .m54ln{margin:2px 0;color:var(--mut,#57534e)}
+.m54card .m54ln b{color:var(--ink,#1c1917)}
+.m54card .btns{margin-top:8px}
+.m54h{margin:14px 0 6px;font-weight:800;border-bottom:1px solid var(--line,#d6d3d1);padding-bottom:4px}
+.m54imp{display:grid;grid-template-columns:70px repeat(5,1fr);gap:6px;align-items:center;margin:4px 0}
+.m54imp input{min-width:0}
+@media (max-width:640px){.m54imp{grid-template-columns:60px 1fr 1fr}}
+.m54sgw{margin-top:6px;color:#991b1b;font-weight:800}

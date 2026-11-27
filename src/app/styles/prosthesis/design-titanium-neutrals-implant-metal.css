@@ -1,0 +1,36 @@
+
+/* Design: titanium neutrals (the implant metal) + Yazd turquoise for surgery + lapis for prosthetics.
+   One bold element: the khatam (8-point star) tile on the login hero and the app mark. Everything else stays quiet. */
+:root{
+  --bg:#edf0f3; --surface:#ffffff; --sunk:#f5f7f9; --ink:#17212b; --muted:#5d6a77; --line:#d8dfe6; --line2:#c4ced8;
+  --accent:#0a7680; --accent-2:#075a62; --accent-soft:#dcefef; --accent-ink:#ffffff;
+  --lapis:#34519a; --lapis-soft:#e3e8f5;
+  --warn:#8f5408; --warn-soft:#fbf0de; --ok:#25744a; --ok-soft:#e1f1e7; --bad:#bf3328; --bad-soft:#fbe5e2;
+  --r-sm:8px; --r:12px; --r-lg:16px;
+  --sh:0 1px 2px rgba(23,33,43,.06),0 4px 14px rgba(23,33,43,.05);
+  --sh-up:0 -6px 24px rgba(23,33,43,.10);
+  --font:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+  --tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.16' stroke-width='1.2'%3E%3Crect x='16' y='16' width='24' height='24'/%3E%3Crect x='16' y='16' width='24' height='24' transform='rotate(45 28 28)'/%3E%3Cpath d='M0 0l11 11M56 0L45 11M0 56l11-11M56 56L45 45'/%3E%3C/g%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1318; --surface:#151d24; --sunk:#10171d; --ink:#e3eaf0; --muted:#8f9cab; --line:#26323d; --line2:#33414e;
+  --accent:#3bbfc6; --accent-2:#5fd0d6; --accent-soft:#12343a; --accent-ink:#04191b;
+  --lapis:#93a9e6; --lapis-soft:#1c2643;
+  --warn:#e2a24c; --warn-soft:#352612; --ok:#5ec98f; --ok-soft:#12301f; --bad:#f07f74; --bad-soft:#3a1a17;
+  --sh:0 1px 2px rgba(0,0,0,.3); --sh-up:0 -6px 24px rgba(0,0,0,.4); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1318; --surface:#151d24; --sunk:#10171d; --ink:#e3eaf0; --muted:#8f9cab; --line:#26323d; --line2:#33414e;
+  --accent:#3bbfc6; --accent-2:#5fd0d6; --accent-soft:#12343a; --accent-ink:#04191b;
+  --lapis:#93a9e6; --lapis-soft:#1c2643;
+  --warn:#e2a24c; --warn-soft:#352612; --ok:#5ec98f; --ok-soft:#12301f; --bad:#f07f74; --bad-soft:#3a1a17;
+  --sh:0 1px 2px rgba(0,0,0,.3); --sh-up:0 -6px 24px rgba(0,0,0,.4); color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;direction:rtl;padding:0;font-feature-settings:"ss01"}
+body>.wrap{padding:16px 16px 150px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.wrap>*,.card>*{min-width:0}
+.wrap .wrap{margin:0;width:100%;max-width:none}
+::selection{background:var(--accent-soft)}
+

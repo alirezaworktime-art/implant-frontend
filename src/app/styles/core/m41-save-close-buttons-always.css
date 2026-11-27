@@ -1,0 +1,8 @@
+/* ---------- m41 (2026-11-17): save / close buttons always within reach — a dock at the bottom of long pages, sticky button row in long windows ---------- */
+#m41Dock{position:fixed;inset-inline:0;bottom:0;z-index:8;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(0,0,0,.12)}
+#m41Dock[hidden]{display:none}
+#m41Dock{flex-wrap:nowrap}
+#m41Dock .btn{flex:1 1 0;max-width:260px;min-width:0;min-height:48px;margin:0;padding-inline:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.m41dock{padding-bottom:84px}
+.sheet>.in>.btns:last-child,.sheet>.in>section>.btns:last-child,.sheet>.in>form>.btns:last-child{position:sticky;bottom:-1px;z-index:3;background:var(--surface);padding:10px 0 8px;margin-bottom:0;box-shadow:0 -8px 10px -8px rgba(0,0,0,.18)}
+.m41hint{font-size:.8rem;color:var(--muted);margin:4px 0 0;line-height:1.9}

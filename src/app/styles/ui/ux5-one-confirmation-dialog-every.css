@@ -1,0 +1,32 @@
+/* ux5: (2) one confirmation dialog for every action that cannot be taken back */
+#uxAskSh{z-index:75}
+#uxAskSh .in{max-width:min(460px,calc(94vw / var(--zm,1)))}
+#uxAskSh h3{margin:0 0 6px;font-size:1.05rem}
+#uxAskSh .uxmsg{margin:0 0 10px;color:var(--ink);line-height:1.8;white-space:pre-line}
+#uxAskSh .uxwho{margin:0 0 8px;color:var(--muted);font-size:.85rem}
+#uxAskSh .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+#uxAskSh .btns .btn{flex:1 1 140px;min-height:44px}
+.btn.danger,#uxAskOk.danger{background:var(--bad);border-color:var(--bad);color:#fff}
+.btn.danger:hover{filter:brightness(1.06)}
+:root[data-theme="dark"] .btn.danger,:root[data-theme="dark"] #uxAskOk.danger{color:#1a0705}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.danger,:root:not([data-theme="light"]) #uxAskOk.danger{color:#1a0705}}
+
+/* ux5: (3) compact plan form — unused sections fold to one-line headers */
+body.ux2cf #sections>.card[data-sec]:not(.used):not(.ux2open)>:not(h2){display:none!important}
+body.ux2cf #sections>.card[data-sec]:not(.used):not(.ux2open){padding-block:6px;min-height:0;cursor:pointer;background:var(--sunk);box-shadow:none}
+body.ux2cf #sections>.card[data-sec]:not(.used):not(.ux2open)>h2{margin:0;min-height:40px;display:flex;align-items:center;gap:8px;font-size:.98rem}
+body.ux2cf #sections>.card[data-sec]>h2{cursor:pointer}
+body.ux2cf #sections>.card[data-sec]>h2 .ux2fold{margin-inline-start:auto;font-size:.8rem;font-weight:700;color:var(--accent);white-space:nowrap}
+body.ux2cf #sections>.card[data-sec]:not(.used):not(.ux2open)>h2 .ux2fold::before{content:'+ باز کردن'}
+body.ux2cf #sections>.card[data-sec].ux2open:not(.used)>h2 .ux2fold::before{content:'− بستن'}
+body.ux2cf #sections>.card[data-sec].used>h2 .ux2fold{display:none}
+body.ux2cf #sections>.card[data-sec]>h2:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:3px;border-radius:8px}
+#ux2FormAll{display:none}
+body.ux2cf #ux2FormAll{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:4px 0 10px;font-size:.85rem;color:var(--muted)}
+#ux2FormAll button{font:inherit;font-weight:700;color:var(--accent);background:var(--surface);border:1px dashed var(--line2);border-radius:10px;min-height:40px;padding:4px 12px;cursor:pointer}
+@media (max-width:620px){
+  .appbar .brand>div{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:6px;align-items:center}
+  .appbar .brand>div>h1,.appbar .brand>div>small,.appbar .brand>div>.netp{grid-column:1;justify-self:start}
+  .appbar .brand>div>.attb{grid-column:2;grid-row:1/span 2;margin:0;align-self:center}
+  .appbar .brand>div>.netp{margin:2px 0 0}
+}

@@ -1,0 +1,11 @@
+/* ---------- m57a ---------- */
+.m57bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 10px;background:var(--card,#fff);border-bottom:1px solid var(--line,#d6d3d1)}
+.m57bar[hidden]{display:none}
+.m57t{display:inline-flex;align-items:stretch;border:1px solid var(--line,#d6d3d1);border-radius:999px;overflow:hidden;max-width:46vw}
+.m57t button{border:0;background:transparent;padding:6px 10px;font:inherit;cursor:pointer;min-height:34px}
+.m57t>button:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m57t.on{border-color:var(--pri,#2563eb);background:var(--pri-soft,#eff6ff)}
+.m57t.on>button:first-child{font-weight:700}
+.m57x{padding:6px 9px!important;color:var(--mut,#78716c)}
+.m57d{color:#d97706;font-style:normal}
+.m57q{border:1px dashed var(--line,#a8a29e);border-radius:999px;background:transparent;padding:6px 12px;font:inherit;cursor:pointer;min-height:34px}

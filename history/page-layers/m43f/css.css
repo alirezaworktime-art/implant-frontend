@@ -1,0 +1,4 @@
+/* ---------- m43f (2026-11-17): settings — choose the new name from the personal accounts ---------- */
+#m14Box #m43fSel{min-height:44px;width:100%}
+#m14Box #m14Name[hidden]{display:none}
+#m14Box #m43fSel+#m14Name:not([hidden]){margin-top:6px}

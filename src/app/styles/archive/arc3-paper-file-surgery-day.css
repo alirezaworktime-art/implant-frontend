@@ -1,0 +1,40 @@
+/* arc3: paper file on the surgery-day page */
+#viewSurg.arcm .arcx{display:none!important}
+#sgArcPat{margin-top:8px;display:flex;flex-direction:column;gap:8px}
+#sgArcPat .note{margin:0}
+.arcg{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.arcg[hidden]{display:none}
+#sgArcSes h2 small{font-size:.8rem;font-weight:500;color:var(--muted);margin-inline-start:6px}
+#sgArcSes .chips{margin-top:4px}
+#sgArcSes .arcadd{border-style:dashed}
+#sgArcSes .arcrow{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end;margin-top:10px}
+#sgArcSes .arcrow .f{flex:0 1 220px;margin:0}
+#sgArcSes .arcrow .btn{margin-inline-start:auto}
+#arcTeam .sgteam{margin-top:10px}
+#sgArcMsg:empty{display:none}
+#fxArcSheet>.in{display:flex;flex-direction:column;gap:12px}
+#arcBot h2{margin:0}
+#arcBot .btns{display:flex;gap:8px;flex-wrap:wrap}#arcBot .btns #fxaGo{flex:1}
+@media (min-width:720.02px){#viewSurg .sgpick .chip{height:auto;white-space:normal;line-height:1.35;overflow-wrap:anywhere}}
+
+/* fin1: account / cheque chips */
+.fin1w{margin-top:6px}.fin1w>span{display:block;margin-bottom:4px}.fin1w[hidden]{display:none}
+
+/* arc4: cost box */
+.arccost{background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.arccost h3{margin:0 0 6px;font-size:.98rem}.arccost .note{margin:6px 0 0}
+.arcct{width:100%;border-collapse:collapse}.arcct td{padding:4px 2px;border-bottom:1px dashed var(--line)}.arcct td:last-child{text-align:left;white-space:nowrap}
+.arcct tfoot td{font-weight:800;border-bottom:0;padding-top:6px}
+#arcUncW{flex:0 1 150px}
+
+/* ttl1: section title in the app bar */
+.appbar .brand h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60vw}
+
+/* arc5: date and doctor in each treatment's header; no session bar, no tariff lines */
+#viewSurg.arcm #sgArcSes{display:none}
+#viewSurg.arcm #surgSecs .calc{display:none}
+.arcsh{display:inline-flex;flex-wrap:wrap;gap:6px;align-items:center;font-weight:400}
+.arcsh input,.arcsh select{min-height:38px;padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:var(--sunk);font:inherit;font-size:.86rem;color:var(--ink)}
+.arcsh .arcsd{width:120px}.arcsh .arcsb{width:170px}
+#surgSecs [data-sec] h2{flex-wrap:wrap;gap:6px}
+

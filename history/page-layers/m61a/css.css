@@ -1,0 +1,28 @@
+/* m61a: «ادامه درمان» */
+#m61Sheet .in{gap:10px}
+.m61hd b{font-size:1.02rem}
+.m61c{border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m61q{font-weight:800;font-size:.92rem}.m61q small{color:var(--muted);font-weight:500}
+.m61s{font-size:.86rem}
+.m61ch{direction:ltr;display:flex;flex-direction:column;align-items:center;gap:4px}
+.m61jw{display:flex;gap:2px;direction:ltr}.m61jw+.m61jw{border-top:2px solid var(--line2);padding-top:4px}
+.m61md{width:2px;background:var(--line2);margin:0 3px}
+.m61t{width:min(32px,calc((100vw / var(--zm,1) - 110px) / 16));height:40px;border-radius:8px;border:1px solid var(--line);background:var(--sunk);font:inherit;font-size:.8rem;font-weight:700;color:var(--line2);padding:0;cursor:default}
+.m61t.im{cursor:pointer;color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.m61t.po{color:#fff;background:var(--lapis);border-color:var(--lapis)}
+.m61t.fx{background:var(--bad);border-color:var(--bad);color:#fff}
+.m61t.fl{background:var(--sunk);border:2px dashed var(--bad);color:var(--bad)}
+.m61t.sel{outline:3px solid var(--warn);outline-offset:1px}
+.m61lg{font-size:.7rem;color:var(--muted);text-align:center}.m61lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 5px 0 2px;vertical-align:-1px}
+.m61lg i.im{background:var(--accent)}.m61lg i.po{background:var(--lapis)}.m61lg i.fx{background:var(--bad)}.m61lg i.fl{border:2px dashed var(--bad)}
+.m61p{border-top:1px dashed var(--line);padding-top:8px;display:flex;flex-direction:column;gap:6px}
+.m61red{border:1px solid var(--bad);background:color-mix(in srgb,var(--bad) 4%,var(--surface));border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.m61op{display:flex;flex-direction:column;gap:6px}
+.m61op button{font:inherit;text-align:right;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:8px 12px;cursor:pointer;color:var(--ink)}
+.m61op button b{display:block;font-size:.9rem}.m61op button small{color:var(--muted);font-size:.74rem}
+.m61op button[aria-pressed="true"]{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--surface))}
+.chip.bad[aria-pressed="true"]{background:var(--bad);border-color:var(--bad);color:#fff}
+.pill.bad{background:color-mix(in srgb,var(--bad) 12%,transparent);color:var(--bad)}
+.m61in{font:inherit;border:1px solid var(--line);background:var(--sunk);border-radius:99px;padding:4px 12px;min-height:36px;width:190px}
+#m61Sheet textarea{font:inherit;width:100%;border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:8px 10px;min-height:52px;resize:vertical;color:var(--ink)}
+.m61nm{cursor:pointer;text-decoration:underline dotted;text-underline-offset:4px}

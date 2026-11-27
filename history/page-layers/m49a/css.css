@@ -1,0 +1,3 @@
+/* ---------- m49a ---------- */
+.m49bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
+tr.m5pick.m49on td{background:var(--accent-soft,#e0f2f1);font-weight:700}

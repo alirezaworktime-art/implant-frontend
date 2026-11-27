@@ -1,0 +1,19 @@
+/* manager board */
+.mb{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+@media (max-width:1100px){.mb{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:600px){.mb{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mbc{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--tc,#888);border-radius:14px;padding:10px 9px;min-height:140px}
+.mbc.hot{border:2px solid var(--bad);border-top:4px solid var(--tc,#888);background:color-mix(in srgb,var(--bad) 6%,var(--surface))}
+.mbc .h{display:flex;justify-content:space-between;align-items:baseline;font-size:.86rem;font-weight:800;color:color-mix(in srgb,var(--tc,#888) 60%,var(--ink))}.mbc .h span{font-size:1.2rem}.mbc.hot .h span{color:var(--bad)}
+.mbc .c{padding:7px 9px;border-radius:9px;background:color-mix(in srgb,var(--tc,#888) 12%,var(--surface));font-size:.84rem;cursor:pointer}.mbc .c small{display:block;color:var(--muted);font-size:.74rem}.mbc .c small.late{color:var(--bad)}
+.mbc .more{text-align:center;color:var(--muted);font-size:.78rem}
+.mbk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}@media (max-width:700px){.mbk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mbk div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}.mbk small{display:block;color:var(--muted);font-size:.76rem}.mbk b{font-size:1.2rem}
+body[data-tile="q"] #rAll [data-tile~="q"]:not([hidden]),body[data-tile="q"] #viewQueue [data-tile~="q"]:not([hidden]){display:flex}
+body[data-tile="q"] #kpiStrip,body[data-tile="q"] #rNow,body[data-tile="q"] .tilehd{display:none!important}
+
+/* patch-pdf: PDF کامل پرونده */
+.pdfi{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-inline-start:6px;border-radius:7px;border:1px solid var(--line);background:var(--surface);font-size:.8rem;line-height:1;cursor:pointer;vertical-align:middle;color:var(--muted);flex:0 0 auto}
+.pdfi:hover,.pdfi:focus-visible{border-color:var(--accent);color:var(--ink);outline:none}
+.pdfi.busy{opacity:.45;pointer-events:none}
+.qitem .pdfi{margin-inline-start:8px}
+

@@ -1,0 +1,39 @@
+/* count picker trigger: the native select stays (for value + change), the face is what people tap */
+.pick{position:relative;display:flex;align-items:center;justify-content:space-between;gap:6px;font:inherit;font-weight:800;font-size:.95rem;min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:10px;background:var(--sunk);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums;width:100%}
+.pick:hover{border-color:var(--accent)}
+.pick.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+[data-kind="pros"] .pick.on{background:var(--lapis-soft);border-color:var(--lapis);color:var(--lapis)}
+.pick select{position:absolute;inset:0;opacity:0;pointer-events:none;min-height:0}
+.pick .pv{flex:1;text-align:center}
+.pick svg{width:14px;height:14px;opacity:.6;flex:none}
+.jcnt .pick{padding:4px 6px;min-height:40px}
+.jcnt .pick svg{display:none}
+.quad{display:grid;grid-template-columns:auto auto;width:max-content;margin:4px auto 0;direction:ltr}
+.qd{font:inherit;font-weight:800;font-size:1rem;width:88px;height:46px;border:0;background:transparent;color:var(--muted);cursor:pointer;border-radius:10px}
+.qd:hover{background:var(--sunk)}
+.qd:nth-child(1){border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);border-radius:10px 0 0 0}
+.qd:nth-child(2){border-bottom:3px solid var(--ink);border-radius:0 10px 0 0}
+.qd:nth-child(3){border-right:3px solid var(--ink);border-radius:0 0 0 10px}
+.qd:nth-child(4){border-radius:0 0 10px 0}
+.qd[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.quad-sides{width:176px;margin:0 auto;padding:0}
+.items{display:grid;gap:10px}
+.items.two{grid-template-columns:1fr 1fr}
+@media (max-width:460px){.items.two{grid-template-columns:minmax(0,1fr)}}
+.item-box{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.item-box b{font-size:.92rem}
+.calc{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.calc b{color:var(--ink)}
+.brands,.totals{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:560px){.brands,.totals{grid-template-columns:repeat(2,1fr)}}
+.tot{border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;display:flex;flex-direction:column;gap:2px;cursor:pointer;background:var(--sunk);font:inherit;color:var(--ink);text-align:right}
+.tot:hover{border-color:var(--line2)}
+.tot.ref{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+.tot[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.tot small{color:var(--muted);font-size:.74rem}
+.tot b{font-variant-numeric:tabular-nums;font-size:1rem}
+.tot small+b+small{font-size:.68rem}
+.rowline{display:flex;justify-content:space-between;gap:8px;font-size:.9rem;font-variant-numeric:tabular-nums}
+.rowline.big{font-weight:800;font-size:1.08rem;border-top:1px solid var(--line);padding-top:8px}
+.card.plan2{border-color:var(--warn);background:var(--warn-soft)}
+

@@ -1,0 +1,17 @@
+/* centers */
+.l8acbar{flex-wrap:wrap;align-items:center}.l8acbar input[type=search]{flex:1 1 220px;min-width:0}
+.l8act tr[data-l8row]{cursor:pointer}.l8act tr[data-l8row]:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.l8act tr.l8cen td{border-top:2px solid var(--line)}.l8act tr.l8kid td:first-child{padding-inline-start:26px}.l8tr{color:var(--muted);margin-inline-end:4px}
+.l8tag{font-size:.75rem}.l8hint{display:block;margin-top:4px;line-height:1.8}.l8docs{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.l8docs .chip{min-height:36px}
+/* required groups on the sheet */
+.l8req{color:var(--bad);font-weight:800;margin-inline-start:3px}.l8rq{font-size:.72rem;font-weight:500;color:var(--muted);margin-inline-start:6px}
+.h9box.l8miss{outline:2px solid var(--bad);outline-offset:2px;background:var(--bad-soft)}
+/* files */
+.h9drop{cursor:pointer}.h9drop:hover{background:var(--accent-soft)}.h9drop:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.h9form .l3files label.btn{min-height:48px;padding:10px 20px;font-size:1rem;font-weight:800;background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.h9form .l3fl li{min-height:44px;align-items:center}.h9form .l3fl button{min-width:40px;min-height:40px}
+.l8up{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:250;width:min(380px,calc(100vw / var(--zm,1) - 32px));max-height:min(50vh,calc(50vh / var(--zm,1)));overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.2);padding:8px 12px}
+.l8uph{display:flex;align-items:center;justify-content:space-between;gap:8px}.l8upl{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.l8upr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 8px;align-items:center;font-size:.85rem}.l8upn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.l8upb{grid-column:1/-1;height:5px;border-radius:3px;background:var(--sunk);overflow:hidden}.l8upb i{display:block;height:100%;width:0;background:var(--accent)}
+.l8upr.ok .l8upp{color:var(--ok)}.l8upr.bad .l8upp{color:var(--bad);white-space:normal}.l8upr.bad .l8upb i{background:var(--bad)}.l8upr .btn{grid-column:1/-1;justify-self:start}

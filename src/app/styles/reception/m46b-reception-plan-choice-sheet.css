@@ -1,0 +1,6 @@
+/* ---------- m46b (2026-11-17): reception plan-choice sheet shows the content of every plan ---------- */
+#q7PlSh .in.m46bin{max-width:980px}
+.m46bw{margin-top:10px}
+.m46bd{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0}
+.m46bd>summary{font-weight:700;cursor:pointer;min-height:32px}
+.m46bd .pview{margin-top:8px}

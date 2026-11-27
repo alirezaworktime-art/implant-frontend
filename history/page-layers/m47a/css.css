@@ -1,0 +1,10 @@
+/* ---------- m47a: prosthesis session — the lab work order opens with a button ---------- */
+.m47hide{display:none!important}
+.m47go{margin:14px 0 4px;padding:12px;border:1.5px dashed var(--line,#c9d3df);border-radius:14px;text-align:center}
+.m47go .btn{min-width:240px;min-height:46px}
+.m47go .note{margin:8px 0 0}
+.m47hd{margin:16px 0 6px;padding:10px 12px;border-radius:12px;background:rgba(14,116,144,.08);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.m47hd b{font-size:1.02rem;flex:1}
+.m47hd .note{flex-basis:100%;margin:0}
+.m47open .l8req,.m47open .l8rq{display:none!important}
+.m47open .l8miss{outline:none!important;box-shadow:none!important}

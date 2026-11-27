@@ -1,0 +1,23 @@
+/* oc2: treatment per patient in «سایر کلینیک‌ها» */
+.oc2-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}.oc2-h h2{margin:0}.oc2-h h2 small{font-weight:400;color:var(--muted);margin-inline-start:6px}
+.oc2-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:8px 0 12px}.oc2-kpi>div{background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-width:0}.oc2-kpi small{display:block;color:var(--muted);font-size:.75rem}.oc2-kpi b{font-size:1.05rem;overflow-wrap:anywhere}
+@media (max-width:620px){.oc2-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.oc2-pats{display:grid;gap:6px}.oc2-pat{font:inherit;text-align:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;min-height:48px;display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--ink)}.oc2-pat:hover{border-color:var(--accent)}.oc2-pat small{color:var(--muted)}
+.oc2-teeth{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.oc2-t{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-radius:10px;padding:4px 10px;font-size:.85rem;cursor:pointer}.oc2-t b{font-weight:800}.oc2-t small{color:var(--muted);margin-inline-start:6px}
+.oc2-ses{align-items:flex-start}.oc2-st{margin:6px 0 10px}
+.chart .t .oc2-dot{position:absolute;inset-inline-end:3px;top:3px;width:7px;height:7px;border-radius:50%;background:var(--accent)}.chart .t{position:relative}
+.oc2-dot.g-ir{background:#2e7d32}.oc2-dot.g-ko{background:#1565c0}.oc2-dot.g-it{background:#ef6c00}.oc2-dot.g-sw{background:#6a1b9a}
+.oc2-oth{margin-top:6px;max-width:220px}
+#oc2ImpSh .grp{margin-bottom:10px}#oc2ImpSh .grp>span{display:block;font-size:.8rem;color:var(--muted);margin-bottom:4px}
+.oc2-pf{margin-top:8px}
+.oc-tariff .oc-t[data-fixed="1"] input.oc-tn{background:var(--sunk);color:var(--muted)}
+/* oc2: services in the session form are a compact grid (not the full-width oc1 rows); the prosthesis stepper wraps on a phone */
+.oc2-svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.oc2-svc .oc-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);min-height:52px}
+.oc2-svc .oc-row.on{border-color:var(--accent);background:var(--accent-soft)}
+.oc2-svc .oc-sn{min-width:0}.oc2-svc .oc-sn b{display:block;overflow-wrap:anywhere}.oc2-svc .oc-sn small{color:var(--muted)}
+.oc2-svc .oc-cc{display:flex;align-items:center;gap:6px;flex:none}.oc2-svc .oc-cc b{min-width:1.6em;text-align:center}
+.oc2-svc .oc-k{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--sunk);font:inherit;font-size:1.1rem;cursor:pointer}
+.oc2-st.stepper{display:flex;flex-wrap:wrap;gap:6px 10px;overflow:visible}.oc2-st .ps{flex:0 0 auto;max-width:100%}
+.oc2-st .ps{display:inline-flex;flex-direction:column;align-items:center;gap:2px;padding:6px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.oc2-st .ps b{white-space:nowrap}.oc2-st .ps small{display:block;font-size:.72rem;color:var(--muted)}.oc2-st .ps.ok{border-color:var(--accent);background:var(--accent-soft)}.oc2-st .ps.cur{border-style:dashed;border-color:var(--accent)}.oc2-st .ps i{display:none}
+

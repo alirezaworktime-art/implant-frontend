@@ -1,0 +1,18 @@
+/* staff: only the sections of the current tile */
+body[data-tile] #rAll [data-tile]{display:none}
+body[data-tile="plan"] #rAll [data-tile~="plan"]:not([hidden]),body[data-tile="fol"] #rAll [data-tile~="fol"]:not([hidden]),body[data-tile="surg"] #rAll [data-tile~="surg"]:not([hidden]),body[data-tile="sdone"] #rAll [data-tile~="sdone"]:not([hidden]),body[data-tile="chk"] #rAll [data-tile~="chk"]:not([hidden]),body[data-tile="unc"] #rAll [data-tile~="unc"]:not([hidden]),body[data-tile="pros"] #rAll [data-tile~="pros"]:not([hidden]){display:block}
+#rTabs,#rFab [data-rfab="cs"],#rFab [data-rfab="cp"]{display:none!important}
+/* consultant / surgery: sections of viewQueue */
+body[data-tile] #viewQueue [data-tile]{display:none}
+body[data-tile="cons"] #viewQueue [data-tile~="cons"]:not([hidden]),body[data-tile="chq"] #viewQueue [data-tile~="chq"]:not([hidden]),body[data-tile="und"] #viewQueue [data-tile~="und"]:not([hidden]),body[data-tile="plan"] #viewQueue [data-tile~="plan"]:not([hidden]),body[data-tile="surg"] #viewQueue [data-tile~="surg"]:not([hidden]),body[data-tile="chk"] #viewQueue [data-tile~="chk"]:not([hidden]),body[data-tile="unc"] #viewQueue [data-tile~="unc"]:not([hidden]){display:block}
+#viewQueue [data-tile] .qhead:first-child{margin-top:0}
+/* discharge checklist */
+.sdc{display:flex;flex-direction:column;gap:6px;margin:8px 0}
+.sdr{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--sunk)}
+.sdr.ok{border-color:color-mix(in srgb,#2e9e5b 50%,transparent);background:color-mix(in srgb,#2e9e5b 10%,var(--sunk))}
+.sdr .ck{width:22px;height:22px;border-radius:50%;border:2px solid var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex:0 0 auto}
+.sdr.ok .ck{background:#2e9e5b;border-color:#2e9e5b;color:#fff}
+.sdr .tx{flex:1;min-width:0;font-size:.9rem}.sdr .tx small{display:block;color:var(--muted);font-size:.78rem}
+.sdr input[type=checkbox]{width:20px;height:20px}
+.item.sdone{border-inline-start:4px solid #E24B4A}
+.item.cont{border-inline-start:4px solid #E24B4A}.pill.cont{background:#FCEBEB;color:#791F1F}

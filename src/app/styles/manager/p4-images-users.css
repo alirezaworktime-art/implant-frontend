@@ -1,0 +1,23 @@
+/* p4: images + users */
+.imgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin:6px 0 12px}
+.imth{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:4px;cursor:pointer;display:flex;flex-direction:column;gap:4px;font:inherit;color:inherit;text-align:center}
+.imth img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:7px;background:#000}
+.imth .pdf{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:7px;background:var(--bad-soft);color:var(--bad);font-weight:800}
+.imth small{font-size:.7rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.imvb{max-height:calc(72vh / var(--zm,1));overflow:auto;margin:8px 0}
+.ucols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:14px}@media(max-width:900px){.ucols{grid-template-columns:minmax(0,1fr)}}
+.item.off{opacity:.6}.item.ua .meta{line-height:1.7}
+/* p5: intake, rx, win-back, attendance, accounting */
+b.late,.late b{color:var(--bad)}
+.item.ik{border-inline-start:4px solid var(--accent)}
+.ikw{white-space:nowrap}.lnk{border:0;background:none;color:var(--bad);cursor:pointer;font:inherit;padding:0 4px}
+.agree{display:flex;gap:8px;align-items:flex-start;margin-top:8px}.agree input{margin-top:6px;width:18px;height:18px}
+.rxp{padding:8px 0;border-bottom:1px solid var(--line)}
+.rxc{margin-top:10px}
+.tbl{width:100%;border-collapse:collapse;font-size:.86rem}.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:right;vertical-align:top}.tbl th{color:var(--muted);font-weight:700;font-size:.78rem}
+.tbl td:nth-child(n+2){font-variant-numeric:tabular-nums}
+.pfr{padding:6px 0;border-bottom:1px solid var(--line)}
+.attb{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--sunk);color:var(--ink);border-radius:99px;padding:2px 10px;margin-inline-start:6px;cursor:pointer;vertical-align:middle}
+.acols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}@media(max-width:900px){.acols{grid-template-columns:minmax(0,1fr)}}
+.wrapx{overflow-x:auto}
+#viewAcc .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}#viewAcc .kpi b{font-size:1.25rem;overflow-wrap:anywhere}

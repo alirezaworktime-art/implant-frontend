@@ -1,0 +1,44 @@
+/* fx2 */
+.fx2big{width:100%;display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 16px;min-height:56px;font-size:1rem}
+.fx2big small{font-weight:400;font-size:.78rem;opacity:.9}
+.fx2v{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;align-items:end;border-bottom:1px dashed var(--line);padding:6px 0}
+.fx2v label{font-size:.74rem;display:flex;flex-direction:column;gap:2px}
+.fx2v input,.fx2v select{min-width:0;width:100%}
+.fx2v .x{min-height:36px}
+.fx2v .w2{grid-column:span 2}.fx2v .x{justify-self:end;align-self:end}
+@media (max-width:520px){.fx2v{grid-template-columns:1fr 1fr}}
+.fx2vt{width:100%;border-collapse:collapse;font-size:.82rem;margin:4px 0}
+.fx2vt th,.fx2vt td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:right}
+.fx2cv{display:inline-flex;margin-inline-end:6px}
+.fx2cv button{font:inherit;font-size:.8rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:5px 12px;min-height:34px;cursor:pointer}
+.fx2cv button:first-child{border-radius:0 10px 10px 0}.fx2cv button:last-child{border-radius:10px 0 0 10px}
+.fx2cv button[aria-pressed="true"]{background:var(--accent,#0F6E6E);color:#fff;border-color:var(--accent,#0F6E6E)}
+body[data-fx2cal] #rAll>*:not(.tilehd):not(#fx2Cal){display:none!important}
+.fx2cal{margin:8px 0 14px}
+.fx2nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.fx2nav small{color:var(--muted,#667)}
+.fx2g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.fx2wh{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;font-size:.74rem;color:var(--muted,#667);text-align:center;margin-bottom:2px}
+.fx2d{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:4px;min-height:110px;display:flex;flex-direction:column;gap:3px}
+.fx2g.mo .fx2d{min-height:86px}
+.fx2d.td{border-color:var(--accent,#0F6E6E);box-shadow:inset 0 0 0 1px var(--accent,#0F6E6E)}
+.fx2d.out{opacity:.45}
+.fx2dh{font-size:.78rem;display:flex;gap:4px;align-items:center}
+.fx2dh[data-fx2day]{cursor:pointer}
+.fx2dh em{font-style:normal;margin-inline-start:auto;background:var(--sunk);border-radius:99px;padding:0 6px;font-size:.7rem}
+.fx2i{font:inherit;font-size:.72rem;text-align:right;border:0;border-inline-start:3px solid var(--k-ot,#64748b);background:var(--sunk);color:var(--ink);border-radius:6px;padding:3px 5px;cursor:pointer;line-height:1.4;white-space:normal;word-break:break-word}
+.fx2i.k-sg{border-inline-start-color:var(--k-sg,#b42318)}.fx2i.k-pr{border-inline-start-color:var(--k-pr,#0f766e)}.fx2i.k-ck{border-inline-start-color:var(--k-ck,#b45309)}
+.fx2i.tk{border-inline-start-style:dashed}.fx2i.dn{text-decoration:line-through;opacity:.75}.fx2i.ns{opacity:.6}
+.fx2d .more{font-size:.7rem;color:var(--muted,#667)}
+@media (max-width:640px){.fx2g.wk{grid-template-columns:1fr}.fx2g.wk .fx2d{min-height:0}.fx2g.mo .fx2d{min-height:52px;padding:2px}.fx2g.mo .fx2i{display:none}.fx2g.mo .fx2dh em{margin:0}}
+.fx2dp{position:absolute;z-index:40;background:var(--surface,#fff);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.2);padding:8px;width:290px;direction:rtl}
+.fx2dpn{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.fx2dpn button,.fx2dpy button{font:inherit;border:1px solid var(--line);background:var(--sunk);color:var(--ink);border-radius:8px;min-height:34px;min-width:34px;cursor:pointer}
+.fx2dpy{display:flex;gap:4px;justify-content:space-between;margin-bottom:6px}.fx2dpy button{font-size:.76rem;flex:1}
+.fx2dpw,.fx2dpg{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.fx2dpw span{font-size:.72rem;color:var(--muted,#667)}
+.fx2dpg button{font:inherit;font-size:.86rem;border:0;background:transparent;color:var(--ink);border-radius:8px;min-height:34px;cursor:pointer}
+.fx2dpg button:hover{background:var(--sunk)}
+.fx2dpg button.td{box-shadow:inset 0 0 0 1px var(--accent,#0F6E6E)}
+.fx2dpg button.sel{background:var(--accent,#0F6E6E);color:#fff}
+

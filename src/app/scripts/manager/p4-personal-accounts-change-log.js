@@ -1,0 +1,31 @@
+/* ---------- p4: personal accounts + change log (manager) ---------- */
+const UROLE=['doctor','consultant','staff','surgery','lab','inventory','manager','accountant'];
+const ACT_L={prosSess:'جلسه‌ی پروتز',prosRef:'ارجاع به پزشک پروتز',labStart:'شروع کار لابراتوار',labStep:'مرحله‌ی لابراتوار',labFile:'فایل لابراتوار',labDefs:'تعریف‌های لابراتوار',save:'ذخیره‌ی طرح',toConsult:'ارسال به مشاور',confirm:'تأیید طرح',queueAdd:'پذیرش بیمار',queueUpdate:'ویرایش پذیرش',queueReopen:'ارسال به پزشک',queueDelete:'حذف از صف',queueOpen:'باز کردن از صف',toSurgery:'ارسال به جراحی',surgSave:'ثبت جلسه‌ی جراحی',settleDone:'تسویه‌ی اختلاف جراحی',payAdd:'ثبت پرداخت',paySet:'تغییر یا حذف پرداخت',prosSet:'مرحله‌ی پروتز',prosMap:'پایه و پونتیک',labNew:'سفارش لابراتوار',labSet:'تغییر سفارش لابراتوار',apptSave:'ثبت یا جابه‌جایی نوبت',apptSet:'وضعیت نوبت',taskDone:'کار پیگیری',undecided:'ثبت تصمیم‌نگرفته',undecidedSet:'نتیجه‌ی پیگیری طرح',patLink:'لینک بیمار',setFile:'فایل PDF طرح',setPhoto:'عکس بیمار',settings:'تغییر تنظیمات',invMove:'ورود یا خروج انبار',invItem:'قلم انبار',fileAdd:'افزودن عکس یا مدرک',fileDel:'حذف عکس یا مدرک',userSave:'حساب کاربری',intakeNew:'ساخت فرم آنلاین',intakeDel:'حذف فرم آنلاین',rxSave:'قالب نسخه',rxGive:'دستور و نسخه‌ی بیمار',wbSnooze:'پیگیری بازگشت بیمار',attMark:'ورود و خروج',attIps:'اینترنت کلینیک',expAdd:'ثبت هزینه',expDel:'حذف هزینه',cashClose:'بستن صندوق'};
+const UA={users:[],items:[],f:{from:'',to:'',user:'',act:''},edit:null,more:true};
+function uaInfo(r){let s={};try{s=JSON.parse(r.info||'{}')}catch(e){}const o=[];
+  if(s.patient)o.push(s.patient);if(s.pay)o.push((PAY_K[s.pay.kind]||s.pay.kind||'')+' '+fa(s.pay.amount||0)+(s.pay.due?' · سررسید '+jDay(s.pay.due):''));
+  if(s.pays)o.push(fa(s.pays.n)+' پرداخت، جمع '+fa(s.pays.sum));if(s.appt)o.push((AKL[s.appt.kind]||'')+' '+(s.appt.day?jDay(s.appt.day):'')+' '+faD(s.appt.time||''));
+  if(s.stage)o.push(PSTN[s.stage]||s.stage);if(s.st)o.push(String(s.st));if(s.rep)o.push('تکرار');if(s.undo)o.push('برگرداندن');if(s.file)o.push(IMKL[s.file.kind]||'');
+  if(s.user)o.push(s.user.name+' ('+(ROLE_LBL[s.user.role]||s.user.role)+')'+(s.user.active===false?' · غیرفعال':'')+(s.user.pw?' · رمز تغییر کرد':''));
+  if(s.settings)o.push(fa(s.settings.length)+' مورد');if(s.note)o.push('«'+s.note+'»');if(s.teeth)o.push(fa(s.teeth)+' دندان');return o.join(' · ')}
+async function loadUsers(more){try{if(!more){const u=await api('userList');UA.users=u.items||[];UA.items=[]}
+    const f=UA.f,p={limit:200};if(f.from)p.from=parseJ(f.from);if(f.to)p.to=parseJ(f.to);if(f.user)p.user=f.user;if(f.act)p.act=f.act;if(more&&UA.items.length)p.before=UA.items[UA.items.length-1].n;
+    const a=await api('auditList',p);UA.items=UA.items.concat(a.items||[]);UA.more=(a.items||[]).length>=200;renderUsers()}catch(e){$('uaList').innerHTML=`<div class="empty">${esc(e.message)}</div>`}}
+function renderUsers(){const U=UA.users,e=UA.edit||{};
+  $('uaUsers').innerHTML=U.length?U.map(u=>`<div class="item${u.active?'':' off'}"><div class="row1"><div><span class="nm">${esc(u.name)}</span><div class="meta">${esc(ROLE_LBL[u.role]||u.role)}${u.active?'':' · <b class="late">غیرفعال</b>'}</div></div>
+    <div class="acts"><button class="btn sm ghost" type="button" data-uedit="${esc(u.id)}">ویرایش / رمز تازه</button><button class="btn sm ghost" type="button" data-uact="${esc(u.id)}">${u.active?'غیرفعال کردن':'فعال کردن'}</button></div></div></div>`).join(''):'<div class="empty">هنوز حساب شخصی ساخته نشده. رمزهای مشترک هر نقش مثل قبل کار می‌کنند.</div>';
+  $('uaFormT').textContent=e.id?'ویرایش حساب «'+e.name+'»':'حساب تازه';$('ua_name').value=e.name||'';$('ua_role').value=e.role||'staff';$('ua_pw').value='';$('ua_pw').placeholder=e.id?'خالی بگذارید تا رمز عوض نشود':'دست‌کم ۶ حرف یا رقم';$('uaCancel').hidden=!e.id;
+  const us=[...new Set(U.map(u=>u.name))];$('ua_fuser').innerHTML='<option value="">همه</option>'+us.map(n=>`<option${UA.f.user===n?' selected':''}>${esc(n)}</option>`).join('');
+  $('ua_fact').innerHTML='<option value="">همه‌ی کارها</option>'+Object.keys(ACT_L).map(k=>`<option value="${k}"${UA.f.act===k?' selected':''}>${esc(ACT_L[k])}</option>`).join('');
+  $('uaList').innerHTML=UA.items.length?UA.items.map(r=>`<div class="item ua"><div class="row1"><div><span class="nm">${esc(ACT_L[r.action]||r.action)}</span>${r.pname?` <span class="meta">· ${esc(r.pname)}</span>`:''}<div class="meta">${esc(uaInfo(r))}</div></div>
+    <div class="meta" style="text-align:left;white-space:nowrap">${esc(jt(r.at))}<br><b>${esc(r.user||'رمز مشترک')}</b> · ${esc(ROLE_LBL[r.role]||r.role)}</div></div></div>`).join('')+(UA.more?'<button class="btn ghost" type="button" id="uaMore" style="width:100%;margin-top:8px">موارد قدیمی‌تر</button>':''):'<div class="empty">در این بازه کاری ثبت نشده.</div>'}
+document.addEventListener('click',async e=>{const t=e.target.closest&&e.target.closest('button');if(!t)return;
+  if(t.id==='tabUsers'){if(dirty&&!$('viewForm').hidden){alertMsg('اول فرم را ذخیره کنید.');return}show('users');return}
+  if(t.dataset.uedit){UA.edit=UA.users.find(u=>u.id===t.dataset.uedit)||null;renderUsers();$('ua_name').focus();return}
+  if(t.id==='uaCancel'){UA.edit=null;renderUsers();return}
+  if(t.id==='uaGen'){const A='abcdefghjkmnpqrstuvwxyz23456789';let p='';const r=crypto.getRandomValues(new Uint32Array(8));r.forEach(v=>p+=A[v%A.length]);$('ua_pw').value=p;$('ua_pw').type='text';return}
+  if(t.id==='uaSave'){const m=$('uaMsg');t.disabled=true;try{await api('userSave',{u:{id:UA.edit&&UA.edit.id||'',name:$('ua_name').value,role:$('ua_role').value,pw:$('ua_pw').value,lab:l2UaRead(),active:UA.edit?(!!UA.edit.active||(!UA.edit.hp&&!!$('ua_pw').value)):true}});m.className='msg ok';m.textContent='ذخیره شد. رمز را به خود شخص بدهید؛ با همان نقش و این رمز وارد می‌شود.';UA.edit=null;loadUsers()}catch(err){m.className='msg err';m.textContent=err.message}finally{t.disabled=false}return}
+  if(t.dataset.uact){const u=UA.users.find(x=>x.id===t.dataset.uact);if(!u)return;t.disabled=true;try{await api('userSave',{u:{id:u.id,name:u.name,role:u.role,active:!u.active}});loadUsers()}catch(err){alertMsg(err.message)}finally{t.disabled=false}return}
+  if(t.id==='uaFilter'){UA.f={from:$('ua_from').value.trim(),to:$('ua_to').value.trim(),user:$('ua_fuser').value,act:$('ua_fact').value};loadUsers();return}
+  if(t.id==='uaMore'){loadUsers(true);return}});
+

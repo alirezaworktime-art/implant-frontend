@@ -1,0 +1,11 @@
+/* ---------- m38 (2026-11-17): surgery sessions waiting for the internet, patients left in the surgery cartable ---------- */
+#m38Bar{position:fixed;inset-inline:0;bottom:0;z-index:9;display:flex;flex-direction:column;gap:6px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));pointer-events:none;max-height:60vh;overflow:auto}
+#m38Bar[hidden]{display:none}
+.m38n{pointer-events:auto;margin:0 auto;width:min(760px,100%);box-sizing:border-box;border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.8;display:flex;flex-wrap:wrap;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(0,0,0,.22);background:#fff6e0;color:#4a3200;border:1px solid #c98a00}
+.m38n.err{background:#fde8e6;color:#5c120c;border-color:#b3261e}
+.m38n.stk{background:#e8f0fe;color:#12305c;border-color:#3d6fd1}
+.m38n > span{flex:1 1 260px;min-width:0}
+.m38n button{font:inherit;font-size:14px;min-height:40px;padding:0 12px;border-radius:10px;border:1px solid currentColor;background:#fff;color:inherit;cursor:pointer}
+.m38n button.p{background:#0a7680;border-color:#0a7680;color:#fff;font-weight:700}
+#m38Det pre{white-space:pre-wrap;font:inherit;font-size:14px;line-height:1.9;margin:0;max-height:55vh;overflow:auto}
+body .toast{bottom:calc(92px + var(--m38h,0px))}

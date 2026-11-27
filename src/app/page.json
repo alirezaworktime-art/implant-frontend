@@ -1,0 +1,1616 @@
+{
+ "out": "index.html",
+ "parts": [
+  {
+   "raw": "<!doctype html>\n<html lang=\"fa\" dir=\"rtl\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n<script>"
+  },
+  {
+   "file": "app/scripts/ui/zoom1-auto-scale-wide-screens.js"
+  },
+  {
+   "raw": "</script>\n<meta name=\"robots\" content=\"noindex,nofollow\">\n<title>طرح درمان ایمپلنت</title>\n<link rel=\"manifest\" href=\"manifest.webmanifest\">\n<meta name=\"theme-color\" content=\"#075a62\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"icon-192.png\">\n<link rel=\"apple-touch-icon\" href=\"apple-touch-icon.png\">\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"طرح درمان\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"default\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap\" onload=\"this.onload=null;this.rel='stylesheet'\">\n<style>"
+  },
+  {
+   "file": "app/styles/prosthesis/design-titanium-neutrals-implant-metal.css"
+  },
+  {
+   "file": "app/styles/ui/app-bar.css"
+  },
+  {
+   "file": "app/styles/core/surfaces.css"
+  },
+  {
+   "file": "app/styles/core/buttons.css"
+  },
+  {
+   "file": "app/styles/plan/count-picker-trigger-native-select.css"
+  },
+  {
+   "file": "app/styles/archive/lists-inbox-archive.css"
+  },
+  {
+   "file": "app/styles/core/login.css"
+  },
+  {
+   "file": "app/styles/core/medical-history.css"
+  },
+  {
+   "file": "app/styles/core/sheets-bottom-sheet-phones-dialog.css"
+  },
+  {
+   "file": "app/styles/ui/toasts.css"
+  },
+  {
+   "file": "app/styles/plan/compact-plan-layout.css"
+  },
+  {
+   "file": "app/styles/plan/surgery-day-floating-treatment-list.css"
+  },
+  {
+   "file": "app/styles/surgery/patient-file-overview-strip-filters.css"
+  },
+  {
+   "file": "app/styles/manager/treatment-flow-calendar-prosthesis-lab.css"
+  },
+  {
+   "file": "app/styles/lab/lab.css"
+  },
+  {
+   "file": "app/styles/prosthesis/psess.css"
+  },
+  {
+   "file": "app/styles/manager/dashboard.css"
+  },
+  {
+   "file": "app/styles/consultant/ux2-patient-summary-doctor-consultant.css"
+  },
+  {
+   "file": "app/styles/manager/p4-images-users.css"
+  },
+  {
+   "file": "app/styles/core/p6-accounting-panel.css"
+  },
+  {
+   "file": "app/styles/ui/ui-tiles.css"
+  },
+  {
+   "file": "app/styles/reception/staff-only-sections-current-tile.css"
+  },
+  {
+   "file": "app/styles/core/doctor-picker.css"
+  },
+  {
+   "file": "app/styles/reception/manager-board.css"
+  },
+  {
+   "file": "app/styles/reception/pay3.css"
+  },
+  {
+   "file": "app/styles/core/path-bar.css"
+  },
+  {
+   "file": "app/styles/surgery/hints.css"
+  },
+  {
+   "file": "app/styles/reception/patch-walk.css"
+  },
+  {
+   "file": "app/styles/manager/mgr2.css"
+  },
+  {
+   "file": "app/styles/core/ui1-readability.css"
+  },
+  {
+   "file": "app/styles/appointments/appt2-purpose-picker.css"
+  },
+  {
+   "file": "app/styles/core/fx2.css"
+  },
+  {
+   "file": "app/styles/core/fx3.css"
+  },
+  {
+   "file": "app/styles/lab/cv3-lab-desk-uses-full.css"
+  },
+  {
+   "file": "app/styles/lab/fe1-path-bar-steps-timeline.css"
+  },
+  {
+   "file": "app/styles/ui/ux5.css"
+  },
+  {
+   "file": "app/styles/ui/ux5-a9-long-treatment-names.css"
+  },
+  {
+   "file": "app/styles/ui/ux5-a17-one-quick-guide.css"
+  },
+  {
+   "file": "app/styles/ui/ux5-one-confirmation-dialog-every.css"
+  },
+  {
+   "file": "app/styles/ui/ux5-a13-more-readable-colours.css"
+  },
+  {
+   "file": "app/styles/archive/arc3-paper-file-surgery-day.css"
+  },
+  {
+   "file": "app/styles/ui/ttl2-nothing-last-login-sign.css"
+  },
+  {
+   "file": "app/styles/ui/fix7a-patient-journey.css"
+  },
+  {
+   "file": "app/styles/ui/manager-one-tile.css"
+  },
+  {
+   "file": "app/styles/core/centers.css"
+  },
+  {
+   "file": "app/styles/core/workbench.css"
+  },
+  {
+   "file": "app/styles/other-clinics/oc2-treatment-per-patient.css"
+  },
+  {
+   "file": "app/styles/other-clinics/arc8-discount-per-treatment-line.css"
+  },
+  {
+   "file": "app/styles/consultant/id1-cheque-numbers.css"
+  },
+  {
+   "file": "app/styles/archive/arc10.css"
+  },
+  {
+   "file": "app/styles/lab/lf1.css"
+  },
+  {
+   "file": "app/styles/archive/arc11-re-implant-box-uncover.css"
+  },
+  {
+   "file": "app/styles/prosthesis/arc13-prosthesis-steps-re-implant.css"
+  },
+  {
+   "file": "app/styles/archive/arc14.css"
+  },
+  {
+   "file": "app/styles/prosthesis/lf2-abutment-pontic-teeth.css"
+  },
+  {
+   "file": "app/styles/ui/lf3-no-double-tap-zoom.css"
+  },
+  {
+   "file": "app/styles/archive/arc15.css"
+  },
+  {
+   "file": "app/styles/archive/arc16.css"
+  },
+  {
+   "file": "app/styles/plan/pk1.css"
+  },
+  {
+   "file": "app/styles/plan/pk2.css"
+  },
+  {
+   "file": "app/styles/plan/pk3.css"
+  },
+  {
+   "file": "app/styles/plan/pk4.css"
+  },
+  {
+   "file": "app/styles/plan/pk5-phone-layout.css"
+  },
+  {
+   "file": "app/styles/plan/pk6.css"
+  },
+  {
+   "file": "app/styles/plan/pk7-lf-list-rows-iphone.css"
+  },
+  {
+   "file": "app/styles/core/q1-quadrant-buttons-left-right.css"
+  },
+  {
+   "file": "app/styles/plan/q2-per-brand-sum-under.css"
+  },
+  {
+   "file": "app/styles/prosthesis/q4-prosthesis-sections-prosthesis-cash.css"
+  },
+  {
+   "file": "app/styles/surgery/q5-surgical-guide-card-end.css"
+  },
+  {
+   "file": "app/styles/surgery/q6-radiographs-before-after-surgery.css"
+  },
+  {
+   "file": "app/styles/reception/q7-archived-alternative-plans-reception.css"
+  },
+  {
+   "file": "app/styles/core/m1.css"
+  },
+  {
+   "file": "app/styles/core/m2.css"
+  },
+  {
+   "file": "app/styles/core/m4.css"
+  },
+  {
+   "file": "app/styles/core/m5.css"
+  },
+  {
+   "file": "app/styles/core/m6.css"
+  },
+  {
+   "file": "app/styles/core/m7.css"
+  },
+  {
+   "file": "app/styles/core/m8.css"
+  },
+  {
+   "file": "app/styles/core/m9.css"
+  },
+  {
+   "file": "app/styles/inventory/m10.css"
+  },
+  {
+   "file": "app/styles/plan/m22.css"
+  },
+  {
+   "file": "app/styles/core/m23.css"
+  },
+  {
+   "file": "app/styles/core/m24.css"
+  },
+  {
+   "file": "app/styles/core/m25.css"
+  },
+  {
+   "file": "app/styles/core/m26.css"
+  },
+  {
+   "file": "app/styles/core/m27.css"
+  },
+  {
+   "file": "app/styles/core/m29.css"
+  },
+  {
+   "file": "app/styles/core/m30.css"
+  },
+  {
+   "file": "app/styles/reception/m31.css"
+  },
+  {
+   "file": "app/styles/surgery/m38-surgery-sessions-waiting-internet.css"
+  },
+  {
+   "file": "app/styles/lab/m39-lab-side-sections-look.css"
+  },
+  {
+   "file": "app/styles/lab/m40-cartable-plain-lab-employee.css"
+  },
+  {
+   "file": "app/styles/core/m41-save-close-buttons-always.css"
+  },
+  {
+   "file": "app/styles/reception/m42-staff-accounts-role-ticks.css"
+  },
+  {
+   "file": "app/styles/core/m42b-patient-file-all-comments.css"
+  },
+  {
+   "file": "app/styles/surgery/m42d-surgery-day-today-s.css"
+  },
+  {
+   "file": "app/styles/plan/m43a-special-implant-rows-priced.css"
+  },
+  {
+   "file": "app/styles/manager/m43c-manager-tariffs-doctor-shares.css"
+  },
+  {
+   "file": "app/styles/prosthesis/m43d-temporary-prosthesis-tooth-jaw.css"
+  },
+  {
+   "file": "app/styles/inventory/m44a-second-fixture-after-early.css"
+  },
+  {
+   "file": "app/styles/core/m43f-settings-choose-new-name.css"
+  },
+  {
+   "file": "app/styles/inventory/m44b-paper-files-second-fixture.css"
+  },
+  {
+   "file": "app/styles/plan/m43g-implant-cost-split-brand.css"
+  },
+  {
+   "file": "app/styles/surgery/m45a-surgery-sheet-suture-kind.css"
+  },
+  {
+   "file": "app/styles/surgery/m45b-discharge-without-day-limit.css"
+  },
+  {
+   "file": "app/styles/surgery/m46a-direct-referral-surgery-brand.css"
+  },
+  {
+   "file": "app/styles/reception/m46b-reception-plan-choice-sheet.css"
+  },
+  {
+   "file": "app/styles/core/m46c-rows-teeth-count-doctor.css"
+  },
+  {
+   "file": "app/styles/lab/m47a-prosthesis-session-lab-work.css"
+  },
+  {
+   "file": "app/styles/core/m48a.css"
+  },
+  {
+   "file": "app/styles/core/m49a.css"
+  },
+  {
+   "file": "app/styles/core/m50a.css"
+  },
+  {
+   "file": "app/styles/core/m50b.css"
+  },
+  {
+   "file": "app/styles/core/m50c.css"
+  },
+  {
+   "file": "app/styles/core/m50d.css"
+  },
+  {
+   "file": "app/styles/core/m50e.css"
+  },
+  {
+   "file": "app/styles/core/m51a.css"
+  },
+  {
+   "file": "app/styles/core/m52a.css"
+  },
+  {
+   "file": "app/styles/core/m53a.css"
+  },
+  {
+   "file": "app/styles/core/m53b.css"
+  },
+  {
+   "file": "app/styles/core/m54a.css"
+  },
+  {
+   "file": "app/styles/core/m54b.css"
+  },
+  {
+   "file": "app/styles/core/m54c.css"
+  },
+  {
+   "file": "app/styles/core/m55a.css"
+  },
+  {
+   "file": "app/styles/core/m57a.css"
+  },
+  {
+   "raw": "</style>\n</head>\n<body>"
+  },
+  {
+   "file": "app/markup/01-markup.html"
+  },
+  {
+   "image": "app/assets/markup-1.png"
+  },
+  {
+   "file": "app/markup/01-markup-2.html"
+  },
+  {
+   "image": "app/assets/markup-2.png"
+  },
+  {
+   "file": "app/markup/01-markup-3.html"
+  },
+  {
+   "file": "app/markup/02-doctor-inbox.html"
+  },
+  {
+   "file": "app/markup/03-staff-reception.html"
+  },
+  {
+   "file": "app/markup/04-archive.html"
+  },
+  {
+   "file": "app/markup/05-appointments.html"
+  },
+  {
+   "file": "app/markup/06-prosthesis-phase.html"
+  },
+  {
+   "file": "app/markup/07-dental-lab.html"
+  },
+  {
+   "file": "app/markup/08-manager-dashboard.html"
+  },
+  {
+   "file": "app/markup/09-form.html"
+  },
+  {
+   "file": "app/markup/10-surgery-day-surgery-assistant.html"
+  },
+  {
+   "file": "app/markup/11-inventory.html"
+  },
+  {
+   "file": "app/markup/12-inventory-one-item.html"
+  },
+  {
+   "file": "app/markup/13-inventory-new-stock.html"
+  },
+  {
+   "file": "app/markup/14-appointment.html"
+  },
+  {
+   "file": "app/markup/15-consultant-patient-did-not-decide.html"
+  },
+  {
+   "file": "app/markup/16-consent-signature.html"
+  },
+  {
+   "file": "app/markup/17-patient-link.html"
+  },
+  {
+   "file": "app/markup/18-patient-file.html"
+  },
+  {
+   "file": "app/markup/19-big-number-picker.html"
+  },
+  {
+   "file": "app/markup/20-confirm-sheet.html"
+  },
+  {
+   "file": "app/markup/21-implant-details-surgery-day.html"
+  },
+  {
+   "file": "app/markup/22-surgery-session-review-before-saving.html"
+  },
+  {
+   "file": "app/markup/23-after-last-surgery-session-consultant.html"
+  },
+  {
+   "file": "app/markup/24-settings-sheet.html"
+  },
+  {
+   "file": "app/scripts/core/perf1-cached-intl-formatters.js"
+  },
+  {
+   "file": "app/scripts/surgery/model.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/calc.js"
+  },
+  {
+   "file": "app/scripts/surgery/form-render.js"
+  },
+  {
+   "file": "app/scripts/plan/serialization-db-stores-selections-arrays.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/pdf-drawing.js"
+  },
+  {
+   "file": "app/scripts/pdf/built-pdf-writer-a4-pages.js"
+  },
+  {
+   "file": "app/scripts/finance/server-google-apps-script.js"
+  },
+  {
+   "file": "app/scripts/reception/firestore-backend-fast-path-apps.js"
+  },
+  {
+   "file": "app/scripts/plan/email-text.js"
+  },
+  {
+   "file": "app/scripts/pdf/confirm-flow.js"
+  },
+  {
+   "file": "app/scripts/pdf/background-send-queue-doctor-never.js"
+  },
+  {
+   "file": "app/scripts/surgery/archive.js"
+  },
+  {
+   "file": "app/scripts/plan/tariff-settings.js"
+  },
+  {
+   "file": "app/scripts/surgery/roles-live-queue-reception.js"
+  },
+  {
+   "file": "app/scripts/manager/views.js"
+  },
+  {
+   "file": "app/scripts/surgery/surgery-day.js"
+  },
+  {
+   "file": "app/scripts/inventory/inventory.js"
+  },
+  {
+   "file": "app/scripts/ui/extras-theme-patient-file-archive.js"
+  },
+  {
+   "file": "app/scripts/finance/patient-file-timeline.js"
+  },
+  {
+   "file": "app/scripts/archive/archive-filters.js"
+  },
+  {
+   "file": "app/scripts/reception/reception-duplicate-check-national-id.js"
+  },
+  {
+   "file": "app/scripts/reception/overview-strip.js"
+  },
+  {
+   "file": "app/scripts/surgery/consultant-plain-language-summary-patient.js"
+  },
+  {
+   "file": "app/scripts/appointments/appointments-calendar.js"
+  },
+  {
+   "file": "app/scripts/surgery/appointment-sheet.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/prosthesis-board.js"
+  },
+  {
+   "file": "app/scripts/lab/dental-lab.js"
+  },
+  {
+   "file": "app/scripts/finance/patient-file-extra-tabs.js"
+  },
+  {
+   "file": "app/scripts/plan/patient-link.js"
+  },
+  {
+   "file": "app/scripts/consultant/consultant-undecided-plans-cheques-due.js"
+  },
+  {
+   "file": "app/scripts/consultant/consent-signature.js"
+  },
+  {
+   "file": "app/scripts/finance/manager-dashboard.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/pros2-monthly-jalali-dates.js"
+  },
+  {
+   "file": "app/scripts/finance/pros2-surgery-difference-settlement-consultant.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/pros2-prosthesis-day-doctor-abutment.js"
+  },
+  {
+   "file": "app/scripts/finance/pros2-cheques-patient-amounts-dates.js"
+  },
+  {
+   "file": "app/scripts/pdf/p4-patient-images-radiographs.js"
+  },
+  {
+   "file": "app/scripts/manager/p4-personal-accounts-change-log.js"
+  },
+  {
+   "file": "app/scripts/reception/p5-online-intake-post-op.js"
+  },
+  {
+   "file": "app/scripts/finance/p6-accounting-panel-accountant-role.js"
+  },
+  {
+   "file": "app/scripts/finance/state-helpers.js"
+  },
+  {
+   "file": "app/scripts/finance/panel.js"
+  },
+  {
+   "file": "app/scripts/finance/events.js"
+  },
+  {
+   "file": "app/scripts/appointments/views-polling.js"
+  },
+  {
+   "file": "app/scripts/appointments/events.js"
+  },
+  {
+   "file": "app/scripts/core/install-app-android-iphone.js"
+  },
+  {
+   "file": "app/scripts/archive/ui.js"
+  },
+  {
+   "file": "app/scripts/finance/fin2.js"
+  },
+  {
+   "file": "app/scripts/surgery/queue.js"
+  },
+  {
+   "file": "app/scripts/finance/patch-pdf-pdf.js"
+  },
+  {
+   "file": "app/scripts/finance/patch-pay3.js"
+  },
+  {
+   "file": "app/scripts/reception/patch-tidy.js"
+  },
+  {
+   "file": "app/scripts/appointments/patch-flow3.js"
+  },
+  {
+   "file": "app/scripts/reception/patch-ux.js"
+  },
+  {
+   "file": "app/scripts/finance/pos-which-card-reader-received.js"
+  },
+  {
+   "file": "app/scripts/finance/flow4-re-confirm-shows-what.js"
+  },
+  {
+   "file": "app/scripts/surgery/flow4-partial-surgery-patient-does.js"
+  },
+  {
+   "file": "app/scripts/manager/fix5-manager-changes-shared-manager.js"
+  },
+  {
+   "file": "app/scripts/core/hist-recorded-patient-history-tab.js"
+  },
+  {
+   "file": "app/scripts/reception/patch-walk.js"
+  },
+  {
+   "file": "app/scripts/manager/sec7-manager-changes-shared-staff.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/pros2-prosthesis-workflow-v2-work.js"
+  },
+  {
+   "file": "app/scripts/inventory/inv2-inventory-v2-receipts-supplier.js"
+  },
+  {
+   "file": "app/scripts/plan/mgr2-management-reports-manager-only.js"
+  },
+  {
+   "file": "app/scripts/finance/pay4-consultant-s-collection-sheet.js"
+  },
+  {
+   "file": "app/scripts/surgery/pa5-assistant-per-tooth-non.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/pa8-tooth-gets-implant-same.js"
+  },
+  {
+   "file": "app/scripts/inventory/pa9-storekeeper-s-cartable.js"
+  },
+  {
+   "file": "app/scripts/lab/lab2-lab-workflow-departments-steps.js"
+  },
+  {
+   "file": "app/scripts/lab/list-lab-cartable.js"
+  },
+  {
+   "file": "app/scripts/lab/small-form-dialog.js"
+  },
+  {
+   "file": "app/scripts/lab/order-sheet-steps-files-returns.js"
+  },
+  {
+   "file": "app/scripts/lab/start-restart-order.js"
+  },
+  {
+   "file": "app/scripts/lab/printing-order-sheet-barcode-label.js"
+  },
+  {
+   "file": "app/scripts/consultant/returns-designer-kind-step.js"
+  },
+  {
+   "file": "app/scripts/lab/definitions-lab-supervisor-manager.js"
+  },
+  {
+   "file": "app/scripts/core/3d-viewer-stl-ply-scans.js"
+  },
+  {
+   "file": "app/scripts/lab/manager-lab-staff.js"
+  },
+  {
+   "file": "app/scripts/lab/clicks.js"
+  },
+  {
+   "file": "app/scripts/lab/pref-reception-prosthesis-doctor-lab.js"
+  },
+  {
+   "file": "app/scripts/ui/bdrop-click-outside-window-closes.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/ponly-prosthesis-only-patients-abutment.js"
+  },
+  {
+   "file": "app/scripts/lab/lab3-one-click-uses-existing.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/psess-full-read-only-file.js"
+  },
+  {
+   "file": "app/scripts/lab/hani-lab-work-order-sheet.js"
+  },
+  {
+   "file": "app/scripts/lab/voice-work-order-sheet-recorded.js"
+  },
+  {
+   "file": "app/scripts/lab/lab4-lab-cartable-stage-tabs.js"
+  },
+  {
+   "file": "app/scripts/plan/h9b-sheet-fields-picked-lists.js"
+  },
+  {
+   "file": "app/scripts/finance/xl-implant-reason-per-fixture.js"
+  },
+  {
+   "file": "app/scripts/finance/xl3-accountant-s-menu-excel.js"
+  },
+  {
+   "file": "app/scripts/inventory/inv3.js"
+  },
+  {
+   "file": "app/scripts/lab/lab5-hani-sections-lab-cartable.js"
+  },
+  {
+   "file": "app/scripts/appointments/appt1-reception-one-big-button.js"
+  },
+  {
+   "file": "app/scripts/surgery/appt2-asks-what-each-purpose.js"
+  },
+  {
+   "file": "app/scripts/archive/fx1-file-number-after-surgery.js"
+  },
+  {
+   "file": "app/scripts/archive/fx2-archive-stage-filters-per.js"
+  },
+  {
+   "file": "app/scripts/finance/fx3-payment-warning-reason-collection.js"
+  },
+  {
+   "file": "app/scripts/finance/fx4-one-balance-everywhere-approvals.js"
+  },
+  {
+   "file": "app/scripts/archive/fx5.js"
+  },
+  {
+   "file": "app/scripts/lab/lab6-hani-parity-orders-list.js"
+  },
+  {
+   "file": "app/scripts/lab/lab7-stage-tabs-removed-cards.js"
+  },
+  {
+   "file": "app/scripts/finance/fix6b-money-consistency-versioned-saves.js"
+  },
+  {
+   "file": "app/scripts/ui/ux5-usability-round.js"
+  },
+  {
+   "file": "app/scripts/finance/oc1-surgeon-s-work-other.js"
+  },
+  {
+   "file": "app/scripts/archive/arc3-forgotten-paper-file-entered.js"
+  },
+  {
+   "file": "app/scripts/finance/fin1-card-card-destination-account.js"
+  },
+  {
+   "file": "app/scripts/archive/arc4-paper-file-uncovering-gbr.js"
+  },
+  {
+   "file": "app/scripts/ui/ttl1-app-bar-title-names.js"
+  },
+  {
+   "file": "app/scripts/archive/arc5-paper-file-each-treatment.js"
+  },
+  {
+   "file": "app/scripts/archive/arc6-paper-archive-file-editor.js"
+  },
+  {
+   "file": "app/scripts/prosthesis/fix7c-prosthesis-lab-flow-order.js"
+  },
+  {
+   "file": "app/scripts/finance/fix7d-money-rv4-m3-settle.js"
+  },
+  {
+   "file": "app/scripts/ui/ux6-duplicate-unused-options-removed.js"
+  },
+  {
+   "file": "app/scripts/lab/lab8-lab-cartable-centers-doctors.js"
+  },
+  {
+   "file": "app/scripts/other-clinics/oc2-treatment-per-patient-like.js"
+  },
+  {
+   "file": "app/scripts/core/boot.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/ux7-one-suture-field-paper.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/ui/ux8-error-prevention-confirm-irreversible.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/appointments/bk1-booking-review.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/arcb1-paper-archive-file-implant.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/arc7-paper-files-no-prosthesis.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/arc8-paper-files-discount-per.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/pl9-implant-pontic-never-same.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/other-clinics/oc3-per-patient-three-tabs.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/other-clinics/id1-patient-identity-cheques.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/pl10-duplicate-alarm-national-id.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/pl11-reception-beside-part-surgery.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/pf1-speed-poll-says-unchanged.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/other-clinics/oc4.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/ex1.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/arc9-opg-cbct.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/pdf/arc10-pdf-pdf-js.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/up2.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/msg2.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/gd2.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/nt2.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/lf1-lab-feedback-ir-project.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/arc11-paper-files-next-stage.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/arc12-re-implant-paper-files.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/arc13-paper-files-one-field.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/arc14-now-new-teeth-abutment.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/lf2-doctor-tap-tooth-once.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/lf3-tooth-buttons-ignore-phone.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/arc15-notes-box-per-session.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/arc16-has-tariff-again-per.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk1-consultant-form-clinic-doctor.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk2-surgery-day-has-typed.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk3-notes-date-author-recipient.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk4-login-step-types-paper.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk5-phone-layout-css-only.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/pk6-after-login-first-tile.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/pk7-css-only.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/q1-marker-only-layout-change.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/q2-sum-each-brand-qty.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/q3-all-x-classic-prosthesis.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/q4-reception-tick-doctor-consultant.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/q5-end-treatment-plan-form.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/q6-patient-radiographs-photos-two.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/q7-when-consultant-picks-one.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/q8-patient-pdf-surgery-table.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/q9-reception-when-stops-payment.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/q10-accounts-k70-k700-k10.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/inventory/a17-server-only-paper-file.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/a18-path-bar-paper-files.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/inventory-manager-accountant-only-two.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/m2-marker.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/what-unsaved-screen-now-who.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/m5-marker.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/manager/m6-jalali-calendar-opens-every.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m7-cheque-print-laid-out.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m8-cheques-chqdoc-use-m7.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/no-per-section-assistant-menu.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/chart-teeth-toggle-pointerdown-drag.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/layer.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/save-every-cheque-needs-amount.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/m13-every-leave-without-saving.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m14-manager-settings-accounting-name.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/layer.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/reopening-saved-tariff-every-all.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/pdf/not-saved-no-pdf.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/reception/label-reception-s-task-cards.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/pdf/form-guide-card-notes.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/tiles.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/palm-while-pen-use.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/root.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m23-lab-prosthesis-paused-prosthesis.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m24-lab-workbench-like-lab.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m25-lab-order-lists-like.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m26-lab-definitions-like-lab.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m27-like-lab-s-own.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/searchable-dropdown-stayed-open-after.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/m29-paper-files-treatment-beside.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/ui/m30-test-published-version-lab.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m31-before-surgery-part-goes.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/m32-every-drop-down-list.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/m33-paper-files-clearer-question.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m34-paper-files-three-independent.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m35-manager-daily-sheet-like.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m36-lab-cartable-referral-new.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m38-surgery-session-cannot-reach.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m39-side-sections-lab-cartable.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m40-plain-lab-employee-not.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m41-save-close-buttons-long.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m41b-paper-file-earlier-payments.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/manager/m42-staff-accounts-person-several.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m42b-patient-file-shows-treatment.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/m42c-floating-save-bar-no.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m42d-surgery-day-cartable-sessions.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m42e-server-only-surgery-session.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/m43a-implant-row-priced-their.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m43b-manager-opens-surgery-sheet.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m43c-manager-cartable-tile-patient.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/m43d-temporary-prosthesis-pmma-chosen.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/inventory/m44a-surgery-sheet-one-tooth.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/m43e-doctor-shares-entered-per.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/manager/m43f-manager-new-name-chosen.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/inventory/m44b-paper-files-tooth-marked.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/m43g-patient-file-shows-implant.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m45a-surgery-sheet.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m45b-patient-can-discharged-any.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m46a-reception-confirmed-patient-waiting.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/m46b-reception-sheet-which-plan.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m46c-surgery-sheet-was-work.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m47a-first-work-session-type.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/m48a-page-only.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/manager/m49a-manager-report.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m50a.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m50b.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m50c-surgery-day-choice-moves.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m50d-surgery-day-defaults-starts.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m50e-surgery-day-implant-window.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/archive/m51a-paper-files-repeated-file.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m52a.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/surgery/m53a-names-new-reception-tasks.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/reception/m53b-server-only-reception-tasks.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/m54a-second-audit.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/m54b-settlement-surgery-cost-difference.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/core/m54c-extra-fields-m54a-not.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/plan/m55a-implant-row-plan-form.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/consultant/m57a.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m58a-prosthesis-card-file-pdf.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m58b-prosthesis-card-no-field.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/lab/m59a-lab-order-form-doctor.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/inventory/m60a-surgery-day-assistant-what.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/prosthesis/m61a-prosthesis-two-buttons-every.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/dep1-editing-confirmed-plan-also.js"
+  },
+  {
+   "raw": "</script>\n<script>"
+  },
+  {
+   "file": "app/scripts/finance/o3s-option-agreed-default-surgery.js"
+  },
+  {
+   "raw": "</script>\n</body>\n</html>\n"
+  }
+ ]
+}

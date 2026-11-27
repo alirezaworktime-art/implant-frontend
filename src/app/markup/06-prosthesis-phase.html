@@ -1,0 +1,79 @@
+  <!-- prosthesis phase -->
+  <section id="viewUsers" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>کاربران و سابقه‌ی تغییرات</h2></div>
+    <div class="ucols" id="apW" style="margin-bottom:14px">
+      <section class="card"><h3>حضور و غیاب <small class="note" id="apRange"></small></h3>
+        <div class="fields"><label class="f">از تاریخ<input id="ap_from" inputmode="numeric" placeholder="خالی = ۳۰ روز اخیر"></label><label class="f">تا تاریخ<input id="ap_to" inputmode="numeric" placeholder="خالی = امروز"></label></div>
+        <div class="btns"><button class="btn sm" type="button" id="apGo">نمایش</button></div><p class="note">اینترنت کلینیک را از دکمه‌ی ⏱ بالای صفحه (روی دستگاهی داخل کلینیک) ثبت کنید.</p><div id="apAtt" class="wrapx"></div></section>
+      <section class="card"><h3>عملکرد هر نفر</h3><div id="apPerf" class="wrapx"></div></section>
+    </div>
+    <div class="ucols">
+      <section class="card"><h3 id="uaFormT">حساب تازه</h3>
+        <div class="fields"><label class="f">نام و نام خانوادگی<input id="ua_name" autocomplete="off"></label>
+          <label class="f">نقش<select id="ua_role"><option value="staff">منشی</option><option value="doctor">پزشک طرح درمان</option><option value="consultant">مشاور</option><option value="surgery">پزشک (جراحی، چکاپ، پروتز)</option><option value="lab">لابراتوار</option><option value="inventory">انباردار</option><option value="manager">مدیر</option><option value="accountant">حسابدار</option></select></label>
+          <label class="f">رمز<input id="ua_pw" type="password" autocomplete="new-password" class="ltr"></label></div>
+        <div class="btns" style="flex-wrap:wrap"><button class="btn" id="uaSave" type="button">ذخیره</button><button class="btn ghost" id="uaGen" type="button">ساخت رمز تصادفی</button><button class="btn ghost" id="uaCancel" type="button" hidden>انصراف</button></div>
+        <div class="msg" id="uaMsg"></div>
+        <p class="note">هر نفر در صفحه‌ی ورود نقش خودش را انتخاب می‌کند و رمز شخصی‌اش را می‌زند؛ همه‌ی کارهایش با نام خودش در سابقه ثبت می‌شود. رمزهای مشترک قبلی هم مثل قبل کار می‌کنند.</p>
+        <div class="list" id="uaUsers"></div><div class="payform" style="margin-top:12px"><b>رمز مشترک مدیر</b><p class="note">فقط از همین‌جا (ورود مدیر) عوض می‌شود؛ پزشک و مشاور دیگر نمی‌توانند آن را تغییر دهند.</p><div class="fields"><label class="f">رمز تازه (حداقل ۸ حرف)<input id="ua_mgrpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" id="uaMgrPw">ثبت رمز تازه‌ی مدیر</button></div><div class="msg" id="uaMgrMsg"></div></div><div class="payform" style="margin-top:12px" id="uaRolePw"><b>رمزهای مشترک بخش‌ها</b><p class="note">رمز تازه‌ی هر بخش را اینجا ثبت کنید؛ از همان لحظه رمز قبلی آن بخش دیگر کار نمی‌کند. هر رمز حداقل ۸ حرف و متفاوت با همه‌ی رمزهای دیگر باشد.</p><div class="fields"><label class="f">رمز تازه‌ی منشی (حداقل ۸ حرف)<input id="ua_staffpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="staffPw" data-rpin="ua_staffpw">ثبت رمز تازه‌ی منشی</button></div><div class="fields"><label class="f">رمز تازه‌ی پزشک (حداقل ۸ حرف)<input id="ua_docpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="docPw" data-rpin="ua_docpw">ثبت رمز تازه‌ی پزشک</button></div><div class="fields"><label class="f">رمز تازه‌ی مشاور (حداقل ۸ حرف)<input id="ua_conspw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="consPw" data-rpin="ua_conspw">ثبت رمز تازه‌ی مشاور</button></div><div class="fields"><label class="f">رمز تازه‌ی دستیار جراحی / پزشک (حداقل ۸ حرف)<input id="ua_surgpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="surgPw" data-rpin="ua_surgpw">ثبت رمز تازه‌ی دستیار جراحی</button></div><div class="fields"><label class="f">رمز تازه‌ی انباردار (حداقل ۸ حرف)<input id="ua_invpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="invPw" data-rpin="ua_invpw">ثبت رمز تازه‌ی انباردار</button></div><div class="fields"><label class="f">رمز تازه‌ی مشترک لابراتوار (حداقل ۸ حرف)<input id="ua_labpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="labPw" data-rpin="ua_labpw">ثبت رمز تازه‌ی لابراتوار</button></div><div class="fields"><label class="f">رمز تازه‌ی سایر کلینیک‌ها (دکتر علویکیا؛ حداقل ۸ حرف)<input id="ua_ocpw" type="password" autocomplete="new-password"></label></div><div class="btns"><button class="btn" type="button" data-rolepw="ocPw" data-rpin="ua_ocpw">ثبت رمز تازه‌ی سایر کلینیک‌ها</button></div><div class="msg" id="uaRoleMsg"></div></div></section>
+      <section class="card"><h3>سابقه‌ی تغییرات</h3>
+        <div class="fields"><label class="f">از تاریخ<input id="ua_from" inputmode="numeric" placeholder="۱۴۰۵/۰۸/۰۱"></label><label class="f">تا تاریخ<input id="ua_to" inputmode="numeric" placeholder="۱۴۰۵/۰۸/۳۰"></label>
+          <label class="f">کاربر<select id="ua_fuser"></select></label><label class="f">نوع کار<select id="ua_fact"></select></label></div>
+        <div class="btns"><button class="btn sm" id="uaFilter" type="button">نمایش</button></div>
+        <div class="list" id="uaList"><div class="empty">در حال بارگذاری…</div></div></section>
+    </div>
+  </section>
+  <section id="viewArc6" class="wrap" hidden><div id="a6Root"></div></section>
+  <section id="viewOc" class="wrap" style="padding:0" hidden><div id="ocRoot" class="wrap" style="padding:0"></div></section>
+  <section id="viewFin" class="wrap fin" style="padding:0" hidden>
+    <nav class="fnav" id="finNav" aria-label="بخش‌های حسابداری"></nav>
+    <div class="fmain" id="finMain"></div>
+  </section>
+  <section id="viewWb" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>بازگشت بیماران از دست‌رفته</h2><button class="btn sm ghost" type="button" onclick="loadWb()">تازه کردن</button></div>
+    <p class="note">بیمارانی که طرح گرفتند و تصمیم نگرفتند (تا یک سال)، طرح را پذیرفتند ولی ۳۰ روز گذشته و جراحی نشده‌اند، چکاپشان بیش از ۲ هفته عقب افتاده، یا مرحله‌ی پروتزشان مانده است. تماس بگیرید یا پیام آماده را بفرستید؛ «یک ماه بعد» مورد را تا یک ماه پنهان می‌کند.</p>
+    <div class="chips" id="wbF" style="margin:8px 0"></div>
+    <div class="list" id="wbList"><div class="empty">در حال بارگذاری…</div></div>
+  </section>
+  <section id="viewAcc" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>حسابداری ساده</h2></div>
+    <div class="acols">
+      <section class="card"><h3>صندوق روزانه</h3>
+        <div class="fields"><label class="f">روز<input id="ac_day" inputmode="numeric" placeholder="۱۴۰۵/۰۸/۰۱"></label></div><div class="btns"><button class="btn sm" type="button" id="acGo">نمایش</button></div>
+        <div id="acBox"><div class="empty">در حال بارگذاری…</div></div></section>
+      <div>
+      <section class="card"><h3>ثبت هزینه</h3>
+        <div class="fields"><label class="f">تاریخ<input id="ae_day" inputmode="numeric"></label><label class="f">نوع هزینه<select id="ae_cat"></select></label>
+          <label class="f">مبلغ (تومان)<input id="ae_amt" inputmode="numeric"></label><label class="f">پرداخت<select id="ae_pay"><option value="cash">نقد از صندوق</option><option value="card">کارت</option><option value="bank">واریز بانکی</option></select></label>
+          <label class="f full">شرح<input id="ae_note" placeholder="مثلاً: خرید گاز استریل"></label></div>
+        <div class="btns"><button class="btn" type="button" id="aeAdd">ثبت هزینه</button></div><div class="msg" id="aeMsg"></div></section>
+      <section class="card"><h3>گزارش درآمد و هزینه</h3>
+        <div class="fields"><label class="f">از تاریخ<input id="ar_from" inputmode="numeric" placeholder="خالی = ۳۰ روز اخیر"></label><label class="f">تا تاریخ<input id="ar_to" inputmode="numeric" placeholder="خالی = امروز"></label></div>
+        <div class="btns"><button class="btn sm" type="button" id="arGo">نمایش</button></div>
+        <div id="arBox" class="wrapx"><div class="empty">در حال بارگذاری…</div></div></section>
+      </div>
+    </div>
+  </section>
+  <section id="viewRx" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>دستورات بعد از جراحی و نسخه‌ها</h2></div>
+    <section class="card"><div id="rxSt"></div><p class="note">این قالب‌ها روز جراحی توسط دستیار جراحی برای بیمار چاپ و در پرونده‌اش ثبت می‌شود؛ بیمار در لینک پرونده‌ی خودش هم آن را می‌بیند. متن نسخه‌ی نمونه را پزشک باید با داروهای خودش جایگزین کند.</p>
+      <div id="rxEd"><div class="empty">در حال بارگذاری…</div></div>
+      <div class="btns" style="flex-wrap:wrap"><button class="btn" type="button" id="rxSave">ذخیره</button><button class="btn ghost" type="button" id="rxAdd">افزودن قالب</button><button class="btn ghost" type="button" id="rxReset">برگرداندن تغییرات</button></div><div class="msg" id="rxSMsg"></div></section>
+  </section>
+  <section id="viewPday" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>روز پروتز</h2><div class="seg" id="pdDay"><button type="button" data-pdd="t">امروز</button><button type="button" data-pdd="f">فردا</button></div></div>
+    <p class="note">برای هر بیمار «پایه و پونتیک» را بزنید و روی نمودار دندان مشخص کنید کدام دندان پایه (ایمپلنت) و کدام پونتیک است. این اطلاعات در پرونده و سفارش لابراتوار می‌نشیند.</p>
+    <div class="list" id="pdList"><div class="empty">در حال بارگذاری…</div></div>
+    <h3 class="pf-h" style="margin-top:18px">سایر بیماران مرحله‌ی پروتز</h3>
+    <div class="search" style="margin:6px 0"><input id="pdQ" placeholder="جستجوی بیمار"></div>
+    <div class="list" id="pdAll"></div>
+  </section>
+  <section id="viewPros" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><h2>پروتز و لابراتوار</h2><span class="live" id="prLive">زنده</span></div>
+    <p class="note">بیمارانی که جراحی‌شان تمام شده تا تحویل پروتز اینجا می‌مانند. روی هر بیمار بزنید تا مرحله را جلو ببرید یا سفارش لابراتوار ثبت کنید.</p>
+    <div class="prtop"><div class="seg" id="prMode"><button type="button" data-prm="b">تابلوی مراحل</button><button type="button" data-prm="l">فهرست</button></div><div class="search" style="flex:1;margin:0"><input id="prQ" placeholder="جستجوی بیمار"></div></div>
+    <div class="chips" id="prFilt"></div>
+    <div class="board" id="prBoard" hidden></div>
+    <div class="list" id="prList"><div class="empty">در حال بارگذاری…</div></div>
+  </section>
+

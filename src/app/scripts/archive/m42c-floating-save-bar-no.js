@@ -1,0 +1,1 @@
+/* ---------- m42c (2026-11-17): the floating save bar no longer flickers off when the save row is followed by a short block (paper file on phones): its own padding is not counted and the row may sit up to 400px above the last screen. ---------- */

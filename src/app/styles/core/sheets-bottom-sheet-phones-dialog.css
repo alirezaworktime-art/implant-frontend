@@ -1,0 +1,24 @@
+/* ---- sheets (bottom sheet on phones, dialog on wide screens) ---- */
+.sheet{position:fixed;inset:0;background:rgba(10,18,24,.48);display:flex;align-items:flex-end;justify-content:center;z-index:10}
+.sheet .in{background:var(--surface);width:100%;max-width:640px;max-height:92%;overflow:auto;border-radius:20px 20px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px;box-shadow:var(--sh-up)}
+.sheet .in::before{content:"";width:40px;height:4px;border-radius:4px;background:var(--line2);align-self:center;flex:none}
+.sheet h3{margin:2px 0 0;font-size:1.08rem;font-weight:800}
+@media (min-width:760px){.sheet{align-items:center}.sheet .in{border-radius:20px;padding-top:20px}.sheet .in::before{display:none}}
+@media (prefers-reduced-motion:no-preference){.sheet:not([hidden]) .in{animation:up .22s cubic-bezier(.2,.8,.2,1)}@keyframes up{from{transform:translateY(24px);opacity:.4}}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.88rem}
+.kv span:nth-child(odd){color:var(--muted)}
+.kv span:nth-child(even){min-width:0;overflow-wrap:anywhere}
+.preview{display:flex;flex-direction:column;gap:8px}
+.preview img{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+.steps{display:flex;flex-direction:column;gap:6px;font-size:.88rem}
+.steps .s{display:flex;gap:10px;align-items:center}
+.steps .s i{width:10px;height:10px;border-radius:50%;background:var(--line2);flex:none;font-style:normal}
+.steps .s.run i{background:var(--warn)} .steps .s.ok i{background:var(--ok)} .steps .s.err i{background:var(--bad)}
+/* number picker sheet */
+.npick{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.npick button{font:inherit;font-weight:800;font-size:1.35rem;height:64px;border-radius:14px;border:1px solid var(--line);background:var(--sunk);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums}
+.npick button:hover{border-color:var(--accent)}
+.npick button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.npick.pros button[aria-pressed="true"]{background:var(--lapis);border-color:var(--lapis);color:#fff}
+.npsub{font-size:.84rem;color:var(--muted);margin:-6px 0 0}
+

@@ -1,0 +1,42 @@
+<!-- settings sheet -->
+<div class="sheet" id="sSheet" hidden>
+  <div class="in">
+    <h3>تنظیمات</h3>
+    <label class="f">ایمیل گیرنده PDFها<input id="set_to" class="ltr" type="email" placeholder="recipient@example.com"></label>
+    <label class="f">نام کلینیک (سربرگ)<input id="set_clinic"></label>
+    <label class="f">نام پزشک و تخصص (سربرگ)<input id="set_doctor"></label>
+    <label class="f">تماس جهت هماهنگی<input id="set_phone"></label>
+    <label class="f">پذیرنده‌ها (هر سطر یک نام)<textarea id="set_recep" rows="3" placeholder="مثلاً:&#10;خانم احمدی&#10;خانم کریمی"></textarea></label><label class="f">تعطیلات رسمی (هر سطر یک تاریخ شمسی؛ نوبت خودکار بخیه / انکاوری / قالب‌گیری مثل جمعه به روز بعد می‌رود)<textarea id="set_hol" rows="3" placeholder="۱۴۰۵/۰۱/۰۱&#10;۱۴۰۵/۰۱/۰۲"></textarea></label>
+    <div id="setPriceW">
+    <h3 style="margin-top:6px">تعرفه‌ها (تومان)</h3>
+    <p class="note">این قیمت‌ها در هر فرم جدید خودکار پر می‌شوند. در خود فرم هم برای موارد خاص می‌شود عوضشان کرد. تغییر تعرفه روی فرم‌های قبلی اثری ندارد.</p>
+    <div id="set_prices" class="list"></div>
+    </div>
+    <h3 class="ux6x" style="margin-top:6px">روز جراحی</h3>
+    <label class="f">رمز ورود دستیار جراحی<input id="set_surgpw" type="password" autocomplete="new-password"></label>
+    <p class="note" id="set_surgpwN"></p>
+    <h3 class="ux6x" style="margin-top:6px">انبار</h3>
+    <label class="f">رمز ورود انباردار<input id="set_invpw" type="password" autocomplete="new-password"></label>
+    <p class="note" id="set_invpwN"></p>
+<h3 style="margin-top:6px">نوبت‌دهی، لابراتوار و مدیر</h3>
+    <label class="f">پزشک‌ها (هر سطر یک نام؛ برای نوبت‌دهی و سفارش لابراتوار)<textarea id="set_docs" rows="2" placeholder="مثلاً:&#10;دکتر علوی"></textarea></label>
+    <label class="f">جراح (پیش‌فرض روز جراحی)<input id="set_surgeon" placeholder="دکتر علویکیا"></label>
+    <label class="f">پزشک پروتز (پیش‌فرض دستورکار و پروتز)<input id="set_prosdoc" placeholder="د. مرتضی پور"></label>
+    <label class="f">پزشک‌های دستیار جراحی (هر سطر یک نام)<textarea id="set_assts" rows="3" placeholder="دکتر صادقی&#10;دکتر اکبرپور&#10;دکتر باصری"></textarea></label>
+    <label class="f">ظرفیت جراحی در روز (برای هشدار هنگام نوبت‌دهی؛ خالی = بدون محدودیت)<input id="set_cap" inputmode="numeric"></label>
+    <label class="f">رمز ورود لابراتوار<input id="set_labpw" type="password" autocomplete="new-password"></label>
+    <p class="note" id="set_labpwN"></p>
+    <label class="f">رمز ورود مدیر <small class="note">(فقط بار اول؛ بعد از آن از ورود مدیر)</small><input id="set_mgrpw" type="password" autocomplete="new-password"></label>
+    <p class="note" id="set_mgrpwN"></p>
+    <h3 style="margin-top:6px">رضایت‌نامه</h3>
+    <label class="f">متن رضایت‌نامه (بیمار هنگام ثبت نهایی مشاور امضا می‌کند و در PDF می‌آید)<textarea id="set_consent" rows="8"></textarea></label>
+    <div id="set_cons2"></div>
+    <p class="note">به‌جای {name} نام بیمار و به‌جای {clinic} نام کلینیک نوشته می‌شود. این متن یک پیش‌نویس عمومی است؛ آن را با مشاور حقوقی یا نظام پزشکی بازبینی کنید.</p>
+    <label class="f">برندها و سایزهای ایمپلنت (هر سطر یک سیستم؛ برای روز جراحی و جدول انبار)<textarea id="set_cat" rows="6" class="ltr" style="direction:rtl" placeholder="کره‌ای | Dentium | SuperLine | 3.6, 4.0, 4.5, 5.0 | 8, 10, 12, 14 | 4.5×3, 4.5×4"></textarea></label>
+    <p class="note">ترتیب هر سطر: گروه قیمتی (ایرانی / کره‌ای / ایتالیایی / سوئیسی / Root) | برند | سیستم | قطرها | طول‌ها | سایزهای کاور و هیلینگ (اختیاری). عددها را با کاما جدا کنید.</p>
+    <div class="msg" id="sMsg"></div>
+    <div class="btns"><button class="btn" id="sSave" type="button">ذخیره تنظیمات</button><button class="btn ghost" id="sClose" type="button">بستن</button><button class="btn ghost" id="sOut" type="button">خروج از این لپ‌تاپ</button></div>
+  </div>
+</div>
+
+<script>

@@ -1,0 +1,29 @@
+/* fx3 */
+#fx3AckSheet{z-index:14}
+.fx3ban{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.fx3ban .btn{margin-inline-start:auto}
+.fx3ban.exp{border-color:var(--bad,#b42318)}
+.fx3up{display:flex;flex-wrap:wrap;gap:8px}
+.fx3up .btn{display:inline-flex;cursor:pointer}
+.fx3drop{margin-top:8px;border:2px dashed var(--line2,#bbb);border-radius:12px;padding:14px;text-align:center;color:var(--muted,#667);font-size:.86rem}
+.fx3drop.on{border-color:var(--accent,#0F6E6E);background:var(--sunk)}
+.fx3cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 12px}
+.fx3cmp figure{margin:0;text-align:center}
+.fx3cmp .imth{width:100%;height:auto}
+.fx3cmp img{width:100%;max-height:340px;object-fit:contain;border-radius:10px;background:#fff}
+.fx3cmp figcaption{font-size:.82rem;margin-top:4px}
+
+/* fx4 */
+
+/* fx5 */
+
+/* zoom1 */@media print{html{zoom:1!important;--zm:1!important}}
+/* cv2: day list */
+.fx2d[data-fx2sel]{cursor:pointer}.fx2d.sel{outline:2px solid var(--accent,#0F6E6E);outline-offset:-1px}
+.cv2p{margin-top:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:10px 12px}
+.cv2h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}.cv2h b{font-size:.95rem}.cv2h .x{margin-inline-start:auto}
+.cv2r{display:grid;grid-template-columns:56px minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
+.cv2r .tm{font-variant-numeric:tabular-nums;color:var(--muted)}.cv2r .nm{font:inherit;font-weight:700;text-align:right;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;text-decoration:underline dotted}
+.cv2r small{color:var(--muted)}.cv2r .ph{direction:ltr;color:var(--accent,#0F6E6E);text-decoration:none;font-size:.85rem}
+.cv2s{font-size:.72rem;border-radius:99px;padding:1px 8px;background:var(--sunk)}.cv2s.dn{background:#dcfce7;color:#166534}.cv2s.ns{background:#fee2e2;color:#991b1b}
+@media (max-width:560px){.cv2r{grid-template-columns:48px minmax(0,1fr) auto}.cv2r .ph{grid-column:2/-1}}

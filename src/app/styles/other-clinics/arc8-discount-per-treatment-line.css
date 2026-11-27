@@ -1,0 +1,39 @@
+/* arc8: discount per treatment line */
+.a8ds{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;display:grid;gap:6px}
+.a8r{display:grid;grid-template-columns:minmax(110px,auto) auto minmax(0,160px) minmax(0,1fr);gap:8px;align-items:center}
+.a8r>span{font-size:.85rem;color:var(--muted)}.a8r b{justify-self:end;font-variant-numeric:tabular-nums}
+.a8r input{min-height:40px}.a8r .seg button{min-height:36px;padding:2px 10px}
+.a8net{border-top:1px solid var(--line);padding-top:6px}.a8net b{font-size:1.02rem}
+.a8sum{font-size:.8rem;color:var(--muted)}
+@media (max-width:620px){.a8r{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"l s" "i b"}.a8r>span{grid-area:l}.a8r .seg{grid-area:s}.a8r input{grid-area:i}.a8r b{grid-area:b}.a8net{grid-template-areas:"l b"}}
+
+/* pl9: math left to right, payment mode, deposit, doctor per tooth, GBR per tooth, anesthesia / sedation */
+.pl9m{direction:ltr;unicode-bidi:isolate;display:inline-block;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pl9bl{display:flex;flex-wrap:wrap;gap:4px 16px}
+.chart .t.pl9x{opacity:.35;text-decoration:line-through}
+.pl9pm{margin:6px 0 10px}.pl9pm button{min-height:42px;padding:4px 16px;font-weight:700}
+#pl9Cash{align-items:end}.pl9net{font-size:.95rem;padding:6px 0}
+.pl9rcv{border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+.pl9rcv .chips{margin:4px 0 8px}
+.pl9gn{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}.pl9gn>small{flex-basis:100%;color:var(--muted)}
+.pl9g{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:10px;padding:4px 8px}
+.pl9g button{min-width:38px;min-height:38px;border-radius:8px;border:1px solid var(--line);background:var(--card,transparent);font-size:1.05rem;cursor:pointer}
+.pl9g b.n{min-width:22px;text-align:center}
+.pl9an{margin:4px 0 8px}
+.pl9owe{display:block;margin:4px 0}
+.pl9pt .pl9dr{margin:4px 0 6px}.pl9pt .pl9dr .chip{font-size:.85rem}
+
+/* oc3: three tabs per patient in «سایر کلینیک‌ها»; the plan-form cards without their own price fields */
+.oc3-tabs{margin:8px 0 12px}.oc3-tabs button{min-height:44px;font-weight:700}
+.oc3f{display:grid;gap:12px}.oc3f .card{margin:0}
+.oc3f label.f:not(.oc3-pf):has(> input.price),.oc3f .grp:has(.brands),.oc3f .calc,.oc3f .pz,.oc3f p.note:has(+ .calc){display:none!important}
+.oc3f .tag{display:none}
+.oc3-line{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;border-top:1px dashed var(--line);margin-top:10px;padding-top:8px}
+.oc3-line .oc3-sn{font-weight:700}.oc3-line label.f{margin:0;min-width:160px}.oc3-line label.f input{max-width:190px}
+.oc3-line b.pl9m{font-size:1rem}.oc3-line i.oc-warn{font-size:.8rem}
+.oc3-plan .oc3-line{display:none}
+.oc3-plan-sum{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin:6px 0 10px}
+.oc3-plan-sum i{font-style:normal;color:var(--muted)}
+select.oc3-sec{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-height:44px;background:var(--surface);color:var(--ink);max-width:220px}
+@media (max-width:640px){select.oc3-sec{flex-basis:100%}}
+

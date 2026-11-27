@@ -1,0 +1,10 @@
+/* ---------- m1: ---------- */
+.m1{display:flex;flex-direction:column;gap:14px}
+.m1top{display:flex;flex-direction:column;gap:10px}
+.m1per{display:flex;flex-direction:column;gap:8px}
+.m1dates{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}.m1dates .f{max-width:160px}
+.m1links{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px}
+.m1k .kpi b{font-size:1.25rem}
+.m1 .kv{margin:6px 0 12px}
+.m1 .bad{color:var(--bad)}
+body[data-role="manager"] #viewInv [data-iseg]:not([data-iseg="rep"]):not([data-iseg="fix"]):not([data-iseg="acc"]),body[data-role="accountant"] #viewInv [data-iseg]:not([data-iseg="rep"]):not([data-iseg="fix"]):not([data-iseg="acc"]){display:none!important}

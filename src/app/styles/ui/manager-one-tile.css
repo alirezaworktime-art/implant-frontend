@@ -1,0 +1,33 @@
+/* manager: «داشبورد» and «گزارش‌های مدیریتی» in one tile */
+.ux6dseg{display:flex;margin:4px 0 12px;max-width:520px}
+.ux6dseg button{flex:1 1 0;min-height:40px}
+/* patient file › payments: the amount boxes fit any phone width (320–430) in both themes */
+.paysum{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:560px){.paysum{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.paysum .kpi{min-width:0}
+.paysum .kpi b{font-size:clamp(.95rem,4.3vw,1.25rem);overflow-wrap:anywhere;white-space:normal}
+
+/* ux7: suture is one field of the file, not of every treatment */
+#a6Secs .a6sut{display:none!important}
+.a6sutf{margin-top:10px}.a6sutf .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* ux8: second message line under an undo toast */
+.toast .ux8m{flex-basis:100%;margin-top:4px;font-size:.85rem;opacity:.95}.toast .ux8m.err{color:#ffd2cc}
+
+/* bk1: third booking choice */
+.bkmb.ot{border-color:color-mix(in srgb,var(--muted) 45%,var(--line))}.bkmb.ot b{color:var(--ink)}
+
+/* lab8: searchable picker, centers, boxes, «نظارت», upload, required sheet fields, workbench, label preview */
+select.l8ssn{position:absolute!important;opacity:0!important;width:1px!important;height:1px!important;min-width:0!important;min-height:0!important;padding:0!important;border:0!important;pointer-events:none;overflow:hidden}
+.l8ssb{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-width:0;min-height:40px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:.9rem;text-align:start;cursor:pointer}
+.l8ssb:focus-visible{outline:2px solid var(--accent);outline-offset:1px}.l8ssb[disabled]{opacity:.55;cursor:default}
+.l8ssb .l8sst{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.l8ssb i{font-style:normal;color:var(--muted);flex:0 0 auto}
+th .l8ssb{min-height:34px;font-size:.8rem;font-weight:500}
+.l8ssp{position:fixed;z-index:300;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.22);display:flex;flex-direction:column;overflow:hidden}
+.l8ssq{margin:8px;width:auto;min-width:0;flex:0 0 auto}
+.l8ssl{overflow:auto;padding:0 6px 6px;display:flex;flex-direction:column;gap:2px;min-height:0;flex:1 1 auto}
+.l8sso{display:block;width:100%;text-align:start;border:0;background:none;color:inherit;font:inherit;font-size:.9rem;padding:9px 10px;border-radius:8px;cursor:pointer;white-space:normal;overflow-wrap:anywhere;min-height:40px}
+.l8sso:hover,.l8sso:focus-visible{background:var(--accent-soft);outline:none}.l8sso[aria-selected="true"]{font-weight:800;color:var(--accent)}.l8sso[disabled]{opacity:.5}
+.l8sse{padding:10px 14px;color:var(--muted);font-size:.85rem}
+.l8chq{margin:0 0 6px;width:100%}
+.l6ms>summary.l8mss{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.5}

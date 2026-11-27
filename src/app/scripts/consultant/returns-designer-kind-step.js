@@ -1,0 +1,9 @@
+/* ---------- returns (by designer, kind, step) ---------- */
+async function l2RetView(L){const F=L2.retF;L.innerHTML=`<section class="card"><div class="fields"><label class="f">از<input id="l2rf" inputmode="numeric" placeholder="خالی = ۹۰ روز اخیر" value="${esc(F.from)}"></label><label class="f">تا<input id="l2rt" inputmode="numeric" placeholder="خالی = امروز" value="${esc(F.to)}"></label><div class="btns"><button class="btn sm" type="button" id="l2rGo">نمایش</button></div></div><div id="l2rOut"><div class="empty">در حال بارگذاری…</div></div></section>`;
+  try{const j=await api('labRet',{from:F.from?parseJ(F.from):'',to:F.to?parseJ(F.to):''});const I=j.items||[],O=$('l2rOut');if(!O)return;
+    const grp=k=>{const g={};I.forEach(r=>{const v=r[k]||'—';g[v]=(g[v]||0)+1});return Object.entries(g).sort((a,b)=>b[1]-a[1])};
+    const box=(t,k)=>`<div class="l2g"><b>${t}</b>${grp(k).map(([v,c])=>`<div><span>${esc(k==='kind'?L2_RK[v]||v:v)}</span><b class="tnum">${fa(c)}</b></div>`).join('')||'<div class="meta">—</div>'}</div>`;
+    O.innerHTML=`<p class="note">${esc(jDay(j.from))} تا ${esc(jDay(j.to))} · ${fa(I.length)} برگشت</p>${I.length?`<div class="l2gs">${box('طراح','designer')}${box('نوع','kind')}${box('مرحله','dname')}${box('نوع کار','wt')}</div>
+      <div class="ftsc"><table class="tbl ftbl"><thead><tr><th>تاریخ</th><th>#</th><th>بیمار</th><th>نوع</th><th>مرحله</th><th>طراح</th><th>کارمند مرحله</th><th>دلیل</th><th>ثبت‌کننده</th></tr></thead><tbody>${I.map(r=>`<tr><td>${esc(jd(r.at))}</td><td class="tnum">${l2No(r.no)}</td><td>${esc(r.name||'')}</td><td>${esc(L2_RK[r.kind]||r.kind)}</td><td>${esc(r.dname||'')}</td><td>${esc(r.designer||'')}</td><td>${esc(r.suser||'')}</td><td>${esc(r.reason||'')}</td><td>${esc(r.by||'')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">در این بازه برگشتی ثبت نشده.</div>'}`}
+  catch(e){const O=$('l2rOut');if(O)O.innerHTML=`<div class="empty">${esc(e.message)}</div>`}}
+

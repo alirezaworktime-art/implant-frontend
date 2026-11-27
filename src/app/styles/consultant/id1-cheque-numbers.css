@@ -1,0 +1,46 @@
+/* id1: cheque numbers, «موبایل ندارد» */
+input.id1no{font:inherit;border:1px solid var(--line);border-radius:8px;padding:6px 8px;min-height:40px;width:150px;max-width:100%;background:var(--surface);color:var(--ink);direction:ltr}
+.cqt td input.id1no{width:130px}
+.id1st{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin:4px 0}
+label.chk.id1np{margin-top:-4px}
+
+/* pl10 */
+.pl10bl b{font-size:.95rem}
+#pl10Via .f{margin-top:6px}
+.pl10brs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:10px 0}
+.pl10brs .tot{display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer;min-height:64px}
+.pl10brs .tot b{font-size:1.05rem}
+.pl10lo{margin:4px 0 0}
+
+/* pl11 */
+.pl11hide{display:none!important}
+#pl11Tag{margin:8px 0}
+.pl11pt{margin:6px 0 4px}.pl11pt button{min-height:42px;font-weight:700}
+#pl11Note{margin:4px 0 8px}
+
+/* oc4: thin progress bar while «سایر کلینیک‌ها» talks to the server */
+#ocRoot{position:relative}
+#ocRoot.oc-wait::before{content:"";position:sticky;top:0;display:block;height:3px;margin-bottom:-3px;z-index:5;border-radius:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);background-size:40% 100%;animation:ocw 1s linear infinite}
+@keyframes ocw{from{background-position:-40% 0}to{background-position:140% 0}}
+
+/* ex1 */
+.ex1rep{margin-top:8px}.ex1rep small{display:block;color:var(--muted);font-size:.8rem;margin-bottom:4px}
+.ex1sg{margin:8px 0}
+#ex1LoanW{margin-top:6px}
+.ex1tag{color:var(--muted);font-size:.78rem}
+
+/* arc9 */
+.a9scan{margin-top:8px}.a9sut2{margin-top:6px}
+.a9gd{margin-top:12px}.a9gd .a6dr{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px}.a9gd input{max-width:160px}
+.a9ct th:nth-child(1){width:14%}.a9ct th:nth-child(2){width:36%}.a9ct th:nth-child(3){width:18%}.a9ct th:nth-child(4){width:16%}
+.a9xr{margin-top:10px}.a9xrl{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.a9th{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;width:120px;padding:6px;border:1px solid var(--line);border-radius:10px;background:var(--card);cursor:pointer;color:inherit;font:inherit}
+.a9th img{width:108px;height:72px;object-fit:cover;border-radius:6px;background:#000}.a9th i{width:108px;height:72px;display:grid;place-items:center;border-radius:6px;background:#eee;color:#555;font-style:normal}
+.a9th small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.3}.a9th.pend{opacity:.85}.a9th .x{position:absolute;top:2px;left:2px;border:0;background:#c33;color:#fff;border-radius:50%;width:20px;height:20px;line-height:18px;cursor:pointer}
+.a9b{margin-top:6px}
+#a9vSh .in{max-width:none;width:min(98vw,1400px);padding:8px}
+.a9vt{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}.a9vt .btns{margin:0}
+.a9vb{height:min(84vh,900px);overflow:hidden;background:#000;border-radius:10px;display:grid;place-items:center;touch-action:none;cursor:grab;user-select:none}
+.a9vb img{max-width:100%;max-height:100%;transform-origin:center center;will-change:transform;pointer-events:none}
+@media (max-width:600px){#a9vSh .in{width:100vw}.a9vb{height:78vh}}
+

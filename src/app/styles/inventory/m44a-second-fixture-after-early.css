@@ -1,0 +1,6 @@
+/* ---------- m44a (2026-11-17): second fixture after an early failure ---------- */
+.m44w{margin-top:8px;padding:10px;border:1px dashed var(--line);border-radius:10px;display:grid;gap:8px}
+.m44w[hidden]{display:none}
+.m44w .m44g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.m44w select,.m44w input{min-height:44px;width:100%}
+.m44w small{color:var(--muted)}

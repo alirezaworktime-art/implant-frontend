@@ -1,0 +1,31 @@
+/* ux5: A17 one quick-guide box at a time */
+body:has(.hintc) #p5Note{display:none!important}
+/* ux5: A16 the save pill is quiet until something was saved */
+.netp.ux2q{display:none}
+
+/* ux5: (1) tiles fold into a slim strip once a section is chosen */
+body.ux2tc #tiles.hts{display:flex!important;flex-wrap:nowrap;gap:6px;align-items:stretch;margin:8px 0 12px}
+body.ux2tc #tiles .htile.x{flex:0 1 auto;min-width:0;min-height:44px;height:auto;padding:5px 9px;border-radius:12px;grid-template-columns:auto auto;grid-template-areas:"i n";gap:0 6px;align-content:center}
+body.ux2tc #tiles .htile.x .hi{width:28px;height:28px;border-radius:8px}
+body.ux2tc #tiles .htile.x .hi svg{width:16px;height:16px}
+body.ux2tc #tiles .htile.x .hn{font-size:1rem;justify-self:start}
+body.ux2tc #tiles .htile.x .hn:empty{display:none}
+body.ux2tc #tiles .htile.x.zero .hn{font-size:.85rem}
+body.ux2tc #tiles .htile.x .hl,body.ux2tc #tiles .htile.x .hs{display:none}
+body.ux2tc #tiles .htile.x[aria-current="true"]{flex:0 0 auto;grid-template-columns:auto auto auto;grid-template-areas:"i l n"}
+body.ux2tc #tiles .htile.x[aria-current="true"] .hl{display:block;font-size:.88rem;white-space:nowrap}
+body.ux2tc #tiles .htile.x::after{height:2px}
+#ux2TT{display:none}
+body.ux2tc #ux2TT{display:inline-flex;align-items:center;gap:4px;margin-inline-start:auto;flex:none;font:inherit;font-size:.82rem;font-weight:700;min-height:44px;padding:4px 12px;border-radius:12px;border:1px dashed var(--line2);background:var(--surface);color:var(--accent);cursor:pointer}
+body.ux2tc #ux2TT:hover{border-color:var(--accent)}
+@media (max-width:900px){
+  body.ux2tc #tiles.hts{gap:3px}
+  body.ux2tc #tiles .htile.x{flex:1 1 0;padding:4px 2px;justify-content:center;grid-template-columns:auto;grid-template-areas:"i";position:relative}
+  body.ux2tc #tiles .htile.x .hi{width:26px;height:26px;margin:auto}
+  body.ux2tc #tiles .htile.x .hn{position:absolute;top:1px;inset-inline-end:1px;font-size:.66rem;min-width:16px;height:16px;line-height:16px;padding:0 3px;border-radius:99px;background:var(--tc);color:#fff;text-align:center}
+  body.ux2tc #tiles .htile.x.zero .hn{display:none}
+  body.ux2tc #tiles .htile.x[aria-current="true"]{flex:1 1 0;grid-template-columns:auto;grid-template-areas:"i"}
+  body.ux2tc #tiles .htile.x[aria-current="true"] .hl{display:none}
+  body.ux2tc #ux2TT{display:none}
+}
+

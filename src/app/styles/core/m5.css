@@ -1,0 +1,5 @@
+/* ---------- m5: ---------- */
+.m5bar{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin:6px 0 10px}.m5bar .f{min-width:220px}
+tr.m5pick{cursor:pointer}tr.m5pick:hover td{background:var(--accent-soft)}
+.m5one{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px}
+.m1k{grid-template-columns:repeat(5,1fr)}@media (max-width:900px){.m1k{grid-template-columns:repeat(2,1fr)}}

@@ -1,0 +1,7 @@
+/* ---------- m46c (2026-11-17): «سایر خدمات» rows — teeth, count, doctor ---------- */
+.m46x{display:grid;grid-template-columns:minmax(0,1.4fr) 5.5em minmax(0,1.2fr);gap:6px;margin:4px 0 12px;align-items:center}
+.m46x .btn,.m46x input,.m46x select{min-height:44px;width:100%}
+.m46x .btn{text-align:start;white-space:normal}
+@media (max-width:560px){.m46x{grid-template-columns:1fr 5em}.m46x select{grid-column:1/-1}}
+#m46T .chart{margin:8px 0}
+.tl .m46o{margin-top:4px;font-size:.84rem}

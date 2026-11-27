@@ -1,0 +1,23 @@
+/* path bar */
+.pbar{display:flex;gap:0;margin:10px 0 14px;overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}
+.pbar .ps{flex:1 0 74px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;gap:2px;color:var(--muted)}
+.pbar .ps i{width:14px;height:14px;border-radius:50%;background:var(--surface);border:2px solid var(--line2);z-index:1}
+.pbar .ps::before{content:'';position:absolute;top:6px;inset-inline-start:50%;width:100%;height:2px;background:var(--line2)}
+.pbar .ps:last-child::before{display:none}
+.pbar .ps.ok i{background:var(--accent);border-color:var(--accent)}.pbar .ps.ok::before{background:var(--accent)}
+.pbar .ps.cur i{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent)}
+.pbar .ps b{font-size:.76rem;font-weight:700;color:var(--ink)}.pbar .ps.cur b{color:var(--accent)}.pbar .ps small{font-size:.68rem;min-height:1em}
+.pbar.lost .ps.cur i{border-color:var(--bad);box-shadow:0 0 0 4px color-mix(in srgb,var(--bad) 20%,transparent)}.pbar.lost .ps.cur b,.pbar.lost .ps.cur small{color:var(--bad)}
+/* toast undo */
+.toast{display:flex;align-items:center;gap:12px}.toast .tundo{font:inherit;font-weight:800;border:0;background:transparent;color:#7fd6dc;cursor:pointer;padding:4px 6px;white-space:nowrap}
+/* bottom bar: buttons share the full width */
+@media (max-width:1399px){.rfab{grid-template-columns:repeat(auto-fit,minmax(0,1fr))!important}}
+/* reminders sheet */
+.rmrow{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.rmrow .tm{font-weight:800;min-width:46px;font-variant-numeric:tabular-nums}.rmrow .nm{flex:1;font-weight:700}.rmrow .nm small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+.rmrow.ok{background:var(--ok-soft);border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+/* status pill + sound */
+.netp{display:inline-block;margin-inline-start:8px;font-size:.7rem;font-weight:700;padding:1px 8px;border-radius:999px;vertical-align:middle}
+.netp.ok{background:var(--ok-soft);color:var(--ok)}.netp.warn{background:var(--warn-soft);color:var(--warn)}.netp.bad{background:var(--bad-soft);color:var(--bad)}.netp:empty{display:none}
+.sndb{font:inherit;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:2px 10px;cursor:pointer;margin-inline-start:8px}
+.mqh{align-items:center}

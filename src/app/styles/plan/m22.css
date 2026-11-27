@@ -1,0 +1,7 @@
+/* ---------- m22 ---------- */
+.brands,.totals{grid-template-columns:repeat(5,1fr)}
+@media (max-width:760px){.brands,.totals{grid-template-columns:repeat(2,1fr)}}
+.oc2-dot.g-rt{background:#00838f}
+.m22doc{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:0 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--sunk);font-size:.88rem}
+.m22doc small{color:var(--muted)}
+

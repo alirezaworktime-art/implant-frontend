@@ -1,0 +1,6 @@
+/* ---------- fx5: «جراحی انجام نشد» ---------- */
+async function fx5SurgCancelGo(t){const reason=await new Promise(res=>{const s=fxSheet('fx5ScSheet',`<h3>جراحی انجام نشد</h3><p class="note">بیمار از کارتابل جراحی به نوبت‌دهی برمی‌گردد و برای پذیرش کار «نوبت جراحی» ساخته می‌شود. دلیل در سیر درمان ثبت می‌شود.</p><label class="f">دلیل (الزامی)<input id="fx5_scr" maxlength="300" placeholder="مثلاً: فشار خون بالا؛ جراحی به جلسه‌ی بعد موکول شد"></label><div class="msg" id="fx5ScM"></div><div class="btns"><button class="btn" type="button" id="fx5ScGo" style="flex:1">ثبت و برگشت به نوبت‌دهی</button><button class="btn ghost" type="button" id="fx5ScNo">انصراف</button></div>`);
+  $('fx5ScNo').onclick=()=>{s.hidden=true;res('')};$('fx5ScGo').onclick=()=>{const v=$('fx5_scr').value.trim();if(v.length<3){$('fx5ScM').className='msg err';$('fx5ScM').textContent='دلیل را بنویسید.';return}s.hidden=true;res(v)}});
+  if(!reason)return;t.disabled=true;try{await api('fx5SurgCancel',{id:t.dataset.fx5sc,reason});toast('بیمار به نوبت‌دهی برگشت.');pollQ(true);if(PF&&!$('pfSheet').hidden)refreshFile()}catch(err){alertMsg(err.message)}finally{t.disabled=false}}
+document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('[data-fx5sc]');if(!t)return;e.preventDefault();fx5SurgCancelGo(t)});
+

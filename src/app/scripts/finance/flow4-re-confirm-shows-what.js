@@ -1,0 +1,6 @@
+/* ---------- flow4: re-confirm shows what is already registered ---------- */
+async function pcPrevLoad(){const id=PC&&PC.id;if(!id)return;try{const j=await api('get',{id});if(!PC||PC.id!==id)return;
+  const P=(j.pays||[]).filter(p=>p.st!=='del'),cash=P.filter(p=>p.kind!=='chq').reduce((a,p)=>a+(Number(p.amount)||0),0),cq=P.filter(p=>p.kind==='chq');if(!cash&&!cq.length)return;
+  PC.again=1;PC.rcash=Math.max(0,PC.cash-cash);const ci=$('pc_cash');if(ci)ci.value=PC.rcash?fa(PC.rcash):'۰';if(cq.length){PC.chq=[];pcRender()}else if(cash>PC.cash){let ex=cash-PC.cash;for(let i=PC.chq.length-1;i>=0&&ex>0;i--){const d=Math.min(ex,PC.chq[i].amount);PC.chq[i].amount-=d;ex-=d}PC.chq=PC.chq.filter(c=>c.amount>0);PC.exDep=cash-PC.cash;pcRender()}
+  let n=$('pcPrev');if(!n){n=document.createElement('div');n.id='pcPrev';$('pcList').before(n)}n.className='msg warn';
+  n.innerHTML=`برای این بیمار قبلاً ثبت شده: نقد/کارت <b>${fa(cash)}</b> تومان${cq.length?` و ${fa(cq.length)} چک (${fa(cq.reduce((a,p)=>a+(Number(p.amount)||0),0))} تومان)`:''}. فقط مانده‌ی نقد پیشنهاد شد${PC.exDep?`؛ ${fa(PC.exDep)} تومانِ بیش از نقدِ طرح از مبلغ چک‌ها کم شد`:''}${cq.length?'؛ چک تازه ساخته نمی‌شود — اگر مبلغ چک‌ها عوض شده، در «پرداخت‌ها»ی پرونده اصلاح کنید':''}.`}catch(e){}}

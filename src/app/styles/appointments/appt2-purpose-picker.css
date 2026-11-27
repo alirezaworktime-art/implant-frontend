@@ -1,0 +1,32 @@
+/* appt2: «ارسال به پزشک» purpose picker */
+.sdp{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:8px 0 10px}
+.sdpb{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:right;border:1px solid var(--line,#d9e2e0);border-right-width:5px;border-radius:12px;padding:10px 12px;background:var(--surface,#fff);font:inherit;color:inherit;cursor:pointer;min-height:56px}
+.sdpb small{opacity:.65}.sdpb:hover{background:rgba(15,118,110,.06)}.sdpb:disabled{opacity:.45;cursor:not-allowed}
+.sdpb.kp-plan{border-right-color:#6366f1}.sdpb.kp-sg{border-right-color:var(--k-sg,#b91c1c)}.sdpb.kp-ck{border-right-color:var(--k-ck,#b45309)}.sdpb.kp-pr{border-right-color:var(--k-pr,#0f766e)}
+
+/* fx1 */
+#fxNtSheet,#fxFnSheet,#fxArcSheet{z-index:13}
+.fxnotes{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:10px 0;background:var(--surface)}
+.fxn-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fxn-top .pf-h{margin:0}
+.fxn{border-top:1px solid var(--line);padding:8px 0}
+.fxn-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.fxn-h small{color:var(--muted,#667);font-size:.8rem}
+.fxn-h .btn{margin-inline-start:auto}
+.fxn p{margin:6px 0 0;white-space:pre-wrap;line-height:1.8}
+.fxn-img{display:block;max-width:100%;max-height:260px;width:auto;object-fit:contain;cursor:zoom-in;margin-top:6px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.fxpad canvas{aspect-ratio:1000/560}
+.pbar .ps[data-ntst]{cursor:pointer}
+.pbar .ps em.ntc{font-style:normal;font-size:.68rem;background:var(--accent,#0F6E6E);color:#fff;border-radius:99px;padding:0 6px;margin-inline-start:4px}
+.fxmiss{color:var(--bad,#b42318);font-weight:700}
+.fxarcbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+.fxarc-tag{color:var(--lapis,#1d4ed8)}
+.fximp{display:grid;grid-template-columns:70px 1fr 64px 64px 110px 1fr 36px;gap:6px;align-items:end;border-bottom:1px dashed var(--line);padding:6px 0}
+.fximp label{font-size:.74rem;display:flex;flex-direction:column;gap:2px}
+.fximp input{min-width:0;width:100%}
+.fximp .x{min-height:36px}
+@media (max-width:640px){.fximp{grid-template-columns:1fr 1fr 1fr}.fximp .x{grid-column:3}}
+.fxsdin{max-width:120px;min-height:36px}
+.fxarcinfo{border:1px dashed var(--line2,#bbb);border-radius:12px;padding:8px 12px;margin:8px 0}
+.fxarcinfo p{margin:4px 0;white-space:pre-wrap}
+

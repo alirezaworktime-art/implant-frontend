@@ -1,0 +1,69 @@
+  <!-- inventory -->
+  <section id="viewInv" class="wrap" style="padding:0" hidden>
+    <div class="qhead"><div style="display:flex;align-items:center;gap:12px"><h2>انبار</h2><span class="live" id="iLive">زنده</span></div><button class="btn" id="invAdd" type="button" hidden>+ ورود کالا</button></div>
+    <div class="kpis" id="invKpis"></div>
+    <div class="seg" role="group" aria-label="بخش انبار"><button type="button" data-iseg="fix" aria-pressed="true">فیکسچرها</button><button type="button" data-iseg="acc" aria-pressed="false">هیلینگ، کاور و مواد</button><button type="button" data-iseg="chart" aria-pressed="false">نمودار</button><button type="button" data-iseg="log" aria-pressed="false">گردش انبار</button><button type="button" data-iseg="cons" aria-pressed="false">امانی</button><button type="button" data-iseg="ast" aria-pressed="false">اموال</button><button type="button" data-iseg="kit" aria-pressed="false">کیت‌ها</button><button type="button" data-iseg="gen" aria-pressed="false">مصرفی عمومی</button><button type="button" data-iseg="cnt" aria-pressed="false" hidden>انبارگردانی</button><button type="button" data-iseg="po" aria-pressed="false" hidden>سفارش خرید</button><button type="button" data-iseg="rep" aria-pressed="false" hidden>گزارش‌ها</button><button type="button" data-iseg="ifin" aria-pressed="false" hidden>خرید و بها</button><button type="button" data-iseg="icat" aria-pressed="false" hidden>تطبیق با فهرست جراحی</button></div>
+    <div class="invtools" id="invTools"><div class="search"><input id="invQ" placeholder="جستجوی برند، سیستم یا نام قلم"></div><button type="button" class="chip" id="invLow" aria-pressed="false">فقط کم یا تمام‌شده</button></div>
+    <div id="invBody" class="wrap" style="padding:0"><div class="empty">در حال بارگذاری انبار…</div></div>
+  </section>
+
+  <section id="viewForm" class="wrap" style="padding:0" hidden>
+    <div class="banner" id="editNote" hidden></div>
+    <section class="card pcard" id="pCard">
+      <h2>مشخصات بیمار</h2>
+      <div id="pSum"></div>
+      <div class="fields">
+        <label class="f full">نام و نام خانوادگی<input id="h_name" data-h="name"></label>
+        <label class="f">کد ملی<input id="h_nid" data-h="nid" inputmode="numeric"></label>
+        <label class="f">تاریخ مراجعه<input id="h_date" data-h="date"></label>
+        <label class="f">شماره موبایل<input id="h_phone" data-h="phone" class="ltr" inputmode="tel"></label>
+        <label class="f">سن<input id="h_age" data-h="age" inputmode="numeric"></label>
+        <div class="f hdoc"><span>نام پزشک</span><div class="seg" id="hDocSeg"><button type="button" data-hdoc="m">دکتر علویکیا</button><button type="button" data-hdoc="o">پزشک دیگر</button></div><input id="h_doc" data-h="doc" placeholder="نام پزشک را بنویسید" hidden></div>
+        <label class="f">پذیرنده<input id="h_asst" data-h="asst"></label>
+        <label class="f">شهر<input id="h_city" data-h="city" list="dlCity"></label>
+        <label class="f">معرف<input id="h_ref" data-h="ref" list="dlRef"></label>
+      </div>
+      <div class="banner info" id="staffNote" hidden></div>
+      <div class="med" id="fMed" data-medbox="f"></div>
+    </section>
+    <div id="sections" class="wrap" style="padding:0"></div>
+    <section class="card" id="totalsCard">
+      <h2 id="totTitle">جمع کل درمان</h2>
+      <p class="note">هزینه‌ی هر پنج برند در PDF می‌آید. برند انتخابی بیمار را بزنید تا در PDF پررنگ شود و شرایط پرداخت بر اساس آن نوشته شود.</p>
+      <div class="totals" id="brandTotals"></div>
+      <div class="rowline"><span>پارت جراحی</span><span id="t_surg"></span></div>
+      <div class="rowline"><span>پارت پروتز (روکش)</span><span id="t_pros"></span></div>
+      <div class="rowline big"><span>جمع کل</span><span id="t_all"></span></div>
+    </section>
+    <section class="card" id="photoCard" hidden>
+      <h2>عکس بیمار <span class="tag">مشاور</span></h2>
+      <div class="photo-row"><img id="fPhoto" class="sgphoto" alt="عکس بیمار" hidden><div class="grp"><p class="note" id="photoNote">عکس بیمار برای شناسایی در روز جراحی. با دوربین گوشی یا از فایل.</p>
+        <div class="btns"><label class="btn ghost" style="cursor:pointer">انتخاب یا گرفتن عکس<input type="file" id="photoIn" accept="image/*" capture="user" hidden></label><button class="btn ghost danger" id="photoDel" type="button" hidden>حذف عکس</button></div><div class="msg" id="photoMsg"></div></div></div>
+    </section>
+    <section class="card" id="payCard">
+      <h2>شرایط پرداخت <span class="tag">مشاور</span></h2>
+      <div class="fields"><label class="f">جمع نقد دریافتی از بیمار — همان مبلغی که بیمار می‌دهد (تومان)<input id="p_cash" class="price" inputmode="numeric" placeholder="خالی = بر اساس درصد"></label><label class="f">تاریخ اولین چک (شمسی)<input id="p_chq1" inputmode="numeric" placeholder="۱۴۰۵/۰۹/۰۱"></label></div><p class="note" id="cashNote" hidden></p><p class="note" id="fx6CashHint">اگر بیمار کل هزینه را نقد می‌دهد، مبلغِ بعد از تخفیف نقدی را بنویسید؛ همین یعنی ۱۰۰٪ نقد و تخفیف اعمال می‌شود.</p>
+      <div class="grp"><span>پارت جراحی</span>
+        <div class="chips" id="payOpt">
+          <button type="button" class="chip" data-opt="1">نقد + چک ماهانه</button>
+          <button type="button" class="chip" data-opt="2">نقد + یک چک</button>
+        </div>
+      </div>
+      <div class="fields">
+        <label class="f">درصد نقد پارت جراحی<input id="p_cs" class="price" inputmode="numeric" placeholder="۳۰"></label>
+        <label class="f" id="lblN1">تعداد چک<input id="p_n1" class="price" inputmode="numeric"></label>
+        <label class="f" id="lblM2">موعد چک (ماه بعد از جراحی)<input id="p_m2" class="price" inputmode="numeric"></label>
+      </div>
+      <div class="calc" id="paySurg"></div>
+      <div class="grp"><span>پارت پروتز · نقد + چک ماهانه</span></div>
+      <div class="fields"><label class="f">درصد نقد پارت پروتز<input id="p_cp" class="price" inputmode="numeric" placeholder="۳۰"></label><label class="f">تعداد چک<input id="p_n3" class="price" inputmode="numeric"></label></div>
+      <div class="calc" id="payPros"></div>
+      <div class="fields"><label class="f">تخفیف پرداخت نقدی (٪)<input id="p_disc" class="price" inputmode="numeric" placeholder="۵"></label></div><p class="note" id="discNote"></p>
+      <p class="note" data-pk1a="1">قیمت‌ها تقریبی است. برای بیمارانی که زمان جراحی‌شان از دی‌ماه به بعد است، پارت پروتز به قیمت روز حساب می‌شود.</p>
+      <div class="btns"><button class="btn ghost sm" id="sumCopy" type="button">کپی خلاصه برای بیمار</button><button class="btn ghost sm" id="sumWa" type="button">ارسال خلاصه در واتس‌اپ</button></div>
+      <div id="sumBox" hidden><textarea id="sumTxt" rows="6" readonly></textarea></div>
+    </section>
+  </section>
+</div>
+
+<div class="planSw" id="planSw"></div>

@@ -1,0 +1,21 @@
+  <!-- doctor inbox -->
+  <section id="viewQueue" class="wrap" style="padding:0" hidden>
+    <div class="kpis" id="kpiStrip" hidden></div>
+    <div class="qhead"><h2 id="qTitle">بیماران در صف انتظار</h2><span class="live" id="qLive">زنده</span></div>
+    <div class="list" id="qList"><div class="empty">در حال بارگذاری…</div></div>
+    <div id="qAppt"></div>
+    <div id="conxW" hidden>
+      <div class="qhead"><h2>چک‌های سررسید</h2><button class="btn sm" id="cpOpen" type="button">🖨 چاپ چک</button></div>
+      <div class="list" id="chqList"></div>
+      <div class="qhead"><h2>پیگیری طرح‌های تأییدنشده</h2><button class="btn sm ghost" id="undAll" type="button" hidden></button></div>
+      <div class="list" id="folList"></div>
+    </div>
+
+    <div id="qWaitW" class="wrap" style="padding:0" hidden>
+      <div class="qhead"><h2>طرح‌های تأییدشده، منتظر جراحی</h2></div>
+      <p class="note">بیماری که امروز جراحی می‌شود را پیدا کنید و بزنید تا ثبت جراحی شروع شود.</p>
+      <div class="search"><input id="qS" placeholder="جستجوی بیمار با نام، کد ملی یا موبایل"></div>
+      <div class="list" id="qWait"></div>
+    </div>
+  </section>
+

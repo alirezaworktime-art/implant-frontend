@@ -1,0 +1,76 @@
+  <!-- staff reception -->
+  <section id="viewRecep" class="wrap" style="padding:0" hidden>
+    <div class="kpis" id="kpiStripR" hidden></div>
+    <div class="rsearch"><input id="rS" type="search" placeholder="جستجوی سریع بیمار: نام، موبایل یا کد ملی" autocomplete="off"><div class="qres" id="rSRes"></div></div>
+    <div class="rnow" id="rNow" hidden></div>
+    <div class="rtabs" id="rTabs">
+      <button type="button" data-rtab="ex">معاینه‌ی امروز <b id="rtN_ex"></b></button>
+      <button type="button" data-rtab="ap">نوبت‌های امروز <b id="rtN_ap"></b></button>
+      <button type="button" data-rtab="bk">نوبت‌دهی <b id="rtN_bk"></b></button>
+      <button type="button" data-rtab="fl">پیگیری‌ها <b id="rtN_fl"></b></button>
+    </div>
+    <div class="rpane" data-rpane="ex">
+      <div class="qhead"><h2>مریض‌های معاینه‌ی امروز</h2><span style="display:flex;gap:8px;align-items:center"><button class="btn sm ghost" type="button" id="ikNew">فرم آنلاین برای بیمار</button><span class="live" id="rLive">زنده</span></span></div>
+      <div class="rsec" id="ikW" hidden><h3 class="rsh">فرم‌های آنلاین پرشده <b id="ikN"></b></h3><div class="list" id="ikList"></div></div>
+      <div class="rqf" id="rChips"></div>
+      <div class="list" id="rList"><div class="empty">در حال بارگذاری…</div></div>
+    </div>
+    <div class="rpane" data-rpane="ap" hidden>
+      <div class="qhead"><div class="seg rday" id="raDay"><button type="button" data-rad="t">امروز</button><button type="button" data-rad="f">فردا</button></div><span style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm ghost" type="button" data-gocal data-cmode="week">تقویم هفتگی</button><button class="btn sm ghost" type="button" data-gocal data-cmode="month">تقویم ماهانه</button></span></div>
+      <div class="rsec"><h3 class="rsh k-sg">نوبت‌های جراحی</h3><div class="rqf" id="raSgF"></div><div class="list" id="raSg"></div></div>
+      <div class="rsec"><h3 class="rsh k-pr">نوبت‌های پروتز</h3><div class="rqf" id="raPrF"></div><div class="list" id="raPr"></div></div>
+      <div class="rsec" id="raOtW"><h3 class="rsh">سایر نوبت‌ها</h3><div class="list" id="raOt"></div></div>
+      <p class="note">چکاپ‌های جراحی و پروتز را از دکمه‌های «چکاپ جراحی» و «چکاپ پروتز» ببینید.</p><div class="kleg"><span><i class="kdot k-sg"></i>جراحی</span><span><i class="kdot k-pr"></i>پروتز</span><span><i class="kdot k-ck"></i>چکاپ</span><span><i class="kdot k-fl"></i>پیگیری</span><span><i class="kdot k-ot"></i>سایر</span></div>
+    </div>
+    <div class="rpane" data-rpane="bk" hidden>
+      <div class="rsec"><h3 class="rsh k-sg">صف نوبت‌دهی جراحی</h3><p class="note">بیمارانی که طرح را پذیرفته‌اند و باید برای جراحی نوبت بگیرند.</p><div class="list" id="bkList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh">بخیه و آماده‌شدن کار لابراتوار</h3><div class="list" id="nbList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh">آنکاوری و چکاپ دوره‌ای</h3><div class="list" id="ucList"><div class="empty">موردی نیست.</div></div></div>
+    </div>
+    <div class="rpane" data-rpane="fl" hidden>
+      <div class="rsec"><h3 class="rsh k-sg">تسویه‌ی اختلاف جراحی</h3><p class="note">در روز جراحی کاری بیشتر یا کمتر از طرح انجام شده؛ نقد یا چک را ثبت کنید.</p><div class="list" id="setlList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh k-sg">نوبت جراحی نگرفته‌اند (بیش از ۳۰ روز)</h3><div class="list" id="bkOld"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh">پیگیری طرح‌ها</h3><p class="note">بیمارانی که طرح را گرفتند و می‌خواهند فکر کنند؛ تماس بگیرید و نتیجه را ثبت کنید.</p><div class="list" id="flList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh k-sg">تماس‌های بعد از جراحی</h3><div class="list" id="fuList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh k-pr">تماس‌های بعد از تحویل پروتز</h3><div class="list" id="fpList"><div class="empty">موردی نیست.</div></div></div>
+      <div class="rsec"><h3 class="rsh k-sg">پرداخت‌ها: تأیید ادامه، وصول مانده، بیماران انصرافی</h3><div class="list" id="fxColList"><div class="empty">موردی نیست.</div></div></div>
+    </div>
+    <div class="rfab" id="rFab">
+      <button type="button" class="fb main" data-rfab="rc"><i>＋</i><span>پذیرش بیمار</span></button>
+      <button type="button" class="fb sg bkfab" data-rfab="book"><i>📅</i><span>نوبت‌دهی</span></button>
+      <button type="button" class="fb ck" data-rfab="cs"><i>🩺</i><span>چکاپ جراحی</span><b id="rfN_cs"></b></button>
+      <button type="button" class="fb ck" data-rfab="cp"><i>🦷</i><span>چکاپ پروتز</span><b id="rfN_cp"></b></button>
+    </div>
+    <div class="sheet" id="rcSheet" hidden><div class="in">
+    <section class="card" id="rcCard" style="box-shadow:none;border:0;padding:0;margin:0">
+      <h2 id="rcTitle">پذیرش بیمار</h2>
+      <div class="fields">
+        <label class="f full">نام و نام خانوادگی<input id="rc_name"></label>
+        <label class="f">کد ملی<input id="rc_nid" inputmode="numeric" maxlength="30"><small class="warnline" id="rcNidW" hidden></small></label>
+        <label class="f">تاریخ مراجعه<input id="rc_date"></label>
+        <label class="f">شماره موبایل *<input id="rc_phone" inputmode="tel" class="ltr" maxlength="20" placeholder="09…"><label class="chk id1np"><input type="checkbox" id="rc_nophone"> موبایل ندارد</label></label>
+        <label class="f">سن<input id="rc_age" inputmode="numeric"></label>
+        <label class="f">شهر<input id="rc_city" list="dlCity" placeholder="مثلاً یزد"></label>
+        <label class="f">معرف<input id="rc_ref" list="dlRef" placeholder="چه کسی یا از کجا معرفی شده؟"></label>
+        <datalist id="dlCity"><option value="یزد"><option value="میبد"><option value="اردکان"><option value="مهریز"><option value="تفت"><option value="اشکذر"><option value="زارچ"><option value="حمیدیا"><option value="بافق"><option value="ابرکوه"><option value="بهاباد"><option value="هرات (خاتم)"><option value="مروست"><option value="نیر"><option value="ندوشن"><option value="عقدا"><option value="کرمان"><option value="اصفهان"><option value="تهران"><option value="شیراز"></datalist><datalist id="dlRef"><option value="بیمار قبلی کلینیک"><option value="دوستان و آشنایان"><option value="اینستاگرام"><option value="گوگل / سایت"><option value="تابلو و عبور"><option value="پزشک یا دندانپزشک دیگر"><option value="بیمه / سازمان"></datalist>
+        <label class="f">پذیرنده<select id="rc_asst"></select></label>
+      </div>
+      <div class="banner" id="rcDup" hidden></div>
+      <div class="med" id="rcMed" data-medbox="rc"></div>
+      <div class="fields">
+        <label class="f full">توضیحات برای پزشک<textarea id="rc_note" rows="3" placeholder="شکایت اصلی، سابقه‌ی پزشکی، …"></textarea></label>
+        <label class="chk full rcponly"><input type="checkbox" id="rc_ponly"> فقط پروتز — ایمپلنت در جای دیگر کاشته شده</label>
+      </div>
+      <div class="msg" id="rcMsg"></div>
+      <div class="btns"><button class="btn" id="rcSend" type="button">ارسال به کارتابل پزشک</button><button class="btn ghost" id="rcCancel" type="button" hidden>انصراف از ویرایش</button><button class="btn ghost" id="rcClose" type="button">بستن</button></div>
+    </section>
+    </div></div>
+    <div class="sheet" id="ckSheet" hidden><div class="in">
+      <h3 id="ckTitle">چکاپ</h3>
+      <div class="seg rday" id="ckDay"><button type="button" data-ckd="t">امروز</button><button type="button" data-ckd="f">فردا</button></div>
+      <div class="rqf" id="ckF"></div>
+      <div class="list" id="ckList"></div>
+      <div class="btns"><button class="btn" id="ckNew" type="button" style="flex:1">＋ ثبت نوبت چکاپ جدید</button><button class="btn ghost" id="ckClose" type="button">بستن</button></div>
+    </div></div>
+  </section>
+

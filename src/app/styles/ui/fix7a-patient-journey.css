@@ -1,0 +1,37 @@
+/* fix7a: patient journey */
+.fx7bk{color:var(--warn,#b45309);font-weight:700}
+#fx7Back{white-space:normal}
+@media (max-width:520px){#formBar .btns{flex-wrap:wrap}#formBar #fx7Back{flex:1 1 100%;order:3}}
+
+/* fix7b: «امروز جراحی نشد» on the surgeon's list */
+.fx7sq{display:flex;flex-direction:column;gap:4px;min-width:0}.fx7sq>.qitem{margin:0}.fx7sqa{display:flex;justify-content:flex-end;padding:0 4px 6px}.fx7sqa .btn{min-height:36px}
+
+/* fix7d: money inputs */
+input.fx7bad{border-color:var(--bad)!important;box-shadow:0 0 0 2px color-mix(in srgb,var(--bad) 25%,transparent)}
+.fx7am{display:block;color:var(--bad);font-size:.78rem;font-weight:600;margin-top:2px}
+
+/* ux6: owner's removal of duplicate / unused options (2026-11-04) */
+/* (1) email / Apps Script leftovers, empty headings, duplicate logout */
+[data-resend]{display:none!important}
+#sSheet label:has(#set_to),#sSheet .ux6x,#sOut{display:none!important}
+body[data-role="consultant"] #sSheet label:has(#set_mgrpw),body[data-role="consultant"] #set_mgrpwN{display:none!important}
+/* (2) attendance only with a personal account (manager keeps it: clinic internet setup) */
+html body.ux6nouser #attBtn{display:none!important}
+/* (3) reception: «کارهای الان» only in «صف من» */
+html body[data-role="staff"]:not([data-tile="q"]) #rNow{display:none!important}
+html body[data-role="staff"][data-tile="q"] #rNow:not([hidden]){display:block!important}
+/* booking: one «نوبت‌دهی» button (bottom bar) and one time control (امروز / فردا / هفته / ماه) */
+html body[data-role="staff"] .tilehd [data-rfab]{display:none!important}
+html body[data-role="staff"] #rAll .qhead:has(#raDay){display:none!important}
+/* archive row: one PDF (📄 the full file); plan PDF, surgery report and implant card are inside the file */
+#viewList [data-pdf],#viewList [data-srep],#viewList [data-scard]{display:none!important}
+body[data-role="doctor"] #viewList [data-tosurg]{display:none!important}
+/* file › payments: one entry */
+.ux6pbtn{margin-top:10px}
+.ux6pbox{border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;background:var(--surface)}
+.ux6ph{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.ux6ph b{font-size:1rem}
+.ux6pseg{display:flex;flex-wrap:wrap;margin-bottom:8px}
+.ux6pseg button{flex:1 1 auto;min-height:40px}
+.ux6pact{margin:4px 0 8px}
+.ux6pbox .payform,.ux6pbox details.instc{margin-top:6px;border:0;padding:0}

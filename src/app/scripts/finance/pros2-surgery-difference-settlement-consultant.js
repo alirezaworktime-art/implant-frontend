@@ -1,0 +1,23 @@
+/* ---------- pros2: surgery difference settlement (consultant + reception) ---------- */
+let ST=null,QSET=[];
+const ST_K=[['cash','نقد'],['card','کارت / واریز'],['chq','چک'],['later','بعداً (به مانده اضافه شود)']];
+function stFormHTML(d){ensurePos();return `<div class="payform" id="stForm"><b>نحوه‌ی دریافت ${fa(d)} تومان اضافه</b><div class="chips" id="stKind" style="margin-top:6px">${ST_K.map(([k,l])=>`<button type="button" class="chip" data-stk="${k}" aria-pressed="false">${l}</button>`).join('')}</div><div id="stF" style="margin-top:8px"></div></div>`}
+function stRender(){const f=$('stF');if(!f||!ST)return;document.querySelectorAll('[data-stk]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.stk===ST.k));
+  if(ST.k==='cash'||ST.k==='card')f.innerHTML=`<div class="fields"><label class="f">مبلغ دریافتی (تومان)<input id="st_amt" class="price" inputmode="numeric" value="${fa(ST.d)}"></label></div>`+(ST.k==='card'?`<div class="f"><span>کدام کارتخوان؟</span>${posChips('stpos',ST.pos,{})}</div>`:'');
+  else if(ST.k==='chq'){f.innerHTML=`<div class="fields"><label class="f">تعداد چک<select id="st_n">${Array.from({length:12},(_,i)=>`<option value="${i+1}"${ST.n===i+1?' selected':''}>${fa(i+1)}</option>`).join('')}</select></label><label class="f">سررسید چک اول (شمسی)<input id="st_first" inputmode="numeric" placeholder="۱۴۰۵/۰۹/۰۱" value="${esc(ST.first||'')}"></label><label class="f">بانک *<input id="st_bank" value="${esc(ST.bank||'')}"></label></div><div id="stPrev" class="note"></div>`;stChq()}
+  else if(ST.k==='refund')f.innerHTML=`<div class="fields"><label class="f">مبلغ قابل پرداخت به بیمار (تومان)<input id="rf_amt" class="price" inputmode="numeric" value="${fa(-ST.d)}"></label><label class="f">توضیح برای حسابداری<input id="rf_note" placeholder="مثلاً: کارت به کارت به شماره‌ی بیمار"></label></div><p class="note">به فهرست «بدهی کلینیک به بیماران» در حسابداری می‌رود و حسابدار یا مشاور پرداخت را ثبت می‌کند.</p>`;
+  else if(ST.k==='reduce')f.innerHTML='<p class="note">مبلغ از مانده‌ی پرونده کم می‌شود؛ اگر چک در جریان دارد، در پرونده چک‌های بعدی را اصلاح کنید.</p>';
+  else if(ST.k==='later')f.innerHTML='<p class="note">مبلغ اضافه به مانده‌ی پرونده اضافه می‌شود و بعداً در «پرداخت‌ها» ثبت می‌شود.</p>';else f.innerHTML=''}
+function stRows(){const x=splitPay(ST.d,0,ST.n),iso=parseJ(ST.first||'');return Array.from({length:ST.n},(_,i)=>({amount:x.am[i],due:iso?jAddM(iso,i):''}))}
+function stChq(){const el=$('stPrev');if(!el)return;el.innerHTML=stRows().map((r,i)=>`چک ${fa(i+1)}: <b>${fa(r.amount)}</b> تومان — ${r.due?esc(jDay(r.due)):'سررسید؟'}`).join('<br>')}
+function stPays(){const m=$('sdMsg'),err=x=>{m.className='msg err';m.textContent=x;return null};if(!ST||!(ST.d>0)||!$('stForm'))return [];
+  if(!ST.k)return err('نحوه‌ی دریافت مبلغ اضافه را انتخاب کنید.');if(ST.k==='later')return [];
+  if(ST.k==='cash'||ST.k==='card'){const a=parseInt(toEn($('st_amt').value).replace(/[^\d]/g,''),10)||0;if(!a)return err('مبلغ را وارد کنید.');if(ST.k==='card'&&!ST.pos)return err('کارتخوان (یا کارت‌به‌کارت) را انتخاب کنید.');return [{kind:ST.k,amount:a,pos:ST.k==='card'?posId(ST.pos):'',note:'تسویه‌ی اختلاف جراحی'}]}
+  const R=stRows();if(!R[0].due)return err('سررسید چک اول را درست وارد کنید (مثلاً ۱۴۰۵/۰۹/۰۱).');return R.map(r=>({kind:'chq',amount:r.amount,due:r.due,bank:ST.bank||'',note:'تسویه‌ی اختلاف جراحی'}))}
+function renderSetl(){const L=$('setlList');if(!L)return;L.dataset.n=QSET.length;
+  L.innerHTML=QSET.length?QSET.map(x=>`<div class="item"><div class="row1"><div><span class="nm">${esc(x.name)}</span><div class="meta">${x.diff>0?'باید <b>'+fa(x.diff)+'</b> تومان بیشتر بپردازد':'<b>'+fa(-x.diff)+'</b> تومان کمتر از طرح (از مانده کم می‌شود)'}${x.phone?' · '+esc(faD(x.phone)):''}</div></div><span class="pill settle">تسویه</span></div>
+    <div class="acts"><button class="btn sm" type="button" data-settle="${esc(x.id)}">تعیین تکلیف</button>${x.phone?`<a class="btn sm ghost" href="tel:${esc(toEn(x.phone))}">تماس</a>`:''}<button class="btn sm ghost" type="button" data-file="${esc(x.id)}" data-fname="${esc(x.name)}" data-ftab="pay">پرونده</button></div></div>`).join(''):'<div class="empty">موردی نیست.</div>'}
+document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('[data-stk]');if(!t||!ST)return;ST.k=t.dataset.stk;$('sdMsg').textContent='';stRender()});
+document.addEventListener('input',e=>{const t=e.target;if(!ST||!t||!t.id)return;if(t.id==='st_n')ST.n=+t.value||1;else if(t.id==='st_first')ST.first=t.value;else if(t.id==='st_bank')ST.bank=t.value;else return;stChq()});
+document.addEventListener('change',e=>{const t=e.target;if(ST&&t&&t.id==='st_n'){ST.n=+t.value||1;stChq()}});
+

@@ -1,0 +1,84 @@
+/* ---------- m57a ---------- */
+.m57bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 10px;background:var(--card,#fff);border-bottom:1px solid var(--line,#d6d3d1)}
+.m57bar[hidden]{display:none}
+.m57t{display:inline-flex;align-items:stretch;border:1px solid var(--line,#d6d3d1);border-radius:999px;overflow:hidden;max-width:46vw}
+.m57t button{border:0;background:transparent;padding:6px 10px;font:inherit;cursor:pointer;min-height:34px}
+.m57t>button:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m57t.on{border-color:var(--pri,#2563eb);background:var(--pri-soft,#eff6ff)}
+.m57t.on>button:first-child{font-weight:700}
+.m57x{padding:6px 9px!important;color:var(--mut,#78716c)}
+.m57d{color:#d97706;font-style:normal}
+.m57q{border:1px dashed var(--line,#a8a29e);border-radius:999px;background:transparent;padding:6px 12px;font:inherit;cursor:pointer;min-height:34px}
+/* m58a */ .l5work .m58n{margin:0}
+/* m58b */ .h9form:has(.m58o) .l8req{display:none}
+.h9form .m58o{margin:4px 0}
+/* m59a: the doctor's lab order = «یک نگاه» */
+.h9form.m59c .h9sheet{display:none}
+.h9form.m59x .l8req{display:none}
+.m59{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+.m59hd{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.m59hd b{font-size:1.02rem;font-weight:800}.m59hd span{color:var(--muted);font-size:.82rem}
+.m59a{display:inline-flex;align-items:center;gap:3px;font-size:.66rem;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:99px;padding:0 8px;white-space:nowrap;vertical-align:1px}
+.m59a::before{content:"✓"}
+.m59fs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media (max-width:560px){.m59fs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.m59f{background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:7px 10px;min-width:0}
+.m59f small{display:block;color:var(--muted);font-size:.7rem}.m59f b{font-size:.88rem;overflow-wrap:anywhere}
+.m59q{display:flex;flex-direction:column;gap:6px}.m59q>span{font-size:.84rem;font-weight:700}
+.m59ch{display:flex;flex-direction:column;align-items:center;gap:4px}
+.m59jw{display:flex;gap:2px}.m59jw+.m59jw{border-top:2px solid var(--line2);padding-top:4px}
+.m59md{width:2px;background:var(--line2);margin:0 3px}
+.m59t{width:min(30px,calc((100vw / var(--zm,1) - 120px) / 16));height:36px;border-radius:8px;border:1px solid var(--line);background:var(--sunk);color:var(--ink);font:inherit;font-weight:700;font-size:.85rem;padding:0;cursor:pointer}
+.m59t.a{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.m59t.p{background:var(--lapis);border-color:var(--lapis);color:#fff}
+.m59lg{font-size:.72rem;color:var(--muted);text-align:center}.m59lg i{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin:0 6px 0 2px}
+.m59lg i.a{background:var(--accent)}.m59lg i.p{background:var(--lapis)}
+.m59more{font:inherit;font-weight:700;color:var(--accent);background:none;border:0;cursor:pointer;padding:0;text-align:right}
+/* m60a: fixture stock on the surgery day */
+#viewSurg .sgpat{position:relative}
+.m60btn{align-self:flex-start;white-space:nowrap}
+.m60bs .chip{min-height:40px}
+.m60n{display:inline-block;min-width:20px;padding:0 6px;border-radius:99px;background:var(--bad);color:#fff;font-size:.72rem;font-weight:800;line-height:1.6;text-align:center;margin-inline-start:4px}
+.m60h{margin:6px 0 0;font-size:.95rem}.m60h small{color:var(--muted);font-weight:500;font-size:.76rem}
+.m60mb{border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.m60bn{font:inherit;font-weight:800;background:none;border:0;padding:0;color:var(--ink);text-align:right;cursor:pointer}.m60bn small{color:var(--bad);font-weight:700}
+.m60ml{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.m60ml>small{width:100%;color:var(--muted)}
+.m60z{display:inline-block;border:1px solid color-mix(in srgb,var(--bad) 35%,transparent);background:color-mix(in srgb,var(--bad) 8%,transparent);color:var(--bad);border-radius:99px;padding:2px 10px;font-weight:700;font-size:.86rem}
+.m60ok{color:var(--ok);font-weight:700}
+.m60tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.m60t{border-collapse:collapse;width:100%;font-size:.9rem;text-align:center}
+.m60t th,.m60t td{border-bottom:1px solid var(--line);border-inline-start:1px solid var(--line);padding:7px 6px;min-width:40px}
+.m60t thead th{background:var(--sunk);font-size:.78rem;color:var(--muted)}
+.m60t tbody th{background:var(--sunk);white-space:nowrap}
+.m60t td.ok{color:var(--ok);font-weight:800}
+.m60t td.no{color:#fff;background:var(--bad);font-weight:800}
+.m60t td.na{color:var(--line2)}
+.m60r{color:var(--bad)}
+/* m61a: «ادامه درمان» */
+#m61Sheet .in{gap:10px}
+.m61hd b{font-size:1.02rem}
+.m61c{border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m61q{font-weight:800;font-size:.92rem}.m61q small{color:var(--muted);font-weight:500}
+.m61s{font-size:.86rem}
+.m61ch{direction:ltr;display:flex;flex-direction:column;align-items:center;gap:4px}
+.m61jw{display:flex;gap:2px;direction:ltr}.m61jw+.m61jw{border-top:2px solid var(--line2);padding-top:4px}
+.m61md{width:2px;background:var(--line2);margin:0 3px}
+.m61t{width:min(32px,calc((100vw / var(--zm,1) - 110px) / 16));height:40px;border-radius:8px;border:1px solid var(--line);background:var(--sunk);font:inherit;font-size:.8rem;font-weight:700;color:var(--line2);padding:0;cursor:default}
+.m61t.im{cursor:pointer;color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.m61t.po{color:#fff;background:var(--lapis);border-color:var(--lapis)}
+.m61t.fx{background:var(--bad);border-color:var(--bad);color:#fff}
+.m61t.fl{background:var(--sunk);border:2px dashed var(--bad);color:var(--bad)}
+.m61t.sel{outline:3px solid var(--warn);outline-offset:1px}
+.m61lg{font-size:.7rem;color:var(--muted);text-align:center}.m61lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 5px 0 2px;vertical-align:-1px}
+.m61lg i.im{background:var(--accent)}.m61lg i.po{background:var(--lapis)}.m61lg i.fx{background:var(--bad)}.m61lg i.fl{border:2px dashed var(--bad)}
+.m61p{border-top:1px dashed var(--line);padding-top:8px;display:flex;flex-direction:column;gap:6px}
+.m61red{border:1px solid var(--bad);background:color-mix(in srgb,var(--bad) 4%,var(--surface));border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.m61op{display:flex;flex-direction:column;gap:6px}
+.m61op button{font:inherit;text-align:right;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:8px 12px;cursor:pointer;color:var(--ink)}
+.m61op button b{display:block;font-size:.9rem}.m61op button small{color:var(--muted);font-size:.74rem}
+.m61op button[aria-pressed="true"]{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--surface))}
+.chip.bad[aria-pressed="true"]{background:var(--bad);border-color:var(--bad);color:#fff}
+.pill.bad{background:color-mix(in srgb,var(--bad) 12%,transparent);color:var(--bad)}
+.m61in{font:inherit;border:1px solid var(--line);background:var(--sunk);border-radius:99px;padding:4px 12px;min-height:36px;width:190px}
+#m61Sheet textarea{font:inherit;width:100%;border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:8px 10px;min-height:52px;resize:vertical;color:var(--ink)}
+.m61nm{cursor:pointer;text-decoration:underline dotted;text-underline-offset:4px}

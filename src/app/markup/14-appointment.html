@@ -1,0 +1,33 @@
+<!-- appointment -->
+<div class="sheet" id="apSheet" hidden>
+  <div class="in">
+    <h3 id="apTitle">نوبت جدید</h3>
+    <div id="apWho"></div>
+    <div class="grp"><span>نوع نوبت</span><div class="chips" id="apKind"></div></div>
+    <div class="fields"><label class="f">تاریخ (شمسی)<input id="ap_day" inputmode="numeric" placeholder="۱۴۰۵/۰۸/۱۵"><small class="dhint" id="ap_dayH"></small></label><label class="f">ساعت<select id="ap_time"></select></label></div>
+    <div class="chips" id="apQuick"></div>
+    <div class="fields"><label class="f">مدت<select id="ap_dur"></select></label><label class="f">پزشک<select id="ap_doc"></select></label></div>
+    <label class="f">توضیح<input id="ap_note" placeholder="مثلاً: ناشتا بیاید، داروی ضدانعقاد قطع شود"></label>
+    <label class="onlw" id="apOnlW" hidden><input type="checkbox" id="ap_onl"><span>بیمار <b>طرح درمان آنلاین</b> گرفته است</span></label>
+    <div class="banner" id="apWarn" hidden></div>
+    <div class="msg" id="apMsg"></div>
+    <div class="btns"><button class="btn" id="apSave" type="button" style="flex:1">ثبت نوبت</button><button class="btn ghost" id="apClose" type="button">بستن</button></div>
+  </div>
+</div>
+<div class="sheet" id="cpSheet" hidden>
+  <div class="in">
+    <h3>چاپ روی برگه‌ی چک</h3>
+    <p class="note">برگه‌ی چک را در پرینتر بگذارید (اندازه‌ی چک صیادی ۱۷٫۵ × ۸ سانتی‌متر). بار اول روی کاغذ ساده امتحان کنید و اگر جابه‌جا بود، «جابه‌جایی» را تنظیم کنید.</p>
+    <div class="fields">
+      <label class="f">در وجه<input id="cp_to"></label>
+      <label class="f">کد/شناسه ملی گیرنده<input id="cp_nid" inputmode="numeric" class="ltr"></label>
+      <label class="f">مبلغ (تومان)<input id="cp_amt" class="price" inputmode="numeric"><small class="dhint" id="cp_amtH"></small></label>
+      <label class="f">تاریخ (شمسی)<input id="cp_day" inputmode="numeric" placeholder="۱۴۰۵/۰۸/۱۵"><small class="dhint" id="cp_dayH"></small></label>
+      <label class="f full">بابت (اختیاری)<input id="cp_for"></label>
+    </div>
+    <div class="seg" id="cpUnit"><button type="button" data-cpu="r">مبلغ روی چک به ریال</button><button type="button" data-cpu="t">به تومان</button></div>
+    <div class="fields"><label class="f">جابه‌جایی افقی (میلی‌متر، + به چپ)<input id="cp_dx" inputmode="numeric" class="ltr"></label><label class="f">جابه‌جایی عمودی (میلی‌متر، + به پایین)<input id="cp_dy" inputmode="numeric" class="ltr"></label></div>
+    <div class="msg" id="cpMsg"></div>
+    <div class="btns"><button class="btn" id="cpGo" type="button" style="flex:1">🖨 چاپ چک</button><button class="btn ghost" id="cpTest" type="button">چاپ آزمایشی روی کاغذ ساده (با کادرها)</button><button class="btn ghost" id="cpClose" type="button">بستن</button></div>
+  </div>
+</div>

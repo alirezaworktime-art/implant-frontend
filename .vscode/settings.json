@@ -1,0 +1,9 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": false,
+  "files.trimTrailingWhitespace": false,
+  "files.trimFinalNewlines": false,
+  "editor.formatOnSave": false,
+  "files.readonlyInclude": { "index.html": true, "p.html": true, "f.html": true, "probe.html": true },
+  "search.exclude": { "index.html": true, "p.html": true, "f.html": true, "probe.html": true, "history/**": true }
+}
